@@ -1,0 +1,29 @@
+{
+	"9o.hist./home/hacked":
+	[
+		"go run gocode.go",
+		"go run main.go",
+		"ls"
+	],
+	"9o.hist./home/hacked/Documents/GoProjects/?":
+	[
+		"pwd",
+		"tskill",
+		"help",
+		"sh go run main.go",
+		"echo $SHELL",
+		"echo $GOPATH",
+		"export GOPATH=/home/hacked/go",
+		"tskill go s",
+		"w",
+		"tskill go",
+		"go build main.go",
+		"go run main.go",
+		"ls",
+		"rm main; go build main.go; ./main",
+		"rm main; go build main.go && ./main"
+	],
+	"ann": "a14.02.25-1",
+	"install_version": "r14.12.06-1",
+	"version": "r14.12.06-1"
+}

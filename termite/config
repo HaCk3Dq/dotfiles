@@ -1,0 +1,58 @@
+[options]
+font = Monospace Regular 11
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = false
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+scrollback_lines = 10000
+search_wrap = true
+icon_name = terminal
+geometry = 755x455
+cursor_blink = off
+cursor_shape = block
+browser = chromium
+
+[colors]
+
+# special
+foreground      = #ffffff
+foreground_bold = #ffffff
+cursor          = #ACACAC
+background      = rgba(0, 0, 0, 0.8)
+highlight       = #565656
+
+# black
+color0  = #3f3f3f
+color8  = #666666
+
+# red
+color1  = #E3001B
+color9  = #E3001B
+
+# green
+color2  = #A6F65E
+color10 = #A6F65E
+
+# yellow
+color3  = #CDB206
+color11 = #FFF25A
+
+# blue
+color4  = #616191
+color12 = #4186be
+
+# magenta
+color5  = #C98ACF
+color13 = #C98ACF
+
+# cyan
+color6  = #A2E9E9
+color14 = #A2E9E9
+
+# white
+color7  = #ffffff
+color15 = #ffffff

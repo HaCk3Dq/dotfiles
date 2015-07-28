@@ -1,0 +1,9 @@
+{
+	"color_scheme": "Packages/Code-Lover/Code-Lover.tmTheme",
+	"font_size": 11,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"theme": "Material-Theme.sublime-theme"
+}

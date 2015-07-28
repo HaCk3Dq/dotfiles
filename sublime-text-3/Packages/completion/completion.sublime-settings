@@ -1,0 +1,6 @@
+{
+		"daemon_command": ["/home/hacked/go/src/github.com/quarnster/completion/build/completion", "daemon", "-proto=unix", "-port=/home/hacked/.config/sublime-text-3/Packages/User/completion.rpc", "-remove=true"],
+		"launch_daemon": true,
+		"proto": "unix",
+		"port": "/home/hacked/.config/sublime-text-3/Packages/User/completion.rpc"
+}

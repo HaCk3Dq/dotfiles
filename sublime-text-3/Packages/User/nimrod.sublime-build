@@ -1,0 +1,14 @@
+{
+    "selector": "source.nim",
+    "variants": [
+    	{
+    		"name": "Run",
+    		"cmd": ["termite", "-e", "zsh -c \"nim c --verbosity:0 $file && ./$file_base_name; exec zsh\""],
+    	},
+    	{
+    		"name": "Run (Release)",
+    		"cmd": ["termite", "-e", "zsh -c \"nim c --verbosity:0 -d:release --opt:speed $file && ./$file_base_name; exec zsh\""],
+    	}
+    ],
+    
+}

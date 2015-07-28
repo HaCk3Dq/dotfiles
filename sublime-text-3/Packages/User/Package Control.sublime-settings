@@ -1,0 +1,24 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AutoFileName",
+		"BufferScroll",
+		"Colorsublime",
+		"EasyMotion",
+		"GoSublime",
+		"Gutter Color",
+		"Jedi - Python autocompletion",
+		"Material Theme",
+		"NimLime",
+		"Package Control",
+		"SublimeREPL",
+		"Theme - Brogrammer",
+		"WakaTime"
+	],
+	"repositories":
+	[
+	]
+}

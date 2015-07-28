@@ -1,0 +1,10 @@
+{
+    "selector": "source.nim",
+    "variants": [
+    	{
+    		"name": "Run",
+    		"cmd": ["termite", "-e", "zsh -c \"python $file; exec zsh\""],
+    	},
+    ],
+    
+}
