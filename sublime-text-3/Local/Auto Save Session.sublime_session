@@ -1960,10 +1960,18 @@
 					}
 				},
 				{
-					"file": "/home/hacked/dotfiles/dot.sh",
+					"file": "/home/hacked/Documents/Conky/README.md",
 					"settings":
 					{
-						"buffer_size": 317,
+						"buffer_size": 74,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/hacked/dotfiles/README.md",
+					"settings":
+					{
+						"buffer_size": 33,
 						"line_ending": "Unix"
 					}
 				}
@@ -2445,6 +2453,7 @@
 			],
 			"file_history":
 			[
+				"/home/hacked/dotfiles/dot.sh",
 				"/home/hacked/dotfiles/.tmux.conf",
 				"/home/hacked/.dircolors",
 				"/home/hacked/dotfiles/htop/htoprc",
@@ -2571,8 +2580,7 @@
 				"/home/hacked/NimDevelop/Nim/bin/test.nim",
 				"/home/hacked/.conkyrc",
 				"/home/hacked/Nim/lib/pure/os.nim",
-				"/home/hacked/Nim/lib/system.nim",
-				"/home/hacked/Nim/bin/test.nim"
+				"/home/hacked/Nim/lib/system.nim"
 			],
 			"find":
 			{
@@ -2791,7 +2799,7 @@
 			"groups":
 			[
 				{
-					"selected": 1,
+					"selected": 2,
 					"sheets":
 					[
 						{
@@ -2825,32 +2833,62 @@
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 1,
+							"stack_index": 2,
 							"type": "text"
 						},
 						{
 							"buffer": 1,
-							"file": "/home/hacked/dotfiles/dot.sh",
+							"file": "/home/hacked/Documents/Conky/README.md",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 317,
+								"buffer_size": 74,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										304,
-										304
+										74,
+										74
 									]
 								],
 								"settings":
 								{
-									"bs_sintax": "shell-unix-generic",
-									"buffer_scroll_name": "cbe4d450",
+									"bs_sintax": "markdown",
+									"buffer_scroll_name": "6582478f",
 									"spell_check": false,
-									"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+									"syntax": "Packages/Markdown/Markdown.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/home/hacked/dotfiles/README.md",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 33,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										11,
+										11
+									]
+								],
+								"settings":
+								{
+									"bs_sintax": "markdown",
+									"buffer_scroll_name": "9870e625",
+									"syntax": "Packages/Markdown/Markdown.tmLanguage"
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
