@@ -1436,6 +1436,10 @@
 				"selected_items":
 				[
 					[
+						"br",
+						"branchName	function"
+					],
+					[
 						"pr",
 						"prompt	statement"
 					],
@@ -1942,15 +1946,19 @@
 					[
 						"pl",
 						"play	*sdl.Texture ν"
-					],
-					[
-						"VK",
-						"VK_ESC	 Ɩ"
 					]
 				]
 			},
 			"buffers":
 			[
+				{
+					"file": "/home/hacked/dotfiles/gitprompt.py",
+					"settings":
+					{
+						"buffer_size": 515,
+						"line_ending": "Unix"
+					}
+				}
 			],
 			"build_system": "Packages/User/python3.sublime-build",
 			"build_system_choices":
@@ -2426,11 +2434,11 @@
 			},
 			"expanded_folders":
 			[
-				"/home/hacked/Documents",
-				"/home/hacked/Documents/Nim/VM"
+				"/home/hacked/Documents"
 			],
 			"file_history":
 			[
+				"/home/hacked/dotfiles/test.txt",
 				"/home/hacked/dotfiles/gitprompt.py",
 				"/home/hacked/.zshrc",
 				"/home/hacked/dotfiles/main.nim",
@@ -2557,8 +2565,7 @@
 				"/home/hacked/Downloads/Hacker Evolution/he-savegames/hack3d.profile",
 				"/home/hacked/Downloads/Hacker Evolution/start.sh",
 				"/run/media/hacked/Test/plot.log",
-				"/home/hacked/Documents/build_win.sh",
-				"/home/hacked/.config/sublime-text-3/Packages/Material Theme/Material-Theme-Darker.sublime-theme"
+				"/home/hacked/Documents/build_win.sh"
 			],
 			"find":
 			{
@@ -2780,8 +2787,40 @@
 			"groups":
 			[
 				{
+					"selected": 0,
 					"sheets":
 					[
+						{
+							"buffer": 0,
+							"file": "/home/hacked/dotfiles/gitprompt.py",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 515,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										214,
+										214
+									]
+								],
+								"settings":
+								{
+									"bs_sintax": "python",
+									"buffer_scroll_name": "903ecebc",
+									"spell_check": false,
+									"syntax": "Packages/Python/Python.tmLanguage"
+								},
+								"translation.x": -0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						}
 					]
 				}
 			],

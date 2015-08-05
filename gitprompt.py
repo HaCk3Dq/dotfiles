@@ -12,7 +12,7 @@ def RepoExists():
   return os.path.exists(".git")
 
 def branchName():
-  return run("git branch")[1:-1]
+  return " " + run("git status")[10:run("git status").find("\n")]
 
 def newFiles():
   if "not staged" in run("git status") or "Untracked" in run("git status"): return red + " +"
