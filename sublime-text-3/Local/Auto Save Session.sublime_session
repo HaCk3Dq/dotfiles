@@ -1951,6 +1951,14 @@
 			},
 			"buffers":
 			[
+				{
+					"file": "/home/hacked/dotfiles/gitprompt.py",
+					"settings":
+					{
+						"buffer_size": 524,
+						"line_ending": "Unix"
+					}
+				}
 			],
 			"build_system": "Packages/User/python3.sublime-build",
 			"build_system_choices":
@@ -2779,8 +2787,42 @@
 			"groups":
 			[
 				{
+					"selected": 0,
 					"sheets":
 					[
+						{
+							"buffer": 0,
+							"file": "/home/hacked/dotfiles/gitprompt.py",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 524,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										70,
+										70
+									]
+								],
+								"settings":
+								{
+									"bs_sintax": "python",
+									"buffer_scroll_name": "903ecebc",
+									"spell_check": false,
+									"syntax": "Packages/Python/Python.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						}
 					]
 				}
 			],

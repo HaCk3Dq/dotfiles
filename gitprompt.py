@@ -8,19 +8,20 @@ branchIcon = "⎇"
 def run(cmd):
   return os.popen(cmd).read()
 
-def RepoExists():
+def repoExists():
   return os.path.exists(".git")
 
-def branchName():
-  return " " + run("git status")[10:run("git status").find("\n")]
+def branchName(status):
+  return " " + status[10:status.find("\n")]
 
-def newFiles():
-  if "not staged" in run("git status") or "Untracked" in run("git status"): return red + " +"
+def newFiles(status):
+  if "not staged" in status or "Untracked" in status: return red + " +"
   else: return ""
 
 
-if RepoExists():
-  prompt = " " + green + branchIcon + branchName() + newFiles()
+if repoExists():
+  status = run("git status")
+  prompt = " " + green + branchIcon + branchName(status) + newFiles(status)
 else:
   prompt = ""
 
