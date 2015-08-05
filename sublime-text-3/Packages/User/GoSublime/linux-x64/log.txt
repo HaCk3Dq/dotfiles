@@ -652,3 +652,205 @@ created by main.(*Broker).Loop
 ** 2015-04-11 15:34:57.979678 **:
 GsComplete: broker: gocode_complete#mg9.autoken.2f1f60ec-2575-45a8-a3ed-a6381e1cff22 PANIC
 --------------------------------
+
+** 2015-08-02 01:15:52.437551 **:
+GsComplete: Blocking Call(gocode_complete): Timeout
+--------------------------------
+margo: 2015/08/02 13:48:10 broker.go:105: gocode_complete#mg9.autoken.983d5a93-39cd-4802-b62f-72d93f1c0e3d PANIC: runtime error: slice bounds out of range
+goroutine 38 [running]:
+main.func·001()
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:104 +0xc7
+gosubli.me/something-borrowed/gocode.path_and_alias(0xc2082a0330, 0x7ff95d853c88, 0xc2082a0330, 0xc2082a0330, 0xc208211b00)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/something-borrowed/gocode/declcache.go:191 +0xa2
+gosubli.me/something-borrowed/gocode.collect_package_imports(0xc208399830, 0x2e, 0xc2082f8b50, 0x1, 0x1, 0xc208029840, 0x0, 0x0, 0x0)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/something-borrowed/gocode/declcache.go:55 +0x1ec
+gosubli.me/something-borrowed/gocode.(*auto_complete_file).process_data(0xc208066c40, 0xc2083f0500, 0x4f8, 0x500)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/something-borrowed/gocode/autocompletefile.go:60 +0x24a
+gosubli.me/something-borrowed/gocode.(*auto_complete_context).apropos(0xc208029e00, 0xc2083f0500, 0x4f8, 0x500, 0xc208399830, 0x2e, 0x63, 0x0, 0x0, 0x0, ...)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/something-borrowed/gocode/autocompletecontext.go:241 +0xc9
+gosubli.me/something-borrowed/gocode.(*margoState).Complete(0xc2080972c0, 0x0, 0xb9e1c0, 0x0, 0xc2082f8160, 0xb, 0xc2082f81b0, 0x1, 0x1, 0xc2083f0500, ...)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/something-borrowed/gocode/gosublime_gocode_bridge.go:52 +0x11f
+main.(*mGocode).completions(0xc208221e00, 0xc2083f0500, 0x4f8, 0x500, 0xc208399830, 0x2e, 0x63, 0x0, 0x0, 0x0)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/m_gocode.go:95 +0x138
+main.(*mGocode).Call(0xc208221e00, 0x0, 0x0, 0x0, 0x0)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/m_gocode.go:76 +0x699
+main.(*Broker).call(0xc20800a770, 0xc208952040, 0x7ff95d853bd8, 0xc208221e00)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:113 +0xb8
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:188 +0xd2
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 1 [syscall]:
+syscall.Syscall(0x0, 0x0, 0xc20800f000, 0x1000, 0xc2082f8008, 0x7ff95d85a898, 0xc2089806e7)
+	/usr/lib/go/src/syscall/asm_linux_amd64.s:21 +0x5
+syscall.read(0x0, 0xc20800f000, 0x1000, 0x1000, 0x9, 0x0, 0x0)
+	/usr/lib/go/src/syscall/zsyscall_linux_amd64.go:867 +0x6e
+syscall.Read(0x0, 0xc20800f000, 0x1000, 0x1000, 0xc2081f20d8, 0x0, 0x0)
+	/usr/lib/go/src/syscall/syscall_unix.go:136 +0x58
+os.(*File).read(0xc208034000, 0xc20800f000, 0x1000, 0x1000, 0x7b, 0x0, 0x0)
+	/usr/lib/go/src/os/file_unix.go:191 +0x5e
+os.(*File).Read(0xc208034000, 0xc20800f000, 0x1000, 0x1000, 0x2, 0x0, 0x0)
+	/usr/lib/go/src/os/file.go:95 +0x91
+bufio.(*Reader).fill(0xc20803e300)
+	/usr/lib/go/src/bufio/bufio.go:97 +0x1ce
+bufio.(*Reader).ReadSlice(0xc20803e300, 0x42cd0a, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/usr/lib/go/src/bufio/bufio.go:295 +0x257
+bufio.(*Reader).ReadBytes(0xc20803e300, 0xc20803e20a, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/usr/lib/go/src/bufio/bufio.go:374 +0xd2
+main.(*Broker).accept(0xc20800a770, 0xc20803e240, 0xc20803e200)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:128 +0x47
+main.(*Broker).Loop(0xc20800a770, 0xc208030001)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:213 +0x2df
+main.main()
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/main.go:140 +0xbb3
+
+goroutine 6 [chan receive, 14 minutes]:
+gosubli.me/something-borrowed/gocode.func·021()
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/something-borrowed/gocode/utils.go:112 +0x7d
+created by gosubli.me/something-borrowed/gocode.new_file_reader
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/something-borrowed/gocode/utils.go:116 +0xe7
+
+goroutine 7 [chan receive]:
+main.func·003()
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/g_autoinst.go:114 +0x70
+created by main.init·2
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/g_autoinst.go:117 +0x25
+
+goroutine 8 [sleep, locked to thread]:
+main.func·037()
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/oom.go:31 +0x371
+created by main.startOomKiller
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/oom.go:33 +0x8c
+
+goroutine 9 [sleep]:
+main.func·033()
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/main.go:122 +0x51
+created by main.main
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/main.go:131 +0xaf9
+
+goroutine 10 [chan receive, 26 minutes]:
+main.func·034()
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/main.go:135 +0x6d
+created by main.main
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/main.go:138 +0xb68
+
+goroutine 34 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 35 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 36 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 37 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 39 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 40 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 41 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 42 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 43 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 44 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 45 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 46 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 47 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 48 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 49 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 50 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 51 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 52 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+goroutine 53 [chan receive]:
+main.(*Broker).worker(0xc20800a770, 0xc20801cc80, 0xc20803e240)
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:187 +0x87
+created by main.(*Broker).Loop
+	/home/hacked/.config/sublime-text-3/Packages/GoSublime/src/gosubli.me/margo/broker.go:209 +0x2af
+
+
+
+** 2015-08-02 13:48:10.539899 **:
+GsComplete: broker: gocode_complete#mg9.autoken.983d5a93-39cd-4802-b62f-72d93f1c0e3d PANIC
+--------------------------------

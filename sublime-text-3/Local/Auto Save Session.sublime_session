@@ -1436,6 +1436,66 @@
 				"selected_items":
 				[
 					[
+						"pr",
+						"prompt	statement"
+					],
+					[
+						"ne",
+						"newFiles	function"
+					],
+					[
+						"Bra",
+						"branchName	function"
+					],
+					[
+						"bc",
+						"branchName	function"
+					],
+					[
+						"txt",
+						"txtred"
+					],
+					[
+						"mus",
+						"music	openal.Source ν"
+					],
+					[
+						"m",
+						"music	bool ν"
+					],
+					[
+						"pla",
+						"play_music	 ƒ"
+					],
+					[
+						"St",
+						"Stopped	 Ɩ"
+					],
+					[
+						"tr",
+						"tracklist	[]string ν"
+					],
+					[
+						"Prin",
+						"Println	n int, err error ƒ"
+					],
+					[
+						"in",
+						"input	string ƒ"
+					],
+					[
+						"init",
+						"init_sound	 ƒ"
+					],
+					[
+						"source",
+						"Source	uint32 ʈ"
+					],
+					[
+						"fu",
+						"func	Function"
+					],
+					[
 						"ma",
 						"main_lua.lua"
 					],
@@ -1490,10 +1550,6 @@
 					[
 						"sta",
 						"stack"
-					],
-					[
-						"in",
-						"incPC"
 					],
 					[
 						"c",
@@ -1728,10 +1784,6 @@
 						"readlines	function"
 					],
 					[
-						"txt",
-						"test.txt"
-					],
-					[
 						"li",
 						"line	statement"
 					],
@@ -1762,10 +1814,6 @@
 					[
 						"num",
 						"num_s	statement"
-					],
-					[
-						"tr",
-						"TrimSpace	string ƒ"
 					],
 					[
 						"vm",
@@ -1832,10 +1880,6 @@
 						"width2	[2]int ν"
 					],
 					[
-						"m",
-						"money	int ν"
-					],
-					[
 						"you",
 						"your_money	*sdl.Texture ν"
 					],
@@ -1900,78 +1944,26 @@
 						"play	*sdl.Texture ν"
 					],
 					[
-						"pla",
-						"play_y	*sdl.Texture ν"
-					],
-					[
 						"VK",
 						"VK_ESC	 Ɩ"
-					],
-					[
-						"sh",
-						"shielded	bool ν"
-					],
-					[
-						"cou",
-						"count	int32 ν"
-					],
-					[
-						"f",
-						"field	Field ν"
-					],
-					[
-						"mo",
-						"move	bool ν"
-					],
-					[
-						"LIF",
-						"LIFE_LOST	 Ɩ"
-					],
-					[
-						"life",
-						"life_lose	*sdl.Texture ν"
-					],
-					[
-						"LI",
-						"LIFE_UP	 Ɩ"
-					],
-					[
-						"slo",
-						"slomo_flag	bool ν"
-					],
-					[
-						"t",
-						"show_text	bool ν"
-					],
-					[
-						"sl",
-						"slomo_flag	bool ν"
 					]
 				]
 			},
 			"buffers":
 			[
 				{
-					"file": "/home/hacked/Documents/Nim/VM/main.nim",
+					"file": "/home/hacked/dotfiles/gitprompt.py",
 					"settings":
 					{
-						"buffer_size": 3026,
+						"buffer_size": 482,
 						"line_ending": "Unix"
 					}
 				},
 				{
-					"file": "/home/hacked/Documents/Conky/README.md",
+					"file": "/home/hacked/dotfiles/test.txt",
 					"settings":
 					{
-						"buffer_size": 74,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/home/hacked/dotfiles/README.md",
-					"settings":
-					{
-						"buffer_size": 33,
+						"buffer_size": 259827,
 						"line_ending": "Unix"
 					}
 				}
@@ -2124,20 +2116,24 @@
 						"View: Toggle Menu"
 					],
 					[
-						"user",
-						"Preferences: Settings - User"
+						"meun",
+						"View: Toggle Menu"
+					],
+					[
+						"men",
+						"View: Toggle Menu"
 					],
 					[
 						"wa",
 						"WakaTime: Open Dashboard"
 					],
 					[
-						"pre",
+						"user",
 						"Preferences: Settings - User"
 					],
 					[
-						"meun",
-						"View: Toggle Menu"
+						"pre",
+						"Preferences: Settings - User"
 					],
 					[
 						"meu",
@@ -2210,10 +2206,6 @@
 					[
 						"bro",
 						"Preferences: Browse Packages"
-					],
-					[
-						"men",
-						"View: Toggle Menu"
 					],
 					[
 						"remo",
@@ -2415,6 +2407,7 @@
 				"height": 204.0,
 				"history":
 				[
+					"view.encoding()",
 					"os.system(\"pwd\")",
 					"os.system(\"ls\")",
 					"import os",
@@ -2453,6 +2446,38 @@
 			],
 			"file_history":
 			[
+				"/home/hacked/dotfiles/gitprompt.py",
+				"/home/hacked/.zshrc",
+				"/home/hacked/dotfiles/main.nim",
+				"/home/hacked/Documents/GoProjects/?/main.go",
+				"/home/hacked/Documents/GoProjects/array.go",
+				"/home/hacked/Documents/GoProjects/?/example.go",
+				"/home/hacked/Documents/NimDevelop/Nim/lib/wrappers/iup.nim",
+				"/home/hacked/Documents/BaskinoNotify/main.py",
+				"/home/hacked/Documents/BaskinoNotify/films.txt",
+				"/home/hacked/Documents/My Games/Path of Exile/new3.filter",
+				"/home/hacked/Documents/My Games/Path of Exile/oftrta.filter",
+				"/home/hacked/Documents/My Games/Path of Exile/new2.filter",
+				"/home/hacked/Documents/My Games/Path of Exile/new.filter",
+				"/home/hacked/Documents/My Games/Path of Exile/production_Config.ini",
+				"/home/hacked/.local/share/applications/Path of Exile.desktop",
+				"/home/hacked/.local/share/applications/wine/Programs/Grinding Gear Games/runPOE.sh",
+				"/home/hacked/.local/share/applications/wine/Programs/Grinding Gear Games/Path of Exile.desktop",
+				"/home/hacked/.PlayOnLinux/wineprefix/pathofexile/drive_c/users/hacked/My Documents/My Games/Path of Exile/production_Config.ini",
+				"/home/hacked/Desktop/Path of Exile.desktop",
+				"/home/hacked/main.nim",
+				"/home/hacked/go/src/github.com/timshannon/go-openal/example.go",
+				"/home/hacked/.PlayOnLinux/install",
+				"/home/hacked/.PlayOnLinux/wineprefix/pathofexile/drive_c/Program Files/Grinding Gear Games/Path of Exile/logs/Client.txt",
+				"/home/hacked/Documents/Nim/VM/main.nim",
+				"/home/hacked/go/src/github.com/phf/go-openal/example.go",
+				"/home/hacked/go/src/github.com/phf/go-openal/Makefile",
+				"/home/hacked/go/src/github.com/phf/go-openal/al/Makefile",
+				"/home/hacked/Downloads/Feist/\\home\\hacked\\.config\\unity3d\\play\\Feist/Unity/4da121ac-6f20-447c-adac-c2d4b9198ea3/Cloud/Analytics/1438244635078/s1438244635078",
+				"/home/hacked/Downloads/Feist/\\home\\hacked\\.config\\unity3d\\play\\Feist/Unity/4da121ac-6f20-447c-adac-c2d4b9198ea3/Cloud/Analytics/1438244635078/e1438244635078",
+				"/home/hacked/Downloads/Feist/\\home\\hacked\\.config\\unity3d\\play\\Feist/Unity/4da121ac-6f20-447c-adac-c2d4b9198ea3/Cloud/Analytics/values",
+				"/home/hacked/Documents/Conky/README.md",
+				"/home/hacked/dotfiles/README.md",
 				"/home/hacked/dotfiles/dot.sh",
 				"/home/hacked/dotfiles/.tmux.conf",
 				"/home/hacked/.dircolors",
@@ -2470,14 +2495,12 @@
 				"/home/hacked/Documents/Nim/VM/main_go.go",
 				"/home/hacked/Documents/Nim/VM/bench_C.c",
 				"/home/hacked/Documents/Nim/VM/bench.nim",
-				"/home/hacked/.zshrc",
 				"/home/hacked/Documents/Nim/VM/main.py",
 				"/home/hacked/Documents/Nim/VM/benchmark",
 				"/home/hacked/Documents/Nim/VM/test",
 				"/home/hacked/.config/sublime-text-3/Packages/User/python3.sublime-build",
 				"/home/hacked/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 				"/home/hacked/.config/sublime-text-3/Packages/User/nimrod.sublime-build",
-				"/home/hacked/main.nim",
 				"/home/hacked/sys.nim",
 				"/home/hacked/time.py",
 				"/home/hacked/Documents/NimDevelop/Nim/lib/pure/collections/sequtils.nim",
@@ -2485,7 +2508,6 @@
 				"/home/hacked/Documents/NimDevelop/new.sh",
 				"/home/hacked/Documents/NimDevelop/clean.sh",
 				"/home/hacked/Documents/NimDevelop/Nim/lib/pure/times.nim",
-				"/home/hacked/Documents/BaskinoNotify/main.py",
 				"/home/hacked/doc/created.rid",
 				"/home/hacked/learnNim.nim",
 				"/home/hacked/Documents/NimDevelop/Nim/lib/system.nim",
@@ -2494,7 +2516,6 @@
 				"/home/hacked/Downloads/guide.txt",
 				"/home/hacked/.wine/drive_c/Program Files (x86)/CSPL AntiCheat/CSPL AntiCheat.url",
 				"/home/hacked/Documents/GoProjects/RemoteGo/remote.go",
-				"/home/hacked/Documents/BaskinoNotify/films.txt",
 				"/home/hacked/Documents/NimDevelop/Nim/doc/tut1.md",
 				"/home/hacked/Documents/NimDevelop/Nim/doc/manual/about.txt",
 				"/home/hacked/Documents/NimDevelop/Nim/doc/readme.txt",
@@ -2520,7 +2541,6 @@
 				"/usr/lib/nim/prelude.nim",
 				"/root-image-pkgs.txt",
 				"/gnome-image-pkgs.txt",
-				"/home/hacked/Documents/GoProjects/?/main.go",
 				"/var/log/journal/e945672d862f45acb827e859f2c9c028/system.journal",
 				"/run/media/hacked/GRMCULF(X)REO_EN-RU_DVD/readme.txt",
 				"/run/media/hacked/GRMCULF(X)REO_EN-RU_DVD/m0nkrus.nfo",
@@ -2539,7 +2559,6 @@
 				"/home/hacked/Downloads/Pillars of Eternity GOG 1.06 for Linux/Pillars of Eternity/start.sh",
 				"/home/hacked/Downloads/Pillars of Eternity GOG 1.06 for Linux/Pillars of Eternity/support/gog-system-report.sh",
 				"/home/hacked/Downloads/Pillars of Eternity GOG 1.06 for Linux/Pillars of Eternity/game/PillarsOfEternity_Data/Mono/etc/mono/config",
-				"/home/hacked/Documents/GoProjects/array.go",
 				"/etc/xdg/termite.cfg",
 				"/home/hacked/.local/share/Steam/SteamApps/common/Counter-Strike Global Offensive/csgo/cfg/start.cfg",
 				"/home/hacked/.local/share/Steam/SteamApps/common/Counter-Strike Global Offensive/csgo/cfg/default.cfg",
@@ -2554,37 +2573,11 @@
 				"/home/hacked/Downloads/Hacker Evolution/start.sh",
 				"/run/media/hacked/Test/plot.log",
 				"/home/hacked/Documents/build_win.sh",
-				"/home/hacked/.config/sublime-text-3/Packages/Material Theme/Material-Theme-Darker.sublime-theme",
-				"/home/hacked/.config/sublime-text-3/Packages/Code-Lover/Code-Lover.tmTheme",
-				"/home/hacked/.config/sublime-text-3/Packages/Code-Lover/Code-Lover.sublime-theme",
-				"/home/hacked/.config/sublime-text-3/Packages/User/GoSublime.sublime-settings",
-				"/home/hacked/Documents/C++/Testing/streams.cc",
-				"/home/hacked/Documents/NimDevelop/Nim/lib/pure/rationals.nim",
-				"/home/hacked/streams.cc",
-				"/home/hacked/streams.h",
-				"/home/hacked/Documents/C++/Kursach/main.cpp",
-				"/home/hacked/Documents/C++/Kursach/file.cpp",
-				"/home/hacked/main.c",
-				"/home/hacked/.wine/dosdevices/z:/home/hacked/.config/sublime-text-3/Packages/Code-Lover/Code-Lover.tmTheme",
-				"/home/hacked/.config/sublime-text-3/Packages/Material Theme/messages/1.0.6.txt",
-				"/home/hacked/.config/sublime-text-3/Packages/Material Theme/messages/install.txt",
-				"/home/hacked/.config/sublime-text-3/Packages/User/nimrod2.sublime-build",
-				"/home/hacked/.cache/.fr-nfMvI9/nimrod.sublime-build",
-				"/home/hacked/.config/sublime-text-3/Packages/WakaTime/packages/wakatime/packages/pygments_py2/pygments/lexers/nimrod.py",
-				"/home/hacked/.config/sublime-text-3/Packages/WakaTime/packages/wakatime/packages/pygments_py3/pygments/lexers/nimrod.py",
-				"/home/hacked/Documents/Conky/.music.py",
-				"/home/hacked/Documents/Conky/.conkyrc",
-				"/home/hacked/NimDevelop/Nim/lib/pure/os.nim",
-				"/home/hacked/.PlayOnLinux/wineprefix/TERA/drive_c/Program Files/TERA/S1Engine.ini",
-				"/home/hacked/NimDevelop/Nim/lib/system.nim",
-				"/home/hacked/NimDevelop/Nim/bin/test.nim",
-				"/home/hacked/.conkyrc",
-				"/home/hacked/Nim/lib/pure/os.nim",
-				"/home/hacked/Nim/lib/system.nim"
+				"/home/hacked/.config/sublime-text-3/Packages/Material Theme/Material-Theme-Darker.sublime-theme"
 			],
 			"find":
 			{
-				"height": 94.0
+				"height": 80.0
 			},
 			"find_in_files":
 			{
@@ -2596,9 +2589,19 @@
 			},
 			"find_state":
 			{
-				"case_sensitive": true,
+				"case_sensitive": false,
 				"find_history":
 				[
+					"nothing",
+					"options",
+					")\n",
+					"source",
+					"/",
+					"random",
+					"init",
+					"ö",
+					"delete",
+					"Error",
 					" \n  vm = VM(state: Running, stack: @[], mem: @[])\n  showedInfo = false",
 					"result\n",
 					"result",
@@ -2716,17 +2719,7 @@
 					"\"\n",
 					"package",
 					"())",
-					"in",
-					"step",
-					"way",
-					",",
-					"s = input()\ns = '1' + s\ns = s.replace('4', '0')\ns = s.replace('7', '1')\nprint(int(s,2)-1)",
-					"main",
-					"\n	",
-					"}",
-					"strings",
-					"\n	",
-					"strings"
+					"in"
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -2734,6 +2727,9 @@
 				"regex": false,
 				"replace_history":
 				[
+					"music",
+					"randomInt",
+					"o",
 					"vm",
 					" &",
 					"",
@@ -2788,7 +2784,7 @@
 				"show_context": true,
 				"use_buffer2": true,
 				"whole_word": false,
-				"wrap": true
+				"wrap": false
 			},
 			"folders":
 			[
@@ -2799,102 +2795,69 @@
 			"groups":
 			[
 				{
-					"selected": 2,
+					"selected": 0,
 					"sheets":
 					[
 						{
 							"buffer": 0,
-							"file": "/home/hacked/Documents/Nim/VM/main.nim",
+							"file": "/home/hacked/dotfiles/gitprompt.py",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 3026,
+								"buffer_size": 482,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										1915,
-										1915
+										327,
+										327
 									]
 								],
 								"settings":
 								{
-									"bs_sintax": "nim",
-									"buffer_scroll_name": "1969416a",
-									"easy_motion_mode": false,
+									"bs_sintax": "python",
+									"buffer_scroll_name": "903ecebc",
 									"spell_check": false,
-									"syntax": "Packages/NimLime/Syntaxes/Nim.tmLanguage",
-									"tab_size": 2,
-									"translate_tabs_to_spaces": true
+									"syntax": "Packages/Python/Python.tmLanguage"
 								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
+								"translation.x": -0.0,
+								"translation.y": 54.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 2,
+							"stack_index": 0,
 							"type": "text"
 						},
 						{
 							"buffer": 1,
-							"file": "/home/hacked/Documents/Conky/README.md",
+							"file": "/home/hacked/dotfiles/test.txt",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 74,
+								"buffer_size": 259827,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										74,
-										74
+										0,
+										0
 									]
 								],
 								"settings":
 								{
-									"bs_sintax": "markdown",
-									"buffer_scroll_name": "6582478f",
-									"spell_check": false,
-									"syntax": "Packages/Markdown/Markdown.tmLanguage"
+									"bs_sintax": "plain text",
+									"buffer_scroll_name": "40df1783",
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 1,
-							"type": "text"
-						},
-						{
-							"buffer": 2,
-							"file": "/home/hacked/dotfiles/README.md",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 33,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										11,
-										11
-									]
-								],
-								"settings":
-								{
-									"bs_sintax": "markdown",
-									"buffer_scroll_name": "9870e625",
-									"syntax": "Packages/Markdown/Markdown.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 0,
 							"type": "text"
 						}
 					]
@@ -2982,6 +2945,18 @@
 				"selected_items":
 				[
 					[
+						"?ma",
+						"GoProjects/?/main.go"
+					],
+					[
+						"main.go",
+						"GoProjects/?/main.go"
+					],
+					[
+						"",
+						"GoProjects/?/example.go"
+					],
+					[
 						"times.nim",
 						"NimDevelop/Nim/lib/pure/times.nim"
 					],
@@ -3006,10 +2981,6 @@
 						"GoProjects/RemoteGo/README.md"
 					],
 					[
-						"main.go",
-						"GoProjects/?/main.go"
-					],
-					[
 						"main.cpp",
 						"C++/Kursach/main.cpp"
 					]
@@ -3028,9 +2999,17 @@
 			"select_symbol":
 			{
 				"height": 371.0,
-				"last_filter": "",
+				"last_filter": "init",
 				"selected_items":
 				[
+					[
+						"init",
+						"init"
+					],
+					[
+						"input",
+						"input"
+					],
 					[
 						"",
 						"ASPECTY"

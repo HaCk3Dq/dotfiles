@@ -3,6 +3,30 @@ History
 -------
 
 
+4.0.12 (2015-07-31)
+++++++++++++++++++
+
+- correctly use urllib in Python3
+
+
+4.0.11 (2015-07-31)
+++++++++++++++++++
+
+- install python if missing on Windows OS
+
+
+4.0.10 (2015-07-31)
+++++++++++++++++++
+
+- downgrade requests library to v2.6.0
+
+
+4.0.9 (2015-07-29)
+++++++++++++++++++
+
+- catch exceptions from pygments.modeline.get_filetype_from_buffer
+
+
 4.0.8 (2015-06-23)
 ++++++++++++++++++
 

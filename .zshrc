@@ -2,7 +2,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 
-setopt autocd extendedglob nomatch notify correctall
+setopt autocd extendedglob nomatch notify correctall promptsubst
 unsetopt appendhistory beep
 autoload -U colors compinit
 colors 
@@ -12,7 +12,7 @@ compinit
 
 eval $(dircolors ~/.dircolors)
 autoload -U pick-web-browser
-alias -s {go,txt,py,cfg,c,cpp,rb,asm,nim}=subl3
+alias -s {go,txt,cfg,c,cpp,rb,asm,nim}=subl3
 alias -s {avi,mpeg,mpg,mov,m2v}=mplayer
 alias -s {html,htm}=chromium
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
@@ -78,4 +78,5 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
 fi
 
 export GOPATH=/home/hacked/go
-export PROMPT="%{$fg_bold[blue]%}% %~ %{$fg[white]%}% $ %{$reset_color%}%u"
+local gitprompt='$(~/dotfiles/gitprompt.py)'
+export PROMPT="%{$fg_bold[blue]%}% %~${gitprompt} %{$fg[white]%}% $ %{$reset_color%}%u"
