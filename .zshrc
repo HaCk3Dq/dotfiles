@@ -28,12 +28,12 @@ alias nimc='nim c --verbosity:0'
 alias nimcr='nim c -r --verbosity:0 -d:release --opt:speed'
 alias nimi='nim i'
 alias q='exit'
+alias extensions='nautilus -w ~/.local/share/gnome-shell/extensions/; q'
 
 bindkey '\e[3~' delete-char  # del
 bindkey ';5D' backward-word  # ctrl+left
 bindkey ';5C' forward-word   # ctrl+right
 
-# ex - archive extractor
 # usage: ex <file>
 ex ()
 {
