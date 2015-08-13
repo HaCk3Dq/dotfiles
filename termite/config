@@ -1,5 +1,5 @@
 [options]
-font = Monospace Regular 11
+font = Droid Sans Mono 11
 scroll_on_output = false
 scroll_on_keystroke = true
 audible_bell = false
