@@ -68,7 +68,7 @@ ${offset 105}${font Ubuntu:size=10,weight:normal}${color1}${top_mem name 1}${ali
 ${offset 105}${font Ubuntu:size=10,weight:normal}${color1}${top_mem name 2}${alignr}${top_mem mem_res 2}
 ${offset 105}${font Ubuntu:size=10,weight:normal}${color1}${top_mem name 3}${alignr}${top_mem mem_res 3}
 ${offset 105}${font Ubuntu:size=10,weight:normal}${color1}${top_mem name 4}${alignr}${top_mem mem_res 4}
-${offset 105}${font Ubuntu:size=10,weight:normal}${color1}${top_mem name 4}${alignr}${top_mem mem_res 5}
+${offset 105}${font Ubuntu:size=10,weight:normal}${color1}${top_mem name 5}${alignr}${top_mem mem_res 5}
 
 ${offset 80}${font Ubuntu:size=10,weight:bold}${color2}Network
 ${offset 105}${font Ubuntu:size=10,weight:normal}${color1}Download:      ${downspeed wlp3s0}
