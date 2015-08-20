@@ -45,7 +45,7 @@ ${font Ubuntu:size=10,weight:bold}${color2}SYSTEM ${hr 2}
 ${offset 15}${font Ubuntu:size=10,weight:normal}${color1}$nodename
 ${offset 15}${font Ubuntu:size=10,weight:normal}${color1}$sysname ${execi 2 uname -r | cut -c -7}
 ${offset 15}${font Ubuntu:size=10,weight:normal}${color1}Uptime: $uptime
-${offset 15}${font Ubuntu:size=10,weight:normal}${color1}CPU temp:  ${execi 2 sensors | grep "Core 0" | cut -c 17-19} °С
+${offset 15}${font Ubuntu:size=10,weight:normal}${color1}CPU temp:  ${execi 2 sensors | grep "Physical id 0" | cut -c 17-19} °С
 
 # Music
 ${offset 80}${font Ubuntu:size=10,weight:bold}${color2}Music
