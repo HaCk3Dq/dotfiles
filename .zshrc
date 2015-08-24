@@ -29,6 +29,10 @@ alias nimcr='nim c -r --verbosity:0 -d:release --opt:speed'
 alias nimi='nim i'
 alias q='exit'
 alias extensions='nautilus -w ~/.local/share/gnome-shell/extensions/; q'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+alias gp='git push origin'
 
 bindkey '\e[3~' delete-char  # del
 bindkey ';5D' backward-word  # ctrl+left

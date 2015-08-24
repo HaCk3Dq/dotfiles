@@ -1,4 +1,5 @@
 [
+	// folding & vintage
 	{ "keys": ["ctrl+shift+q"], "command": "fold_all" },
 	
 	{ "keys": ["j", "j"], "command": "exit_insert_mode",
@@ -7,5 +8,11 @@
 			{ "key": "setting.command_mode", "operand": false },
 			{ "key": "setting.is_widget", "operand": false }
 		]
-	}
+	},
+
+	// IncDevValue shortcuts
+	{ "keys": ["alt+up"],         "command": "inc_dec_value", "args": { "action": "inc_min" } },
+    { "keys": ["alt+down"],       "command": "inc_dec_value", "args": { "action": "dec_min" } },
+    { "keys": ["ctrl+alt+up"],   "command": "inc_dec_value", "args": { "action": "inc_all" } },
+    { "keys": ["ctrl+alt+down"], "command": "inc_dec_value", "args": { "action": "dec_all" } }
 ]
