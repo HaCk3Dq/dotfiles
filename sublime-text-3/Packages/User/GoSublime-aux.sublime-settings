@@ -5,6 +5,10 @@
 		"go run main.go",
 		"ls"
 	],
+	"9o.hist./home/hacked/Documents/Go/?":
+	[
+		"rm main; go build main.go && ./main"
+	],
 	"9o.hist./home/hacked/Documents/GoProjects/?":
 	[
 		"pwd",

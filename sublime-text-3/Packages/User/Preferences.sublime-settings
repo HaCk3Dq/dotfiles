@@ -1,9 +1,8 @@
 {
-	"color_scheme": "Packages/Code-Lover/Code-Lover.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Code-Lover (SL).tmTheme",
 	"font_size": 11,
 	"ignored_packages":
 	[
-		"Vintage"
 	],
 	"theme": "Material-Theme.sublime-theme"
 }
