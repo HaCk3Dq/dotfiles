@@ -15,6 +15,7 @@ autoload -U pick-web-browser
 alias -s {go,txt,cfg,c,cpp,rb,asm,nim}=subl3
 alias -s {avi,mpeg,mpg,mov,m2v}=mplayer
 alias -s {html,htm}=chromium
+alias -s {png,jpg,gif,svg}=viewnior
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias ll='ls -lh --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias la='ls -lha --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
@@ -33,12 +34,15 @@ alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push origin'
+alias gocode='~/Documents/Go/'
+alias pythoncode='~/Documents/Python/'
+alias nimcode='~/Documents/Nim/'
 
 bindkey '\e[3~' delete-char  # del
 bindkey ';5D' backward-word  # ctrl+left
 bindkey ';5C' forward-word   # ctrl+right
 
-# usage: ex <file>
+# extract <file>
 ex ()
 {
   if [ -f $1 ] ; then
@@ -59,6 +63,17 @@ ex ()
   else
     echo "'$1' is not a valid file"
   fi
+}
+
+# convert <int> to <hex>
+hex() {
+   emulate -L zsh
+   if [[ -n "$1" ]]; then
+       printf "%x\n" $1
+   else
+       print 'Usage: hex <number-to-convert>'
+       return 1
+   fi
 }
 
 typeset -A key
