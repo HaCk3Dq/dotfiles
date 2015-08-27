@@ -21,6 +21,8 @@ try:
 except ImportError:
     HAS_SQL = False
 
+from .compat import u
+
 
 log = logging.getLogger('WakaTime')
 
@@ -50,14 +52,14 @@ class Queue(object):
         try:
             conn, c = self.connect()
             heartbeat = {
-                'file': data.get('entity'),
+                'file': u(data.get('entity')),
                 'time': data.get('time'),
-                'project': data.get('project'),
-                'branch': data.get('branch'),
+                'project': u(data.get('project')),
+                'branch': u(data.get('branch')),
                 'is_write': 1 if data.get('is_write') else 0,
-                'stats': stats,
-                'misc': misc,
-                'plugin': plugin,
+                'stats': u(stats),
+                'misc': u(misc),
+                'plugin': u(plugin),
             }
             c.execute('INSERT INTO heartbeat VALUES (:file,:time,:project,:branch,:is_write,:stats,:misc,:plugin)', heartbeat)
             conn.commit()

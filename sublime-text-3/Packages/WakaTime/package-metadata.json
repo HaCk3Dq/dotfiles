@@ -1,1 +1,1 @@
-{"platforms": ["*"], "description": "Sublime Text 2 & 3 plugin to quantify your coding with automatic time tracking and metrics about your programming.", "dependencies": [], "sublime_text": "*", "url": "https://wakatime.com", "version": "4.0.12"}
+{"dependencies": [], "platforms": ["*"], "url": "https://wakatime.com", "description": "Sublime Text 2 & 3 plugin to quantify your coding with automatic time tracking and metrics about your programming.", "version": "4.0.14", "sublime_text": "*"}
