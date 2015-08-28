@@ -10,6 +10,9 @@
 		]
 	},
 
+	// Sidebar
+	{ "keys": ["ctrl+\\"], "command": "toggle_side_bar" },
+
 	// IncDevValue shortcuts
 	{ "keys": ["alt+up"],         "command": "inc_dec_value", "args": { "action": "inc_min" } },
     { "keys": ["alt+down"],       "command": "inc_dec_value", "args": { "action": "dec_min" } },
