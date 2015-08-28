@@ -1,13 +1,17 @@
 import vk_api, time, os
 
 def load():
-  response = vk.method("status.get", {"user_id": 1234567})
+  try:
+    response = vk.method("status.get", {"user_id": 1234567})
+  except:
+    return "", 0
   if "audio" in response:
     title = response["audio"]["artist"] + " - " + response["audio"]["title"]
     return title, response
   else:
     title = ""
     os.system('echo "No music is playing" > .track; rm -f .cover.jpg')
+    return title, 0
 
 def main():
   temp   = ""
