@@ -1,4 +1,7 @@
-import vk_api, time, os
+import vk_api, time, os, atexit
+
+def clean():
+  os.system('echo "No music is playing" > .track; rm -f .cover.jpg')
 
 def load():
   try:
@@ -10,7 +13,7 @@ def load():
     return title, response
   else:
     title = ""
-    os.system('echo "No music is playing" > .track; rm -f .cover.jpg')
+    clean()
     return title, 0
 
 def main():
@@ -35,4 +38,5 @@ except vk_api.AuthorizationError as error_msg:
     print(error_msg)
     exit()
 
+atexit.register(clean)
 main()
