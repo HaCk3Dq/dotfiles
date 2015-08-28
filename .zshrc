@@ -12,7 +12,7 @@ compinit
 
 eval $(dircolors ~/.dircolors)
 autoload -U pick-web-browser
-alias -s {go,txt,cfg,c,cpp,rb,asm,nim}=subl3
+alias -s {go,txt,cfg,c,cpp,rb,asm,nim,sh}=subl3
 alias -s {avi,mpeg,mpg,mov,m2v}=mplayer
 alias -s {html,htm}=chromium
 alias -s {png,jpg,gif,svg}=viewnior
@@ -29,13 +29,13 @@ alias nimc='nim c --verbosity:0'
 alias nimcr='nim c -r --verbosity:0 -d:release --opt:speed'
 alias nimi='nim i'
 alias q='exit'
-alias extensions='nautilus -w ~/.local/share/gnome-shell/extensions/; q'
+alias extensions='~/.local/share/gnome-shell/extensions/'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push origin'
 alias gocode='~/Documents/Go/'
-alias pythoncode='~/Documents/Python/'
+alias pycode='~/Documents/Python/'
 alias nimcode='~/Documents/Nim/'
 
 bindkey '\e[3~' delete-char  # del
@@ -70,9 +70,6 @@ hex() {
    emulate -L zsh
    if [[ -n "$1" ]]; then
        printf "%x\n" $1
-   else
-       print 'Usage: hex <number-to-convert>'
-       return 1
    fi
 }
 
@@ -99,3 +96,4 @@ fi
 export GOPATH=/home/hacked/go
 local gitprompt='$(~/dotfiles/gitprompt.py)'
 export PROMPT="%{$fg_bold[blue]%}% %~${gitprompt} %{$fg[white]%}% $ %{$reset_color%}%u"
+byobu; clear;

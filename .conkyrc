@@ -49,13 +49,19 @@ ${offset 15}${font Ubuntu:size=10,weight:normal}${color1}CPU temp:  ${execi 2 se
 
 # Music
 ${offset 80}${font Ubuntu:size=10,weight:bold}${color2}Music
-${offset 80}${font Droid Sans Fallback:size=10}${color1}${exec python ~/.music.py}
+${if_existing /home/hacked/.cover.jpg}${offset 80}${image ~/.cover.jpg -p 75,127 -s 60x60 -f 2}${offset 65}${voffset 33}${font Droid Sans Fallback:size=10}${color1}${exec cat .track}${else}${offset 105}${voffset 10}${font Droid Sans Fallback:size=10}${color1}${exec cat .track}
+${endif}
 
 # CPU
-${voffset -30}${offset 150}${cpugraph 40,200 61AAF6 61AAF6z}${voffset -25}
-${voffset -5}${offset 80}${font Ubuntu:size=10,weight:bold}${color2}CPU $cpu%
+${if_existing /home/hacked/.cover.jpg}
+${voffset -35}${offset 150}${cpugraph 40,200 61AAF6 61AAF6z}${voffset -25}
+${voffset 0}${offset 80}${font Ubuntu:size=10,weight:bold}${color2}CPU $cpu%
+${else}
+${voffset -80}${offset 150}${cpugraph 40,200 61AAF6 61AAF6z}${voffset -45}
+${voffset 20}${offset 80}${font Ubuntu:size=10,weight:bold}${color2}CPU $cpu%
+${endif}
 
-${voffset -10}${offset 105}${font Ubuntu:size=10,weight:normal}${color1}${top name 1}${alignr}${top cpu 1}%
+${voffset -30}${offset 105}${font Ubuntu:size=10,weight:normal}${color1}${top name 1}${alignr}${top cpu 1}%
 ${offset 105}${font Ubuntu:size=10,weight:normal}${color1}${top name 2}${alignr}${top cpu 2}%
 ${offset 105}${font Ubuntu:size=10,weight:normal}${color1}${top name 3}${alignr}${top cpu 3}%
 ${offset 105}${font Ubuntu:size=10,weight:normal}${color1}${top name 4}${alignr}${top cpu 4}%
