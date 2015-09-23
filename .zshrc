@@ -12,7 +12,7 @@ compinit
 
 eval $(dircolors ~/.dircolors)
 autoload -U pick-web-browser
-alias -s {go,txt,cfg,c,cpp,rb,asm,nim,sh}=subl3
+alias -s {go,txt,cfg,c,cpp,rb,asm,nim}=subl3
 alias -s {avi,mpeg,mpg,mov,m2v}=mplayer
 alias -s {html,htm}=chromium
 alias -s {png,jpg,gif,svg}=viewnior
@@ -35,9 +35,11 @@ alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push origin'
 alias gd='git diff'
+alias gr='git rm'
 alias gocode='~/Documents/Go/'
 alias pycode='~/Documents/Python/'
 alias nimcode='~/Documents/Nim/'
+alias off='gnome-session-quit --power-off'
 
 bindkey '\e[3~' delete-char  # del
 bindkey ';5D' backward-word  # ctrl+left
