@@ -1,5 +1,6 @@
 #!/usr/bin/python
 from os import system
+from sys import argv
 
 
 config_destinations = {
@@ -23,11 +24,18 @@ config_destinations = {
     'layout.service': '~/.config/systemd/user/',
 }
 
+server_part = [
+    '.zshrc',
+    '.tmux.conf',
+    '.p10k.zsh',
+    'nvim',
+]
+
 for config, path in config_destinations.items():
+    if argv[1] == '--server' and config not in server_part:
+        continue
+
     system(f'rm {path}{config}')
     system(f'ln -s $PWD/{config} {path}{config}')
     print(f'installed: {path}{config}')
 
-system('rm -r ~/.config/sublime-text-3/Packages/User')
-system('ln -s $PWD/sublime/User ~/.config/sublime-text-3/Packages/User')
-print('installed: subltime-text user configs')
