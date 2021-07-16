@@ -1,0 +1,8 @@
+{
+	"extensions":
+	[
+		".zshrc",
+		".xinitrc",
+		"config"
+	]
+}

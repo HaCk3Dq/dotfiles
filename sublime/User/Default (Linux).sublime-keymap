@@ -1,0 +1,29 @@
+[
+  // folding & vintage
+  { "keys": ["ctrl+shift+q"], "command": "fold_all" },
+
+  // Sidebar
+  { "keys": ["ctrl+\\"], "command": "toggle_side_bar" },
+
+  // IncDevValue shortcuts
+  { "keys": ["alt+up"],        "command": "inc_dec_value", "args": { "action": "inc_min" } },
+  { "keys": ["alt+down"],      "command": "inc_dec_value", "args": { "action": "dec_min" } },
+  { "keys": ["ctrl+alt+up"],   "command": "inc_dec_value", "args": { "action": "inc_all" } },
+  { "keys": ["ctrl+alt+down"], "command": "inc_dec_value", "args": { "action": "dec_all" } },
+
+  // Match brackets
+  {
+    "keys": ["ctrl+m"],
+    "command": "bh_key",
+    "args": {
+        "plugin": {
+            "args": {"select": "right", "alternate": true},
+            "command": "bh_modules.bracketselect",
+            "type": ["__all__"]
+        },
+        "lines": true,
+        "no_outside_adj": null
+    }
+  },
+
+]

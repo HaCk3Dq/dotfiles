@@ -1,0 +1,12 @@
+[Unit]
+Description=Switch keyboard layouts according to focused window
+
+[Service]
+Type=simple
+Restart=on-failure
+
+Environment=DISPLAY=:0
+ExecStart=python /home/hacked/dotfiles/layout.py
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,19 @@
+[user]
+	email = vladstudiorus@gmail.com
+	name = HaCk3D
+	signingkey = 3593C7FF706F0942
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+
+[core]
+	editor = subl
+
+[commit]
+  gpgsign = true
+
+[alias]
+  	lg = log --date=format:%c --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ad)%C(reset) - %C(dim white)%an%C(reset) - %C(white)%s%C(reset) %C(bold yellow)%d%C(reset)'

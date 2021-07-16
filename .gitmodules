@@ -1,0 +1,3 @@
+[submodule "polybar-spotify"]
+	path = polybar-spotify
+	url = https://github.com/Jvanrhijn/polybar-spotify
