@@ -1,4 +1,3 @@
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/bin/xcalib -d :0 /usr/share/color/icc/NV156FHM_N61.icm
 dunst &
 firefox &
