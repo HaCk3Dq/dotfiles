@@ -1,5 +1,6 @@
 -- packer
 require('plugins')
+vim.cmd 'colorscheme nord'
 
 -- settings
 require('settings')
@@ -9,9 +10,13 @@ require('settings.filetype')
 
 -- ui
 require('feline').setup()
-vim.cmd 'colorscheme nord'
+
+-- LSP
+require('lsp')
 
 -- plugins
 require('plugins.treesitter')
 require('plugins.telescope')
+
+require('settings.keymap')
 
