@@ -7,7 +7,7 @@ telegram-desktop &
 nautilus &
 spotify &
 discord --start-minimized &
-xrandr --dpi 96 --output DP-0 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-0 --off &
+./.screenlayout/main.sh &
 feh --no-fehbg --bg-scale Pictures/wallpaper.jpg &
 picom -C &
 # slack -u &
