@@ -50,9 +50,17 @@ return require('packer').startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-fzy-native.nvim'
-  use 'nvim-telescope/telescope-project.nvim'
 
   -- Syntax
   use 'nfnty/vim-nftables'
+  
+  use 'mg979/vim-visual-multi'
 
+  use {
+    'rmagatti/session-lens',
+    requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'},
+    config = function()
+    require('session-lens').setup()
+  end
+}
 end)

@@ -10,10 +10,17 @@ assign [class="firefox"] 1
 for_window [class="firefox"] layout tabbed
 assign [class="Alacritty"] 2
 assign [class="nvim-qt"] 3
-assign [class="TelegramDesktop|discord"] 4
-assign [class="Nautilus|Transmission-gtk"] 5
-for_window [class="Spotify"] move to workspace 6
-assign [class="Tor Browser|Pavucontrol|Arandr"] 7
+assign [class="TelegramDesktop|Spotify|discord"] 4
+for_window [class="Spotify"] move to workspace 4
+assign [class="Tor Browser|Pavucontrol|Arandr"] 5
+assign [class="Nautilus|Transmission-gtk"] 6
+
+workspace 1 output HDMI-1
+workspace 2 output primary
+workspace 3 output primary
+workspace 4 output HDMI-1
+workspace 5 output primary
+workspace 6 output HDMI-1
 
 gaps inner 5
 gaps outer 3
@@ -28,7 +35,7 @@ bindsym Mod1+m exec --no-startup-id pactl set-sink-mute 0 toggle
 
 bindsym Mod1+q kill
 
-bindsym $mod+Tab focus right
+bindsym $mod+Tab exec i3-cycle right
 
 bindsym $mod+Shift+a move left
 bindsym $mod+Shift+s move down
@@ -77,5 +84,8 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+bindsym $mod+Shift+x move workspace to output right
+
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
+

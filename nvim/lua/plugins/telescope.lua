@@ -3,12 +3,11 @@ require('telescope').setup{
   defaults = {
     prompt_prefix = "λ -> ",
     selection_caret = "|> ",
-    -- Don't pass to normal mode with ESC, problem with telescope-project
-    -- mappings = {
-    --   i = {
-    --     ["<esc>"] = actions.close,
-    --   },
-    -- },
+    mappings = {
+      i = {
+        ["<esc>"] = actions.close,
+      },
+    },
   },
   extensions = {
     fzy_native = {
@@ -19,12 +18,10 @@ require('telescope').setup{
 }
 
 -- Extensions
-
 require('telescope').load_extension('fzy_native')
-require('telescope').load_extension('project')
+require("telescope").load_extension("session-lens")
 
 -- Implement delta as previewer for diffs
-
 local previewers = require('telescope.previewers')
 local builtin = require('telescope.builtin')
 local conf = require('telescope.config')
