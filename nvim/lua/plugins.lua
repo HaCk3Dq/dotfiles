@@ -39,6 +39,9 @@ return require('packer').startup(function(use)
   }
   use 'airblade/vim-gitgutter'
 
+  -- Color
+  use 'norcalli/nvim-colorizer.lua'
+
   -- Explorer
   use {
     'kyazdani42/nvim-tree.lua',

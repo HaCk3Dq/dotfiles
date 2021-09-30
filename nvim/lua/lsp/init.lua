@@ -15,16 +15,10 @@ require'lspconfig'.html.setup {
     filetypes = {"html", "eruby"},
   capabilities = capabilities,
 }
-require'lspconfig'.tsserver.setup{
-}
-require'lspconfig'.solargraph.setup{
-  capabilities = capabilities,
-}
 require'lspconfig'.cssls.setup{
   capabilities = capabilities,
 }
-require'lspconfig'.dockerls.setup{
-}
+require'lspconfig'.dockerls.setup{}
 require'lspconfig'.jsonls.setup{
   commands = {
     Format = {
@@ -36,6 +30,5 @@ require'lspconfig'.jsonls.setup{
 }
 require'lspconfig'.yamlls.setup{}
 require'lspconfig'.vimls.setup{}
-require'lspconfig'.dartls.setup{}
 require'lspconfig'.pyright.setup{}
 

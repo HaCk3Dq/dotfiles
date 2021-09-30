@@ -17,6 +17,7 @@ require('lsp')
 -- plugins
 require('plugins.treesitter')
 require('plugins.telescope')
+require('plugins.colorizer')
 
 require('settings.keymap')
 
