@@ -32,7 +32,7 @@ server_part = [
 ]
 
 for config, path in config_destinations.items():
-    if argv[1] == '--server' and config not in server_part:
+    if len(argv) > 1 and argv[1] == '--server' and config not in server_part:
         continue
 
     system(f'rm {path}{config}')

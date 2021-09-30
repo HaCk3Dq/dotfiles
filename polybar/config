@@ -80,7 +80,7 @@
 [module/spotify]
   type = custom/script
   interval = 1
-  format =  <label>
+  format = <label>
   exec = python /home/hacked/dotfiles/spotify.py
 
 [module/battery]

@@ -1,7 +1,7 @@
 set mouse=a
 
 if exists(':GuiFont')
-    GuiFont DroidSansMono Nerd Font Mono:11
+    GuiFont DroidSansMono Nerd Font Mono:h10
 endif
 
 if exists(':GuiTabline')

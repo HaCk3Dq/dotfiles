@@ -43,31 +43,6 @@ local delta = previewers.new_termopen_previewer {
   end
 }
 
-M.my_git_commits = function(opts)
-  opts = opts or {}
-  opts.previewer = delta
-
-  builtin.git_commits(opts)
-end
-
-M.my_git_bcommits = function(opts)
-  opts = opts or {}
-  opts.previewer = delta
-
-  builtin.git_bcommits(opts)
-end
-
-M.my_git_status = function(opts)
-  opts = opts or {}
-  opts.previewer = delta
-
-  builtin.git_status(opts)
-end
-
-M.my_note = function(opts)
-  builtin.live_grep { prompt_title = ' Note ', cwd = '~/Note' }
-end
-
 M.project_files = function()
   local opts = {} -- define here if you want to define something
   local ok = pcall(require'telescope.builtin'.git_files, opts)
