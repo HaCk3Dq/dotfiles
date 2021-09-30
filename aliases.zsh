@@ -14,6 +14,8 @@ alias ping='mtr'
 alias less='less -r'
 alias v='nvim'
 alias tmux='TERM=screen-256color tmux'
+alias ip='ip -color=auto'
+alias tree='tree -C'
 
 alias gs='git status'
 alias ga='git add'
