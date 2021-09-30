@@ -12,7 +12,7 @@ from subprocess import run, PIPE
 from re import search
 
 cache_file = f'{gettempdir()}/spotify_status'
-adIsPlaying = song in ['Advertisement', '', 'Spotify'] and artist == ''
+adIsPlaying = artist == ''
 
 
 def muteSink(sinkIndex, toggle):
