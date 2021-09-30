@@ -70,6 +70,9 @@ return require('packer').startup(function(use)
   use 'nfnty/vim-nftables'
 
   use 'mg979/vim-visual-multi'
+  use 'nacro90/numb.nvim'
+  use 'karb94/neoscroll.nvim'
+  use 'tpope/vim-sensible'
 
   use {
     'rmagatti/session-lens',

@@ -10,6 +10,8 @@ require('settings.filetype')
 
 -- ui
 require('feline').setup()
+require('neoscroll').setup()
+require('numb').setup()
 
 -- LSP
 require('lsp')
