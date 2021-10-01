@@ -16,3 +16,8 @@ if exists(':GuiScrollBar')
     GuiScrollBar 0
 endif
 
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
+

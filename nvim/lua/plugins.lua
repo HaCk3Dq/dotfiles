@@ -11,7 +11,7 @@ vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
 
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
-  use 'arcticicestudio/nord-vim'
+  use 'hack3dq/nord-vim'
 
   -- LSP
   use 'neovim/nvim-lspconfig'
@@ -67,11 +67,41 @@ return require('packer').startup(function(use)
   use 'nvim-telescope/telescope-fzy-native.nvim'
 
   -- Syntax
+  use {
+    "b3nj5m1n/kommentary",
+    config = function()
+      require("kommentary.config").configure_language(
+        "default",
+        {prefer_single_line_comments = true}
+      )
+    end,
+  }
   use 'nfnty/vim-nftables'
+  use 'chr4/nginx.vim'
 
+  use {
+    "sbdchd/neoformat",
+    config = function() require("plugins.neoformat") end,
+  }
+  use 'jiangmiao/auto-pairs'
+
+  -- UI
   use 'mg979/vim-visual-multi'
   use 'nacro90/numb.nvim'
   use 'karb94/neoscroll.nvim'
+  use 'rrethy/vim-illuminate'
+
+  use {
+    "ray-x/lsp_signature.nvim",
+    config = function()
+      require("lsp_signature").setup {
+        floating_window = true,
+        floating_window_above_cur_line = false,
+        hint_enable = false,
+      }
+    end,
+  }
+
   use 'tpope/vim-sensible'
   use 'tpope/vim-surround'
 
@@ -79,7 +109,9 @@ return require('packer').startup(function(use)
     'rmagatti/session-lens',
     requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'},
     config = function()
-    require('session-lens').setup()
+    require('session-lens').setup {
+      path_display={'shorten'},
+    }
   end
 }
 end)

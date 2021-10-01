@@ -16,6 +16,7 @@ alias v='nvim'
 alias tmux='TERM=screen-256color tmux'
 alias ip='ip -color=auto'
 alias tree='tree -C'
+alias lg='lazygit'
 
 alias gs='git status'
 alias ga='git add'
