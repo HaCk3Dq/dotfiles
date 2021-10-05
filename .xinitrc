@@ -2,7 +2,7 @@
 dunst &
 firefox &
 alacritty &
-nvim-qt &
+nvim-ui &
 telegram-desktop &
 nautilus &
 spotify &
