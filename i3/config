@@ -15,12 +15,12 @@ for_window [class="Spotify"] move to workspace 4
 assign [class="Tor Browser|Pavucontrol|Arandr"] 5
 assign [class="Nautilus|Transmission-gtk"] 6
 
-workspace 1 output HDMI-1
+workspace 1 output HDMI-0
 workspace 2 output primary
 workspace 3 output primary
-workspace 4 output HDMI-1
+workspace 4 output HDMI-0
 workspace 5 output primary
-workspace 6 output HDMI-1
+workspace 6 output HDMI-0
 
 gaps inner 5
 gaps outer 3

@@ -10,7 +10,7 @@
 	ui = true
 
 [core]
-	editor = subl
+	editor = nvim
 
 [commit]
   gpgsign = true

@@ -56,3 +56,5 @@ function goto_last_pos()
 end
 
 vim.cmd 'au TextYankPost * silent! lua vim.highlight.on_yank()'
+
+vim.g.python3_host_prog = '/usr/bin/python'

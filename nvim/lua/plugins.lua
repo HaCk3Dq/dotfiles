@@ -19,8 +19,6 @@ return require('packer').startup(function(use)
 
   -- Autocomplete
   use 'hrsh7th/nvim-compe'
-  use 'SirVer/ultisnips'
-  use 'honza/vim-snippets'
   use 'windwp/nvim-autopairs'
   use 'AndrewRadev/tagalong.vim'
   use 'andymass/vim-matchup'
@@ -83,7 +81,6 @@ return require('packer').startup(function(use)
     "sbdchd/neoformat",
     config = function() require("plugins.neoformat") end,
   }
-  use 'jiangmiao/auto-pairs'
 
   -- UI
   use 'mg979/vim-visual-multi'
