@@ -58,3 +58,11 @@ end
 vim.cmd 'au TextYankPost * silent! lua vim.highlight.on_yank()'
 
 vim.g.python3_host_prog = '/usr/bin/python'
+
+vim.api.nvim_exec([[
+  augroup fmt
+    autocmd!
+    autocmd BufWritePre * undojoin | Neoformat
+  augroup end
+]], false)
+

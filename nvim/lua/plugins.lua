@@ -81,6 +81,7 @@ return require('packer').startup(function(use)
     "sbdchd/neoformat",
     config = function() require("plugins.neoformat") end,
   }
+  use 'jiangmiao/auto-pairs'
 
   -- UI
   use 'mg979/vim-visual-multi'
@@ -89,14 +90,12 @@ return require('packer').startup(function(use)
   use 'rrethy/vim-illuminate'
 
   use {
-    "ray-x/lsp_signature.nvim",
+    "folke/which-key.nvim",
     config = function()
-      require("lsp_signature").setup {
-        floating_window = true,
-        floating_window_above_cur_line = false,
-        hint_enable = false,
+      require("which-key").setup {
+        
       }
-    end,
+    end
   }
 
   use 'tpope/vim-sensible'
