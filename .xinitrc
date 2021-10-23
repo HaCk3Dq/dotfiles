@@ -5,7 +5,7 @@ alacritty &
 nvim-ui &
 telegram-desktop &
 nautilus &
-spotify &
+spotify-ad &
 discord --start-minimized &
 ./.screenlayout/main.sh &
 feh --no-fehbg --bg-scale Pictures/wallpaper.jpg &

@@ -1,1 +1,0 @@
-polybar-spotify/spotify_status.py
