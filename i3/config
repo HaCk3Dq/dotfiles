@@ -9,6 +9,7 @@ for_window [class="^.*"] border pixel 3
 assign [class="firefox"] 1
 for_window [class="firefox"] layout tabbed
 assign [class="Alacritty"] 2
+for_window [class="Alacritty"] layout tabbed
 for_window [title="NVIM$"] move to workspace 3
 assign [class="TelegramDesktop|Spotify|discord"] 4
 for_window [class="Spotify"] move to workspace 4
