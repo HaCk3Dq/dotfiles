@@ -43,7 +43,7 @@
     show_age_threshold = 60
     ellipsize = middle
     ignore_newline = no
-    stack_duplicates = true
+    stack_duplicates = false
     hide_duplicate_count = false
     show_indicators = yes
     icon_position = left
@@ -60,10 +60,6 @@
     class = Dunst
     corner_radius = 0
     ignore_dbusclose = false
-
-    mouse_left_click = close_current
-    mouse_middle_click = do_action, close_current
-    mouse_right_click = close_all
 
 [urgency_normal]
     background = "#0D2E46"
