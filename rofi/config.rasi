@@ -1,0 +1,51 @@
+configuration {
+  monitor: "primary";
+  matching: "fuzzy";
+  font: "Cantarell 15";
+}
+
+* {
+  background: #3B4252;
+  selected: #323D55;
+  blue: #2379C2;
+  text: #c1c1c1;
+}
+
+window {
+  location: "center";
+  width: 1000px;
+}
+
+inputbar {
+  children: [entry];
+  border: 0 0 0;
+}
+
+scrollbar {
+  handle-width: 3px;
+}
+
+listview,
+inputbar {
+  background-color: @background;
+}
+
+listview {
+  lines: 15;
+  margin: -2px 0 0;
+}
+
+entry,
+element normal normal,
+element alternate normal {
+  text-color: @text;
+}
+
+element selected normal {
+  background-color: @selected;
+  text-color: @blue;
+}
+
+element alternate normal {
+  background-color: @background;
+}
