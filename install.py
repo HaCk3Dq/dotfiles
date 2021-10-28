@@ -21,6 +21,7 @@ config_destinations = {
     'alacritty': '~/.config/',
     'zathura': '~/.config/',
     'feh': '~/.config/',
+    'rofi': '~/.config/',
     'layout.service': '~/.config/systemd/user/',
 }
 
@@ -35,7 +36,6 @@ for config, path in config_destinations.items():
     if len(argv) > 1 and argv[1] == '--server' and config not in server_part:
         continue
 
-    system(f'rm {path}{config}')
+    system(f'rm -r {path}{config}')
     system(f'ln -s $PWD/{config} {path}{config}')
     print(f'installed: {path}{config}')
-
