@@ -9,10 +9,10 @@ map('v', 'K', ":m '<-2<CR>gv=gv", opts)
 
 
 -- Buffers
-map('n', '<A-,>', ':BufferPrevious<CR>', opts)
-map('n', '<A-.>', ':BufferNext<CR>', opts)
-map('n', '<A-<>', ':BufferMovePrevious<CR>', opts)
-map('n', '<A->>', ':BufferMoveNext<CR>', opts)
+map('n', 'J', ':BufferPrevious<CR>', opts)
+map('n', 'K', ':BufferNext<CR>', opts)
+map('n', '<A-j>', ':BufferMovePrevious<CR>', opts)
+map('n', '<A-k>', ':BufferMoveNext<CR>', opts)
 map('n', '<C-W>', ':BufferClose<CR>', opts)
 map('n', '<A-c>', ':BufferPick<CR>', opts)
 
@@ -27,7 +27,7 @@ map('n', '<space>d', ':lua vim.lsp.buf.definition()<CR>', opts)
 map('n', '<space>f', ':lua vim.lsp.buf.formatting()<CR>', opts)
 map('n', '<space>h', ':lua vim.lsp.buf.hover()<CR>', opts)
 map('n', '<space>m', ':lua vim.lsp.buf.rename()<CR>', opts)
-map('n', '<space>r', ':lua vim.lsp.buf.references()<CR>', opts)
+map('n', '<space>r', ':Telescope lsp_references<CR>', opts)
 map('n', '<space>s', ':lua vim.lsp.buf.document_symbol()<CR>', opts)
 
 -- Telescope
