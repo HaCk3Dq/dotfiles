@@ -3,7 +3,8 @@ Description=Switch keyboard layouts according to focused window
 
 [Service]
 Type=simple
-Restart=on-failure
+Restart=always
+RestartSec=5
 
 Environment=DISPLAY=:0
 ExecStart=python /home/hacked/dotfiles/layout.py

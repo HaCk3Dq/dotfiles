@@ -2,7 +2,6 @@
 from os import system
 from sys import argv
 
-
 config_destinations = {
     '.gitconfig': '~/',
     '.xinitrc': '~/',
@@ -10,7 +9,6 @@ config_destinations = {
     '.gtkrc-2.0': '~/',
     '.tmux.conf': '~/',
     '.p10k.zsh': '~/',
-    'dunst': '~/.config/',
     'dunst': '~/.config/',
     'gtk-3.0': '~/.config/',
     'htop': '~/.config/',
@@ -30,6 +28,7 @@ server_part = [
     '.tmux.conf',
     '.p10k.zsh',
     'nvim',
+    'htop',
 ]
 
 for config, path in config_destinations.items():

@@ -6,7 +6,8 @@ map('n', '<F4>', ':set list! list?<CR>', opts)
 map('n', '<C-\\>', ':NvimTreeToggle<CR>', opts)
 map('v', 'J', ":m '>+1<CR>gv=gv", opts)
 map('v', 'K', ":m '<-2<CR>gv=gv", opts)
-
+map('v', '<', '<gv', opts)
+map('v', '>', '>gv', opts)
 
 -- Buffers
 map('n', 'J', ':BufferPrevious<CR>', opts)
