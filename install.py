@@ -1,4 +1,3 @@
-#!/usr/bin/python
 from os import system
 from sys import argv
 
