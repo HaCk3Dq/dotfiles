@@ -13,7 +13,7 @@ for_window [class="Alacritty"] layout tabbed
 for_window [title="NVIM$"] move to workspace 3
 assign [class="TelegramDesktop|Spotify|discord"] 4
 for_window [class="Spotify"] move to workspace 4
-assign [class="Tor Browser|Pavucontrol|Arandr"] 5
+assign [class="Tor Browser|Pavucontrol|Arandr|Steam|betaflight-configurator|resolve"] 5
 assign [class="Nautilus|Transmission-gtk"] 6
 
 workspace 1 output HDMI-0
