@@ -10,7 +10,7 @@ discord --start-minimized &
 ./.screenlayout/main.sh &
 feh --no-fehbg --bg-scale Pictures/wallpaper.jpg &
 picom -C &
-# slack -u &
-# upwork &
+slack -u &
+upwork &
 exec i3
 
