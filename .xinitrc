@@ -6,7 +6,7 @@ nvim-ui &
 telegram-desktop &
 nautilus &
 spotify-ad &
-discord --start-minimized &
+# discord --start-minimized &
 ./.screenlayout/main.sh &
 feh --no-fehbg --bg-scale Pictures/wallpaper.jpg &
 picom -C &
