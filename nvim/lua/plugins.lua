@@ -46,11 +46,8 @@ return require('packer').startup(function(use)
     requires = 'kyazdani42/nvim-web-devicons',
     config = function()
       require'nvim-tree'.setup {
-        auto_close = false,
         disable_netrw = false,
         hijack_netrw = true,
-        highlight_opened_files = true,
-        auto_resize = false,
       }
     end
   }
