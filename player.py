@@ -27,9 +27,8 @@ match argv:
     case [_, ('previous' | 'next') as direction]:
         send_cmd(direction)
     case [_, ('loop' | 'shuffle') as cmd]:
-        status = get_status(cmd)
         status_list = STATUS_MAP[cmd]
         next_status = next(
-            islice(cycle(status_list), status_list.index(status) + 1, None))
+            islice(cycle(status_list), status_list.index(get_status(cmd)) + 1, None))
         send_cmd(cmd, next_status)
         send_notify(f'{cmd.title()}: {next_status}')
