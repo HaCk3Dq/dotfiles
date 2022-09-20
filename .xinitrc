@@ -1,7 +1,7 @@
 /usr/bin/xcalib -d :0 /usr/share/color/icc/NV156FHM_N61.icm
 dunst &
 firefox &
-alacritty &
+alacritty -e tmux &
 nvim-ui &
 telegram-desktop &
 nautilus &

@@ -3,7 +3,7 @@ from subprocess import run, PIPE
 
 xkb_path = '/home/hacked/dotfiles/xkblayout-state'
 bind = {
-    'us': ['Alacritty', 'firefox', 'Org.gnome.Nautilus', 'Spotify'],
+    'us': ['Alacritty', 'firefox', 'Org.gnome.Nautilus', 'Spotify', 'Tor Browser'],
     'ru': ['TelegramDesktop', 'discord']
 }
 bind['all'] = bind['us'] + bind['ru']
