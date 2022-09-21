@@ -35,7 +35,8 @@ fi
 source ~/dotfiles/aliases.zsh
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-python ~/dotfiles/colored.py
+
 [[ -f ~/.SERVER_ENV ]] && source ~/.SERVER_ENV
+python ~/dotfiles/colored.py
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
