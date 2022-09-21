@@ -11,4 +11,5 @@ env_colors = {
     None: 'default',
 }
 
-system(f'tmux select-pane -P "bg={env_colors[env]}"')
+if environ.get('TMUX'):
+    system(f'tmux select-pane -P "bg={env_colors[env]}"')
