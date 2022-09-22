@@ -97,6 +97,7 @@ return require('packer').startup(function(use)
 
   use 'tpope/vim-sensible'
   use 'tpope/vim-surround'
+  use 'wsdjeg/vim-fetch' -- Allows nvim file:line
 
   use {
     'rmagatti/session-lens',
