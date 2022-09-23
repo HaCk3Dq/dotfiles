@@ -26,6 +26,7 @@ plugins=(
 
 export EDITOR="nvim"
 export BAT_THEME="Nord"
+export QT_QPA_PLATFORMTHEME="qt5ct"
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then

@@ -19,6 +19,7 @@ config_destinations = {
     'zathura': '~/.config/',
     'feh': '~/.config/',
     'rofi': '~/.config/',
+    'qt5ct': '~/.config/',
     'layout.service': '~/.config/systemd/user/',
 }
 
