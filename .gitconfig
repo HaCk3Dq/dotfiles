@@ -15,5 +15,11 @@
 [commit]
   gpgsign = true
 
+[init]
+  defaultBranch = master
+
+[pull]
+  rebase = true
+
 [alias]
-  	lg = log --date=format:%c --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ad)%C(reset) - %C(dim white)%an%C(reset) - %C(white)%s%C(reset) %C(bold yellow)%d%C(reset)'
+  lg = "log --date=format:%c --pretty=format:'%C(blue)%h%C(reset) - %C(green)%ad%C(reset) %s %C(bold blue)<%an>%C(reset)' --abbrev-commit"
