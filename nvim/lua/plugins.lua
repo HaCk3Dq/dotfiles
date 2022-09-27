@@ -81,7 +81,6 @@ return require('packer').startup(function(use)
   use 'jiangmiao/auto-pairs'
 
   -- UI
-  use 'mg979/vim-visual-multi'
   use 'nacro90/numb.nvim'
   use 'karb94/neoscroll.nvim'
   use 'rrethy/vim-illuminate'

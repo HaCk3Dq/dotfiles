@@ -17,6 +17,11 @@ map('n', '<A-k>', ':BufferMoveNext<CR>', opts)
 map('n', '<C-W>', ':BufferClose<CR>', opts)
 map('n', '<A-c>', ':BufferPick<CR>', opts)
 
+-- Splits
+map('n', '<F26>', ':vsp<CR>', opts)
+map('n', '<S-Left>', ':wincmd h<CR>', opts)
+map('n', '<S-Right>', ':wincmd l<CR>', opts)
+
 -- Git
 map('n', '<leader>g', ':LazyGit<CR>', opts)
 
