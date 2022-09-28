@@ -17,6 +17,7 @@ alias v='nvim'
 alias ip='ip -color=auto'
 alias tree='tree -C --dirsfirst'
 alias lg='lazygit'
+alias ldo='lazydocker'
 
 alias gs='git status --short --branch'
 alias ga='git add'
