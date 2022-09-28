@@ -41,16 +41,17 @@ return require('packer').startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
 
   -- Explorer
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
-    config = function()
-      require'nvim-tree'.setup {
-        disable_netrw = false,
-        hijack_netrw = true,
-      }
-    end
-  }
+  -- too many bugs with restoring sessions
+  -- use {
+  --   'kyazdani42/nvim-tree.lua',
+  --   requires = 'kyazdani42/nvim-web-devicons',
+  --   config = function()
+  --     require'nvim-tree'.setup {
+  --       disable_netrw = false,
+  --       hijack_netrw = true,
+  --     }
+  --   end
+  -- }
 
   -- Git
   use 'kdheepak/lazygit.nvim'
