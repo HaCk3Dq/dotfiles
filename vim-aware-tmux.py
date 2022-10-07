@@ -7,7 +7,6 @@ from os import system
 def get_output(cmd: list) -> str:
     return run(cmd, stdout=PIPE).stdout.decode().rstrip()
 
-
 current_cmd = get_output(['tmux', 'display', '-p', '#{pane_current_command}'])
 
 # vim:tmux

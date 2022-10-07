@@ -46,23 +46,11 @@ vim.opt.signcolumn = 'yes'
 vim.opt.relativenumber = true
 vim.opt.foldenable = false
 vim.opt.cursorline = true
+vim.o.ch = 0
 
-vim.cmd[[autocmd BufReadPost * lua goto_last_pos()]]
-function goto_last_pos()
-  local last_pos = vim.fn.line("'\"")
-  if last_pos > 0 and last_pos <= vim.fn.line("$") then
-    vim.api.nvim_win_set_cursor(0, {last_pos, 0})
-  end
+if vim.fn.has("termguicolors") == 1 then
+  vim.opt.termguicolors = true
 end
 
 vim.cmd 'au TextYankPost * silent! lua vim.highlight.on_yank()'
-
-vim.g.python3_host_prog = '/usr/bin/python'
-
-vim.api.nvim_exec([[
-  augroup fmt
-    autocmd!
-    autocmd BufWritePre * undojoin | Neoformat
-  augroup end
-]], false)
 

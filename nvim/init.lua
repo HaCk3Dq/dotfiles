@@ -4,22 +4,15 @@ vim.cmd 'colorscheme nord'
 
 -- settings
 require('settings')
-require('settings.color')
-require('settings.completion')
-require('settings.filetype')
+require("mason").setup()
 
 -- ui
 require('feline').setup()
 require('neoscroll').setup()
 require('numb').setup()
-
--- LSP
-require('lsp')
-
--- plugins
-require('plugins.treesitter')
-require('plugins.telescope')
-require('plugins.colorizer')
+require('true-zen').setup({
+  modes = { ataraxis = { padding = { left = 250 } } }
+})
 
 require('settings.keymap')
 
