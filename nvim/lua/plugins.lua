@@ -81,7 +81,7 @@ return require('packer').startup(function(use)
   -- Git
   use 'kdheepak/lazygit.nvim'
   use 'airblade/vim-gitgutter'
- 
+
   -- Telescope
   use({
     'nvim-telescope/telescope.nvim',

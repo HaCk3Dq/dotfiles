@@ -13,9 +13,18 @@ local servers_with_default_settings = {
   'pyright',
   'jsonls',
   'dockerls',
-  'sumneko_lua',
 }
-
 for _, server in ipairs(servers_with_default_settings) do
   lspconfig[server].setup({})
 end
+
+lspconfig.sumneko_lua.setup({
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { 'vim' },
+        disable = { 'undefined-global' },
+      },
+    },
+  },
+})

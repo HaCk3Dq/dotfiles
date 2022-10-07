@@ -1,16 +1,16 @@
 [user]
-	email = vladstudiorus@gmail.com
-	name = HaCk3D
-	signingkey = 3593C7FF706F0942
+  email = vladstudiorus@gmail.com
+  name = HaCk3D
+  signingkey = 3593C7FF706F0942
 
 [color]
-	diff = auto
-	status = auto
-	branch = auto
-	ui = true
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
 
 [core]
-	editor = nvim
+  editor = nvim
 
 [commit]
   gpgsign = true
