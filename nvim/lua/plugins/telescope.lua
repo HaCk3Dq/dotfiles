@@ -1,4 +1,5 @@
 local actions = require('telescope.actions')
+
 require('telescope').setup{
   defaults = {
     prompt_prefix = "λ -> ",
@@ -21,3 +22,9 @@ require('telescope').setup{
 require('telescope').load_extension('fzy_native')
 require("telescope").load_extension("session-lens")
 
+local M = {}
+M.project_files = function()
+  local ok = pcall(require('telescope.builtin').git_files)
+  if not ok then require('telescope.builtin').find_files() end
+end
+return M
