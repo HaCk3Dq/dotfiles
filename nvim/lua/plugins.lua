@@ -91,6 +91,7 @@ return require("packer").startup(function(use)
         filesystem = {
           filtered_items = {
             hide_dotfiles = false,
+            enable_diagnostics = false,
           },
         },
       })
