@@ -1,161 +1,171 @@
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
-  execute 'packadd packer.nvim'
+  fn.system({ "git", "clone", "https://github.com/wbthomason/packer.nvim", install_path })
+  execute("packadd packer.nvim")
 end
 
-vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
+vim.cmd("autocmd BufWritePost plugins.lua PackerCompile")
 
-return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use 'hack3dq/nord-vim'
+return require("packer").startup(function(use)
+  use("wbthomason/packer.nvim")
+  use("hack3dq/nord-vim")
 
   -- LSP
   use({
-    'neovim/nvim-lspconfig',
+    "neovim/nvim-lspconfig",
     requires = {
-      'onsails/lspkind-nvim',
-      'williamboman/mason-lspconfig.nvim',
+      "onsails/lspkind-nvim",
+      "williamboman/mason-lspconfig.nvim",
     },
     config = function()
-      require('plugins.lsp')
+      require("plugins.lsp")
     end,
   })
-  use { 'williamboman/mason.nvim' }
-  use { 'ray-x/lsp_signature.nvim' }
+  use({ "williamboman/mason.nvim" })
+  use({ "ray-x/lsp_signature.nvim" })
+  use({ "jose-elias-alvarez/null-ls.nvim" })
 
   -- Autocomplete
   use({
-    'hrsh7th/nvim-cmp',
+    "hrsh7th/nvim-cmp",
     requires = {
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-nvim-lua',
-      'hrsh7th/cmp-buffer',
-      'hrsh7th/cmp-path',
-      'onsails/lspkind-nvim',
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-nvim-lua",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "onsails/lspkind-nvim",
     },
     config = function()
-      require('plugins.cmp')
+      require("plugins.cmp")
     end,
   })
 
   use({
-    'L3MON4D3/LuaSnip',
+    "L3MON4D3/LuaSnip",
     config = function()
-      require('plugins.luasnips')
+      require("plugins.luasnips")
     end,
   })
 
   use({
-    'nvim-treesitter/nvim-treesitter',
+    "nvim-treesitter/nvim-treesitter",
     requires = {
-      'lukas-reineke/indent-blankline.nvim',
-      'JoosepAlviste/nvim-ts-context-commentstring',
-      'romgrk/nvim-treesitter-context',
+      "lukas-reineke/indent-blankline.nvim",
+      "JoosepAlviste/nvim-ts-context-commentstring",
+      "romgrk/nvim-treesitter-context",
     },
     run = function()
-      vim.cmd('TSUpdate')
+      vim.cmd("TSUpdate")
     end,
     config = function()
-      require('plugins.treesitter')
+      require("plugins.treesitter")
     end,
   })
 
   -- Status Line and Bufferline
-  use 'kyazdani42/nvim-web-devicons'
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' }
-  }
-  use {
-    'romgrk/barbar.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' }
-  }
+  use("kyazdani42/nvim-web-devicons")
+  use({
+    "nvim-lualine/lualine.nvim",
+    requires = { "kyazdani42/nvim-web-devicons" },
+  })
+  use({
+    "romgrk/barbar.nvim",
+    requires = { "kyazdani42/nvim-web-devicons" },
+  })
 
   -- Tree
-  use {
-    'nvim-neo-tree/neo-tree.nvim',
-    branch = 'v2.x',
+  use({
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
     requires = {
-      'nvim-lua/plenary.nvim',
-      'kyazdani42/nvim-web-devicons',
-      'MunifTanjim/nui.nvim',
-    }
-  }
+      "nvim-lua/plenary.nvim",
+      "kyazdani42/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    },
+    config = function()
+      require("neo-tree").setup({
+        enable_git_status = false,
+        filesystem = {
+          filtered_items = {
+            hide_dotfiles = false,
+          },
+        },
+      })
+    end,
+  })
 
   -- Color
   use({
-    'norcalli/nvim-colorizer.lua',
+    "norcalli/nvim-colorizer.lua",
     config = function()
-      require('colorizer').setup {
-        filetypes = { '*' },
+      require("colorizer").setup({
+        filetypes = { "*" },
         user_default_options = {
           RGB = true,
           RRGGBB = true,
           css = true,
         },
-      }
+      })
     end,
   })
 
   -- Git
-  use 'kdheepak/lazygit.nvim'
-  use 'airblade/vim-gitgutter'
+  use("kdheepak/lazygit.nvim")
+  use("airblade/vim-gitgutter")
 
   -- Telescope
   use({
-    'nvim-telescope/telescope.nvim',
+    "nvim-telescope/telescope.nvim",
     requires = {
-      'kyazdani42/nvim-web-devicons',
-      'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope-fzy-native.nvim',
+      "kyazdani42/nvim-web-devicons",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope-fzy-native.nvim",
     },
     config = function()
-      require('plugins.telescope')
+      require("plugins.telescope")
     end,
   })
 
   -- Syntax
-  use {
-    'b3nj5m1n/kommentary',
+  use({
+    "b3nj5m1n/kommentary",
     config = function()
-      require('kommentary.config').configure_language(
-        'default',
-        {prefer_single_line_comments = true}
-      )
+      require("kommentary.config").configure_language("default", { prefer_single_line_comments = true })
     end,
-  }
-  use 'tpope/vim-surround'
-  use {
-    'windwp/nvim-autopairs',
-      config = function() require('nvim-autopairs').setup {} end
-  }
+  })
+  use("tpope/vim-surround")
+  use({
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup({})
+    end,
+  })
 
   -- UI
-  use 'nacro90/numb.nvim'
-  use 'karb94/neoscroll.nvim'
-  use 'rrethy/vim-illuminate'
-  use 'Pocco81/true-zen.nvim'
+  use("nacro90/numb.nvim")
+  use("karb94/neoscroll.nvim")
+  use("rrethy/vim-illuminate")
+  use("Pocco81/true-zen.nvim")
 
-  use {
-    'folke/which-key.nvim',
+  use({
+    "folke/which-key.nvim",
     config = function()
-      require('which-key').setup{}
-    end
-  }
+      require("which-key").setup({})
+    end,
+  })
 
-  use 'wsdjeg/vim-fetch' -- Allows nvim file:line
+  use("wsdjeg/vim-fetch") -- Allows nvim file:line
 
-  use {
-    'rmagatti/session-lens',
-    requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'},
+  use({
+    "rmagatti/session-lens",
+    requires = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
     config = function()
-    require('session-lens').setup {
-      path_display={'shorten'},
-    }
-  end
-}
+      require("session-lens").setup({
+        path_display = { "shorten" },
+      })
+    end,
+  })
 end)

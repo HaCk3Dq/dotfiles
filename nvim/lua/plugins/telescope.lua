@@ -1,6 +1,6 @@
-local actions = require('telescope.actions')
+local actions = require("telescope.actions")
 
-require('telescope').setup{
+require("telescope").setup({
   defaults = {
     prompt_prefix = "λ -> ",
     selection_caret = "|> ",
@@ -14,17 +14,19 @@ require('telescope').setup{
     fzy_native = {
       override_generic_sorter = false,
       override_file_sorter = true,
-    }
-  }
-}
+    },
+  },
+})
 
 -- Extensions
-require('telescope').load_extension('fzy_native')
+require("telescope").load_extension("fzy_native")
 require("telescope").load_extension("session-lens")
 
 local M = {}
 M.project_files = function()
-  local ok = pcall(require('telescope.builtin').git_files)
-  if not ok then require('telescope.builtin').find_files() end
+  local ok = pcall(require("telescope.builtin").git_files)
+  if not ok then
+    require("telescope.builtin").find_files()
+  end
 end
 return M

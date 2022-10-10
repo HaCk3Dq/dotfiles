@@ -1,19 +1,18 @@
 -- packer
-require('plugins')
-vim.cmd 'colorscheme nord'
+require("plugins")
+vim.cmd("colorscheme nord")
 
 -- settings
-require('settings')
-require('mason').setup()
+require("settings")
+require("mason").setup()
 
 -- ui
-require('lualine').setup()
-require('neoscroll').setup()
-require('numb').setup()
-require('true-zen').setup({
-  modes = { ataraxis = { padding = { left = 250 } } }
+require("lualine").setup()
+require("neoscroll").setup()
+require("numb").setup()
+require("true-zen").setup({
+  modes = { ataraxis = { padding = { left = 250 } } },
 })
-require('lsp_signature').setup({})
+require("lsp_signature").setup({})
 
-require('settings.keymap')
-
+require("settings.keymap")
