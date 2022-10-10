@@ -24,7 +24,8 @@ return require('packer').startup(function(use)
       require('plugins.lsp')
     end,
   })
-  use { "williamboman/mason.nvim" }
+  use { 'williamboman/mason.nvim' }
+  use { 'ray-x/lsp_signature.nvim' }
 
   -- Autocomplete
   use({
@@ -44,7 +45,7 @@ return require('packer').startup(function(use)
   use({
     'L3MON4D3/LuaSnip',
     config = function()
-      require('plugins.luasnip')
+      require('plugins.luasnips')
     end,
   })
 
@@ -64,17 +65,39 @@ return require('packer').startup(function(use)
   })
 
   -- Status Line and Bufferline
-  use 'famiu/feline.nvim'
+  use 'kyazdani42/nvim-web-devicons'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' }
+  }
   use {
     'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'}
+    requires = { 'kyazdani42/nvim-web-devicons' }
+  }
+
+  -- Tree
+  use {
+    'nvim-neo-tree/neo-tree.nvim',
+    branch = 'v2.x',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'kyazdani42/nvim-web-devicons',
+      'MunifTanjim/nui.nvim',
+    }
   }
 
   -- Color
   use({
     'norcalli/nvim-colorizer.lua',
     config = function()
-      require('colorizer').setup({'!*'})
+      require('colorizer').setup {
+        filetypes = { '*' },
+        user_default_options = {
+          RGB = true,
+          RRGGBB = true,
+          css = true,
+        },
+      }
     end,
   })
 
@@ -106,6 +129,10 @@ return require('packer').startup(function(use)
     end,
   }
   use 'tpope/vim-surround'
+  use {
+    'windwp/nvim-autopairs',
+      config = function() require('nvim-autopairs').setup {} end
+  }
 
   -- UI
   use 'nacro90/numb.nvim'

@@ -14,9 +14,16 @@ local servers_with_default_settings = {
   'jsonls',
   'dockerls',
 }
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 for _, server in ipairs(servers_with_default_settings) do
-  lspconfig[server].setup({})
+  lspconfig[server].setup({
+    capabilities = capabilities,
+    on_attach = function(_, bufnr)
+      require "lsp_signature".on_attach(signature_setup, bufnr)
+    end,
+  })
 end
+
 
 lspconfig.sumneko_lua.setup({
   settings = {
@@ -25,6 +32,11 @@ lspconfig.sumneko_lua.setup({
         globals = { 'vim' },
         disable = { 'undefined-global' },
       },
+      completion = {
+        keywordSnippet = 'Replace',
+        callSnippet = 'Replace',
+      },
     },
   },
 })
+

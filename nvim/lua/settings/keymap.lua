@@ -7,6 +7,7 @@ map('v', 'J', ":m '>+1<CR>gv=gv", opts)
 map('v', 'K', ":m '<-2<CR>gv=gv", opts)
 map('v', '<', '<gv', opts)
 map('v', '>', '>gv', opts)
+map('n', '<C-\\>', ':NeoTreeFocusToggle<CR>', opts)
 
 -- Buffers
 map('n', 'J', ':BufferPrevious<CR>', opts)
@@ -36,5 +37,4 @@ map('n', '<space>e', ':Telescope diagnostics<CR>', opts)
 map('n', '<leader>r', ':lua require("telescope.builtin").live_grep()<CR>', opts)
 map('n', '<leader>p', ':lua require("session-lens").search_session()<CR>', opts)
 map('n', '<leader>l', ':lua require("telescope.builtin").current_buffer_fuzzy_find()<CR>', opts)
-map('n', '<leader>f', ':lua require("plugins.telescope").project_files()<CR>', opts)
-
+map('n', '<leader>f', ':Telescope find_files hidden=true<CR>', opts)
