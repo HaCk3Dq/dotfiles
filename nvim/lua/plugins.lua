@@ -12,6 +12,7 @@ vim.cmd("autocmd BufWritePost plugins.lua PackerCompile")
 return require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
   use("hack3dq/nord-vim")
+  use("lewis6991/impatient.nvim")
 
   -- LSP
   use({

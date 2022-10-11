@@ -1,4 +1,5 @@
 -- packer
+require("impatient")
 require("plugins")
 vim.cmd("colorscheme nord")
 
