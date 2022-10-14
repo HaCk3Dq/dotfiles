@@ -48,6 +48,7 @@ vim.opt.foldenable = false
 vim.opt.cursorline = true
 vim.o.ch = 0
 
+-- UI
 if vim.fn.has("termguicolors") == 1 then
   vim.opt.termguicolors = true
 end
