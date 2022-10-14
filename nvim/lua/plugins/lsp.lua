@@ -4,6 +4,14 @@ require("lspkind").init()
 local lspconfig = require("lspconfig")
 local null_ls = require("null-ls")
 
+require("swenv").setup({
+  get_venvs = function(venvs_path)
+    return require("swenv.api").get_venvs(venvs_path)
+  end,
+  venvs_path = vim.fn.expand("~/.virtualenvs"),
+  post_set_venv = nil,
+})
+
 null_ls.setup({
   sources = {
     null_ls.builtins.formatting.autopep8,

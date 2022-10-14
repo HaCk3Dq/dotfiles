@@ -28,6 +28,7 @@ return require("packer").startup(function(use)
   use({ "williamboman/mason.nvim" })
   use({ "ray-x/lsp_signature.nvim" })
   use({ "jose-elias-alvarez/null-ls.nvim" })
+  use({ "AckslD/swenv.nvim" })
 
   -- Autocomplete
   use({
@@ -116,7 +117,12 @@ return require("packer").startup(function(use)
 
   -- Git
   use("kdheepak/lazygit.nvim")
-  use("airblade/vim-gitgutter")
+  use({
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("gitsigns").setup()
+    end,
+  })
 
   -- Telescope
   use({
@@ -151,6 +157,13 @@ return require("packer").startup(function(use)
   use("karb94/neoscroll.nvim")
   use("rrethy/vim-illuminate")
   use("Pocco81/true-zen.nvim")
+
+  use({
+    "stevearc/dressing.nvim",
+    config = function()
+      require("dressing").setup({})
+    end,
+  })
 
   use({
     "folke/which-key.nvim",
