@@ -34,6 +34,7 @@ local servers_with_default_settings = {
   "pyright",
   "jsonls",
   "dockerls",
+  "yamlls",
 }
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities(basic_capabilities)
