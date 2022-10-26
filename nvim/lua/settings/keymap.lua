@@ -30,11 +30,11 @@ map("n", "<leader>g", ":LazyGit<CR>", opts)
 map("n", "<space>d", ":lua vim.lsp.buf.definition()<CR>", opts)
 map("n", "<space>h", ":lua vim.lsp.buf.hover()<CR>", opts)
 map("n", "<space>r", ":lua vim.lsp.buf.rename()<CR>", opts)
+map("n", "<space>u", ":Telescope lsp_references<CR>", opts)
 
 -- Telescope
 map("n", "<leader>r", ':lua require("telescope.builtin").live_grep()<CR>', opts)
 map("n", "<leader>p", ':lua require("session-lens").search_session()<CR>', opts)
 map("n", "<leader>l", ':lua require("telescope.builtin").current_buffer_fuzzy_find()<CR>', opts)
 map("n", "<leader>f", ':lua require("plugins.telescope").project_files()<CR>', opts)
-map("n", "<leader>R", ":Telescope lsp_references<CR>", opts)
 map("n", "<leader>e", ":Telescope diagnostics<CR>", opts)
