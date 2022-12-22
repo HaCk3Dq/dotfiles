@@ -10,6 +10,7 @@ config_destinations = {
     '.p10k.zsh': '~/',
     'dunst': '~/.config/',
     'gtk-3.0': '~/.config/',
+    'gtk-4.0': '~/.config/',
     'htop': '~/.config/',
     'i3': '~/.config/',
     'nvim': '~/.config/',
