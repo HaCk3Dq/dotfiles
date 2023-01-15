@@ -41,3 +41,6 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 python ~/dotfiles/colored.py
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
