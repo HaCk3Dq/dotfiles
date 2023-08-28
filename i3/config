@@ -33,7 +33,7 @@ bindsym $mod+r exec --no-startup-id rofi -show run
 bindsym $mod+l exec --no-startup-id $HOME/dotfiles/.lock.sh
 bindsym Mod1+e exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym Mod1+r exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym Mod1+m exec --no-startup-id pactl set-sink-mute alsa_output.pci-0000_00_1f.3.analog-stereo toggle
+bindsym Mod1+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym $mod+p exec --no-startup-id python $HOME/dotfiles/player.py pause
 bindsym $mod+o exec --no-startup-id python $HOME/dotfiles/player.py loop
 bindsym $mod+bracketleft exec --no-startup-id python $HOME/dotfiles/player.py previous
