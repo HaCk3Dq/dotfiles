@@ -7,7 +7,7 @@ speakers = 'alsa_output.pci-0000_00_1f.3.analog-stereo'
 with pulsectl.Pulse('sink-swapper') as pulse:
 
     sink_list = pulse.sink_list()
-    sink_names = [e.name for e in pulse.sink_list()]
+    sink_names = [e.name for e in sink_list]
     if headphones in sink_names:
 
         current = pulse.server_info().default_sink_name
