@@ -46,7 +46,6 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 for _, server in ipairs(servers_with_default_settings) do
   lspconfig[server].setup({
     capabilities = capabilities,
-
     require("lsp_signature").on_attach({
       bind = true,
       hint_prefix = "💡",
@@ -54,7 +53,7 @@ for _, server in ipairs(servers_with_default_settings) do
   })
 end
 
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
   settings = {
     Lua = {
       diagnostics = {
