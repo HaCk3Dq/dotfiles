@@ -39,7 +39,7 @@
 
   modules-left = i3
   modules-center = date
-  modules-right =  spotify volume cpu memory xkeyboard battery
+  modules-right = spotify volume cpu memory xkeyboard battery
 
   tray-position = right
   tray-padding = 5
