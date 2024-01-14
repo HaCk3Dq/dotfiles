@@ -1,0 +1,38 @@
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "#666666"
+blue = "#7aa6da"
+cyan = "#70c0b1"
+green = "#7aba55"
+magenta = "#c397d8"
+red = "#d54e53"
+white = "#eaeaea"
+yellow = "#e7c547"
+
+[colors.normal]
+black = "#1d1f21"
+blue = "#81a2be"
+cyan = "#8abeb7"
+green = "#a2ca4a"
+magenta = "#b294bb"
+red = "#cc6666"
+white = "#c5c8c6"
+yellow = "#f0c674"
+
+[colors.primary]
+background = "#1d1f21"
+foreground = "#c5c8c6"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 10
+
+[font.normal]
+family = "DroidSansM Nerd Font"
+
+[window]
+opacity = 0.9
