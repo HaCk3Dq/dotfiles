@@ -178,11 +178,15 @@ return require("packer").startup(function(use)
   use("wsdjeg/vim-fetch") -- Allows nvim file:line
 
   use({
-    "rmagatti/session-lens",
-    requires = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
+    "rmagatti/auto-session",
     config = function()
-      require("session-lens").setup({
-        path_display = { "shorten" },
+      require("auto-session").setup({
+        log_level = "error",
+        auto_session_suppress_dirs = { "~/" },
+        session_lens = {
+          load_on_setup = true,
+          path_display = { "shorten" },
+        },
       })
     end,
   })
