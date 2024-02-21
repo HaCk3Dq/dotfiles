@@ -4,7 +4,7 @@ require("lualine").setup({
     lualine_b = { "branch", "diff", "diagnostics" },
     lualine_c = { "filename" },
     lualine_x = { "encoding", "fileformat", "filetype" },
-    lualine_y = {},
+    lualine_y = { "swenv" },
     lualine_z = {},
   },
   inactive_sections = {
