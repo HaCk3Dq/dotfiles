@@ -21,6 +21,7 @@ config_destinations = {
     'feh': '~/.config/',
     'rofi': '~/.config/',
     'qt5ct': '~/.config/',
+    'lazygit': '~/.config/',
     'layout.service': '~/.config/systemd/user/',
 }
 

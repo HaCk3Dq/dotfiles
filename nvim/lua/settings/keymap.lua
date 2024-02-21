@@ -8,6 +8,7 @@ map("v", "K", ":m '<-2<CR>gv=gv", opts)
 map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 map("n", "<C-\\>", ":NeoTreeFocusToggle<CR>", opts)
+map("n", "<esc>", ":noh<CR>", opts)
 
 -- Buffers
 map("n", "J", ":BufferPrevious<CR>", opts)
