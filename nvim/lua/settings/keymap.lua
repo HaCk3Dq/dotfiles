@@ -16,7 +16,7 @@ map("n", "K", ":BufferNext<CR>", opts)
 map("n", "<A-j>", ":BufferMovePrevious<CR>", opts)
 map("n", "<A-k>", ":BufferMoveNext<CR>", opts)
 map("n", "<C-W>", ":BufferClose<CR>", opts)
-map("n", "<A-c>", ":BufferPick<CR>", opts)
+map("n", "<S-x>", ":BufferRestore<CR>", opts)
 
 -- Splits
 map("n", "<F26>", ":vsp<CR>", opts)

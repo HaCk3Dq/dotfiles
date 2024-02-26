@@ -28,7 +28,16 @@ return require("packer").startup(function(use)
   use({ "williamboman/mason.nvim" })
   use({ "ray-x/lsp_signature.nvim" })
   use({ "nvimtools/none-ls.nvim" })
-  use({ "AckslD/swenv.nvim" })
+  use({
+    "linux-cultist/venv-selector.nvim",
+    config = function()
+      require("venv-selector").setup({
+        auto_refresh = true,
+        path = "~/.virtualenvs/",
+        parents = 0,
+      })
+    end,
+  })
 
   -- Autocomplete
   use({

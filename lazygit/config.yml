@@ -183,8 +183,8 @@ keybinding:
         update: u
         bulkMenu: b
 os:
-    openCommand: nvim --server ${XDG_RUNTIME_DIR:-${TMPDIR}nvim.${USER}}/nvim.*.0  --remote {{filename}}
-    openLinkCommand: sh -c "xdg-open {{link}} >/dev/null"
+    Open: nvim --server ${XDG_RUNTIME_DIR:-${TMPDIR}nvim.${USER}}/nvim.*.0  --remote {{filename}}
+    OpenLink: sh -c "xdg-open {{link}} >/dev/null"
 
 disableStartupPopups: false
 customCommands: []
