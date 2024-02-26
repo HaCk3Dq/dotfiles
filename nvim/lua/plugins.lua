@@ -27,7 +27,7 @@ return require("packer").startup(function(use)
   })
   use({ "williamboman/mason.nvim" })
   use({ "ray-x/lsp_signature.nvim" })
-  use({ "jose-elias-alvarez/null-ls.nvim" })
+  use({ "nvimtools/none-ls.nvim" })
   use({ "AckslD/swenv.nvim" })
 
   -- Autocomplete
@@ -92,11 +92,14 @@ return require("packer").startup(function(use)
     },
     config = function()
       require("neo-tree").setup({
-        enable_git_status = false,
         filesystem = {
           filtered_items = {
             hide_dotfiles = false,
+            hide_gitignored = false,
             enable_diagnostics = false,
+          },
+          follow_current_file = {
+            enabled = true,
           },
         },
       })

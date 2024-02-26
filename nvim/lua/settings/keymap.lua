@@ -2,7 +2,7 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 map("n", "<F3>", ":set relativenumber!<CR>", opts)
-map("n", "<F4>", ":set list! list?<CR>", opts)
+map("n", "<F4>", ":set list!<CR>", opts)
 map("v", "J", ":m '>+1<CR>gv=gv", opts)
 map("v", "K", ":m '<-2<CR>gv=gv", opts)
 map("v", "<", "<gv", opts)
