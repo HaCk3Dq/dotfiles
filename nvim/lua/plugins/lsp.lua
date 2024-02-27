@@ -1,5 +1,7 @@
 require("mason").setup({})
-require("mason-lspconfig").setup()
+require("mason-lspconfig").setup({
+  ensure_installed = { "lua_ls", "dockerls", "pyright", "jsonls", "ruff", "ruff_lsp", "taplo", "stylua", "yamlls" },
+})
 require("lspkind").init()
 local lspconfig = require("lspconfig")
 local null_ls = require("null-ls")
@@ -25,6 +27,7 @@ null_ls.setup({
   sources = {
     null_ls.builtins.formatting.stylua,
     null_ls.builtins.formatting.shfmt,
+    null_ls.builtins.diagnostics.hadolint,
   },
 })
 
