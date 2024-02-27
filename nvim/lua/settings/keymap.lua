@@ -38,3 +38,4 @@ map("n", "<leader>p", ':lua require("auto-session.session-lens").search_session(
 map("n", "<leader>l", ':lua require("telescope.builtin").current_buffer_fuzzy_find()<CR>', opts)
 map("n", "<leader>f", ':lua require("plugins.telescope").project_files()<CR>', opts)
 map("n", "<leader>e", ":Telescope diagnostics<CR>", opts)
+map("n", "<leader>v", ":VenvSelect<CR>", opts)
