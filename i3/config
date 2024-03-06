@@ -61,7 +61,7 @@ bindsym $mod+w layout tabbed
 
 bindsym Control+space exec dunstctl close
 bindsym Control+Shift+space exec dunstctl close-all
-bindsym Control+grave exec dunstctl history-pop
+bindsym Control+Escape exec dunstctl history-pop
 
 set $ws1 "1"
 set $ws2 "2"
