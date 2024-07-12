@@ -1,7 +1,5 @@
-alias ls='/usr/bin/ls-icons --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias ll='/usr/bin/ls-icons -lah --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias la='/usr/bin/ls-icons -ah --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-
+alias ls='eza --icons -g'
+alias tree='exa --icons --tree --group-directories-first'
 alias cp='cp -i'
 alias df='df -h'
 alias free='free -hm'
@@ -16,7 +14,6 @@ alias less='less -r'
 alias v='nvim'
 alias vr='nvim --server ${XDG_RUNTIME_DIR:-${TMPDIR}nvim.${USER}}/nvim.*.0  --remote "$(pwd)/"'
 alias ip='ip -color=auto'
-alias tree='tree -C --dirsfirst'
 alias lg='lazygit'
 alias ldo='lazydocker'
 
