@@ -24,6 +24,7 @@ plugins=(
     virtualenvwrapper
 )
 
+export GPG_TTY=$(tty)
 export EDITOR="nvim"
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
 export BAT_THEME="Nord"
