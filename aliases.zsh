@@ -1,4 +1,4 @@
-alias ls='eza --icons -g'
+alias ls='eza --icons -g --group-directories-first'
 alias tree='exa --icons --tree --group-directories-first'
 alias cp='cp -i'
 alias df='df -h'
