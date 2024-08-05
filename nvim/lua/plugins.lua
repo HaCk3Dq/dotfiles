@@ -30,6 +30,11 @@ return require("packer").startup(function(use)
   use({ "nvimtools/none-ls.nvim" })
   use({
     "linux-cultist/venv-selector.nvim",
+    requires = {
+      "mfussenegger/nvim-dap",
+      "mfussenegger/nvim-dap-python",
+    },
+    branch = "regexp",
     config = function()
       require("venv-selector").setup({
         auto_refresh = true,
