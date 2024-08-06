@@ -1,5 +1,5 @@
 local function venv()
-  local fullPath = require("venv-selector").get_active_venv()
+  local fullPath = require("venv-selector").venv()
   if not fullPath then
     return ""
   end
