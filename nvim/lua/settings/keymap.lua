@@ -22,6 +22,9 @@ map("n", "<S-x>", ":BufferRestore<CR>", opts)
 map("n", "<F26>", ":vsp<CR>", opts)
 map("n", "<S-Left>", ":wincmd h<CR>", opts)
 map("n", "<S-Right>", ":wincmd l<CR>", opts)
+map("n", "<S-Down>", ":wincmd j<CR>", opts)
+map("n", "<S-Up>", ":wincmd k<CR>", opts)
+map("n", "<C-X>", ":close<CR>", opts)
 
 -- Git
 map("n", "<leader>g", ":LazyGit<CR>", opts)
