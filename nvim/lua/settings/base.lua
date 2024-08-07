@@ -1,14 +1,14 @@
 local o = vim.opt
 
-o.relativenumber = true
-o.number = true
-
 o.tabstop = 2
 o.shiftwidth = 2
 o.expandtab = true
 o.autoindent = true
 o.wrap = false
 o.clipboard = "unnamedplus"
+o.listchars = { tab = ">>>", trail = "·", precedes = "←", extends = "→", eol = "↲", nbsp = "␣" }
+o.swapfile = false
+o.showmatch = true
 
 o.splitright = true
 o.splitbelow = true
@@ -16,6 +16,9 @@ o.splitbelow = true
 o.ignorecase = true
 o.smartcase = true
 
+o.relativenumber = true
+o.number = true
+o.fillchars = { vert = " " }
 o.cursorline = true
 o.termguicolors = true
 o.signcolumn = "yes"
