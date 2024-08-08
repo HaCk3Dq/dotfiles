@@ -13,6 +13,9 @@ return {
     local lazy_status = require("lazy.status")
 
     require("lualine").setup({
+      options = {
+        globalstatus = true,
+      },
       sections = {
         lualine_a = { "mode" },
         lualine_b = { "branch", "diff", "diagnostics" },
