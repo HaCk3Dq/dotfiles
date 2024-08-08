@@ -5,13 +5,17 @@ return {
   { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = { indent = { char = "▏" } } },
   { "windwp/nvim-autopairs", event = "InsertEnter", config = true },
   { "kylechui/nvim-surround", event = { "BufReadPre", "BufNewFile" }, version = "*", config = true },
+  "rrethy/vim-illuminate",
+  "wsdjeg/vim-fetch", -- Allows nvim file:line
+  "kdheepak/lazygit.nvim",
+
   {
     "lewis6991/gitsigns.nvim",
     config = function()
       require("gitsigns").setup()
     end,
   },
-  { "kdheepak/lazygit.nvim" },
+
   {
     "ray-x/lsp_signature.nvim",
     event = "VeryLazy",
@@ -20,6 +24,7 @@ return {
       require("lsp_signature").setup(opts)
     end,
   },
+
   {
     "linux-cultist/venv-selector.nvim",
     dependencies = {
@@ -39,14 +44,14 @@ return {
       require("venv-selector").setup()
     end,
   },
+
   {
     "karb94/neoscroll.nvim",
     config = function()
       require("neoscroll").setup({})
     end,
   },
-  "rrethy/vim-illuminate",
-  "wsdjeg/vim-fetch", -- Allows nvim file:line
+
   {
     "norcalli/nvim-colorizer.lua",
     config = function()
