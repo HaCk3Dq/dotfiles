@@ -1,27 +1,28 @@
-import i3ipc
-from subprocess import run, PIPE
+from subprocess import PIPE, run
 
-xkb_path = '/home/hacked/dotfiles/xkblayout-state'
+import i3ipc
+
+xkb_path = "/home/hacked/dotfiles/xkblayout-state"
 bind = {
-    'us': ['Alacritty', 'firefox', 'Org.gnome.Nautilus', 'Spotify', 'Tor Browser'],
-    'ru': ['TelegramDesktop', 'discord']
+    "us": ["Alacritty", "firefox", "Org.gnome.Nautilus", "Spotify", "Tor Browser"],
+    "ru": ["TelegramDesktop", "discord"],
 }
-bind['all'] = bind['us'] + bind['ru']
+bind["all"] = bind["us"] + bind["ru"]
 
 
 def swap_layout(current):
-    bit = '1' if current == 'us' else '0'
-    run([xkb_path, 'set', bit])
+    bit = "1" if current == "us" else "0"
+    run([xkb_path, "set", bit])
 
 
 def swap(focused, layout):
-    if focused in bind['all'] and focused not in bind[layout]:
+    if focused in bind["all"] and focused not in bind[layout]:
         swap_layout(layout)
 
 
 def get_layout():
-    out = run([xkb_path, 'print', '"%c"'], stdout=PIPE).stdout
-    return 'us' if out.decode("utf-8") == '"0"' else 'ru'
+    out = run([xkb_path, "print", '"%c"'], stdout=PIPE).stdout
+    return "us" if out.decode("utf-8") == '"0"' else "ru"
 
 
 def on_window_focus(i3, _):
