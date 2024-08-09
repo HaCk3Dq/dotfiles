@@ -21,7 +21,16 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     config = function()
-      require("gitsigns").setup()
+      require("gitsigns").setup({
+        on_attach = function()
+          local gitsigns = require("gitsigns")
+          local map = vim.keymap.set
+
+          map("n", "<space>gv", gitsigns.preview_hunk)
+          map("n", "<space>gr", gitsigns.reset_hunk)
+          map("n", "<space>gb", gitsigns.toggle_current_line_blame)
+        end,
+      })
     end,
   },
 

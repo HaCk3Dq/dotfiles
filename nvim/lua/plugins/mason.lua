@@ -26,7 +26,6 @@ return {
         "pyright",
         "jsonls",
         "ruff",
-        "ruff_lsp",
         "taplo",
         "stylua",
         "yamlls",
