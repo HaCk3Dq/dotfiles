@@ -37,11 +37,15 @@ return {
       ensure_installed = {
         "prettier",
         "stylua",
-        "isort",
         "ruff",
-        "pylint",
         "shfmt",
+
+        "pylint",
         "luacheck",
+        "actionlint",
+        "hadolint",
+        "jsonlint",
+        "yamllint",
       },
     })
   end,
