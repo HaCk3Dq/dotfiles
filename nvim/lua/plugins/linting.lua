@@ -5,9 +5,10 @@ return {
     local lint = require("lint")
 
     lint.linters_by_ft = {
+      markdown = { "markdownlint" },
       sh = { "shellcheck" },
       lua = { "luacheck" },
-      python = { "pylint" },
+      python = { "ruff" },
       yaml = { "actionlint", "yamllint" },
       dockerfile = { "hadolint" },
       json = { "jsonlint" },

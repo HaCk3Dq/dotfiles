@@ -7,11 +7,10 @@ return {
     conform.setup({
       formatters_by_ft = {
         javascript = { "prettier" },
-        typescript = { "prettier" },
         css = { "prettier" },
         html = { "prettier" },
         json = { "prettier" },
-        yaml = { "prettier" },
+        yaml = { "yamlfmt" },
         markdown = { "prettier" },
         lua = { "stylua" },
         python = { "ruff_organize_imports", "ruff_format" },
