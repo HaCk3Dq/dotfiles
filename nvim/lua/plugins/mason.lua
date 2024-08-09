@@ -38,6 +38,7 @@ return {
         "stylua",
         "shfmt",
         "yamlfmt",
+        "beautysh",
 
         "markdownlint",
         "luacheck",
