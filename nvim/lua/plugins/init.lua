@@ -8,6 +8,15 @@ return {
   "rrethy/vim-illuminate",
   "wsdjeg/vim-fetch", -- Allows nvim file:line
   "kdheepak/lazygit.nvim",
+  "williamboman/mason.nvim",
+
+  {
+    "williamboman/mason-lspconfig.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    dependencies = {
+      "williamboman/mason.nvim",
+    },
+  },
 
   {
     "lewis6991/gitsigns.nvim",

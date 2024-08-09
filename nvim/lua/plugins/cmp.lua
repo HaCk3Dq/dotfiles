@@ -73,7 +73,7 @@ return {
       }),
 
       formatting = {
-        fields = {},
+        fields = { "abbr", "menu", "kind" },
         expandable_indicator = true,
         format = lspkind.cmp_format({
           mode = "text",

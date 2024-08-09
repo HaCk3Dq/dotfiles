@@ -41,6 +41,7 @@ return {
         "ruff",
         "pylint",
         "shfmt",
+        "luacheck",
       },
     })
   end,
