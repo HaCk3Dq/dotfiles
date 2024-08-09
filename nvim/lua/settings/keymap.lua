@@ -28,6 +28,9 @@ map("n", "<C-X>", ":close<CR>", opts)
 
 -- Git
 map("n", "<leader>g", ":LazyGit<CR>", opts)
+map("n", "<space>gv", ":lua require('gitsigns').preview_hunk()<CR>", opts)
+map("n", "<space>gr", ":lua require('gitsigns').reset_hunk()<CR>", opts)
+map("n", "<space>gb", ":lua require('gitsigns').toggle_current_line_blame()<CR>", opts)
 
 -- LSP
 map("n", "<space>d", ":lua vim.lsp.buf.definition()<CR>", opts)
