@@ -6,8 +6,8 @@ return {
   },
   config = function()
     local mason = require("mason")
-    local mason_lspconfig = require("mason-lspconfig")
     local mason_tool_installer = require("mason-tool-installer")
+    local mason_lspconfig = require("mason-lspconfig")
 
     mason.setup({
       ui = {
@@ -40,6 +40,7 @@ return {
         "isort",
         "ruff",
         "pylint",
+        "shfmt",
       },
     })
   end,

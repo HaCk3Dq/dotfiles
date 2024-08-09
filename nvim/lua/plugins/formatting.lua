@@ -15,6 +15,7 @@ return {
         markdown = { "prettier" },
         lua = { "stylua" },
         python = { "ruff_organize_imports", "ruff_format" },
+        sh = { "shfmt" },
       },
 
       format_on_save = {

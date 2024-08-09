@@ -18,6 +18,9 @@ return {
         },
       },
       defaults = {
+        file_ignore_patterns = {
+          ".git/",
+        },
         prompt_prefix = "λ -> ",
         selection_caret = "> ",
         mappings = {
