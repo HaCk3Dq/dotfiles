@@ -8,6 +8,7 @@ return {
     require("auto-session").setup({
       auto_session_suppress_dirs = { "~/" },
       session_lens = {
+        previewer = false,
         load_on_setup = true,
         path_display = { "shorten" },
       },
