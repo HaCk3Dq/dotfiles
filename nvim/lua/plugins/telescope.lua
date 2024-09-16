@@ -5,6 +5,7 @@ return {
     "kyazdani42/nvim-web-devicons",
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope-fzy-native.nvim",
+    "folke/todo-comments.nvim",
   },
   config = function()
     require("telescope").load_extension("fzy_native")
