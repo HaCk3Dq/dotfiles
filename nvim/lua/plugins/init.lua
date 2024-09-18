@@ -12,6 +12,31 @@ return {
   "xiyaowong/transparent.nvim",
 
   {
+    "akinsho/git-conflict.nvim",
+    version = "*",
+    config = function()
+      vim.api.nvim_set_hl(0, "GitConflictCurrent", { bg = "#1D3B40" })
+      vim.api.nvim_set_hl(0, "GitConflictCurrentLabel", { bg = "#2A7069" })
+      vim.api.nvim_set_hl(0, "GitConflictIncoming", { bg = "#1D3450" })
+      vim.api.nvim_set_hl(0, "GitConflictIncomingLabel", { bg = "#2A5F92" })
+      vim.api.nvim_set_hl(0, "GitConflictAncestor", { bg = "#1E1E1E" })
+      vim.api.nvim_set_hl(0, "GitConflictAncestorLabel", { bg = "#282A34" })
+
+      require("git-conflict").setup({
+        default_mappings = false,
+        list_opener = "copen",
+        debug = false,
+        disable_diagnostics = true,
+        highlights = {
+          current = "GitConflictCurrent",
+          incoming = "GitConflictIncoming",
+          ancestor = "GitConflictAncestor",
+        },
+      })
+    end,
+  },
+
+  {
     "williamboman/mason-lspconfig.nvim",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
@@ -87,6 +112,7 @@ return {
           RGB = true,
           RRGGBB = true,
           css = true,
+          names = false,
         },
       })
     end,

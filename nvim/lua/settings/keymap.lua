@@ -59,3 +59,9 @@ map("n", "<F9>", ":lua require('dap').toggle_breakpoint()<CR>", opts)
 map("n", "<F10>", ":lua require('telescope').extensions.dap.list_breakpoints()<CR>", opts)
 map("n", "<F11>", ":lua require('telescope').extensions.dap.commands()<CR>", opts)
 map("n", "<F12>", ":lua require('dap').clear_breakpoints()<CR>", opts)
+
+-- Merge
+map("n", "<leader>cc", ":GitConflictChooseOurs<CR>", opts)
+map("n", "<leader>ci", ":GitConflictChooseTheirs<CR>", opts)
+map("n", "<leader>cb", ":GitConflictChooseBoth<CR>", opts)
+map("n", "<leader>cn", ":GitConflictChooseNone<CR>", opts)
