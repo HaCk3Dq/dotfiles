@@ -13,7 +13,6 @@ DISABLE_LS_COLORS="true"
 plugins=(
     adb
     sudo
-    sublime-merge
     colored-man-pages
     docker
     docker-compose
@@ -21,6 +20,9 @@ plugins=(
     ripgrep
     systemd
     virtualenvwrapper
+    kubectl
+    kubectx
+    helm
 )
 
 export EDITOR="nvim"

@@ -9,6 +9,7 @@ return {
   "wsdjeg/vim-fetch", -- Allows nvim file:line
   "kdheepak/lazygit.nvim",
   "williamboman/mason.nvim",
+  "xiyaowong/transparent.nvim",
 
   {
     "williamboman/mason-lspconfig.nvim",
@@ -48,6 +49,7 @@ return {
       auto_refresh = true,
       path = "~/.virtualenvs/",
       parents = 0,
+      dap_enabled = true,
     },
     config = function()
       require("venv-selector").setup()
@@ -64,6 +66,9 @@ return {
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("todo-comments").setup()
+    end,
   },
 
   {
@@ -74,7 +79,7 @@ return {
   },
 
   {
-    "norcalli/nvim-colorizer.lua",
+    "NvChad/nvim-colorizer.lua",
     config = function()
       require("colorizer").setup({
         filetypes = { "*" },

@@ -12,7 +12,9 @@ alias feh='feh -q --scale-down --auto-zoom'
 alias ping='mtr'
 alias less='less -r'
 alias v='nvim'
-alias vr='nvim --server ${XDG_RUNTIME_DIR:-${TMPDIR}nvim.${USER}}/nvim.*.0  --remote "$(pwd)/"'
+vr() {
+    nvim --server ${XDG_RUNTIME_DIR:-${TMPDIR}nvim.${USER}}/nvim.*.0 --remote-tab-silent "$(realpath "$1")"
+}
 alias ip='ip -color=auto'
 alias lg='lazygit'
 alias ldo='lazydocker'
