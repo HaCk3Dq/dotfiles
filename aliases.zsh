@@ -33,6 +33,7 @@ alias gd='git diff'
 alias gr='git rm'
 alias gl='git lg'
 alias gb='git branch -avv --list'
+alias gbd='git branch -D'
 
 fzf-git-branch() {
     git rev-parse HEAD > /dev/null 2>&1 || return
