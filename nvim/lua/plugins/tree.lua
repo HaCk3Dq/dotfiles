@@ -13,7 +13,6 @@ return {
         filtered_items = {
           hide_dotfiles = false,
           hide_gitignored = false,
-          enable_diagnostics = false,
         },
         follow_current_file = {
           enabled = true,
