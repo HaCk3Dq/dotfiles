@@ -19,6 +19,7 @@ map("n", "<C-W>", ":BufferClose<CR>", { nowait = true })
 map("n", "<S-x>", ":BufferRestore<CR>", opts)
 
 -- Splits
+-- TODO: vertical split + resize
 map("n", "<F26>", ":vsp<CR>", opts)
 map("n", "<S-Left>", ":wincmd h<CR>", opts)
 map("n", "<S-Right>", ":wincmd l<CR>", opts)
@@ -51,7 +52,6 @@ map("n", "<leader>t", ":TodoTelescope<CR>", opts)
 -- DAP
 map("n", "<leader>d", ":lua require('dapui').toggle()<CR>", opts)
 map("n", "<F5>", ":lua require('dap').continue()<CR>", opts)
-map("n", "<S-F5>", ":lua require('dap').close()<CR>", opts)
 map("n", "<F6>", ":lua require('dap').step_over()<CR>", opts)
 map("n", "<F7>", ":lua require('dap').step_into()<CR>", opts)
 map("n", "<F8>", ":lua require('dap').step_out()<CR>", opts)
