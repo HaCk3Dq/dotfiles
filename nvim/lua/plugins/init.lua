@@ -1,6 +1,5 @@
 return {
   "nvim-lua/plenary.nvim",
-  "folke/which-key.nvim",
   "stevearc/dressing.nvim",
   { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = { indent = { char = "▏" } } },
   { "windwp/nvim-autopairs", event = "InsertEnter", config = true },
@@ -12,10 +11,14 @@ return {
   "xiyaowong/transparent.nvim",
 
   {
-    "rcarriga/nvim-notify",
+    "kevinhwang91/nvim-ufo",
+    dependencies = { "kevinhwang91/promise-async" },
     config = function()
-      vim.notify = require("notify")
-      vim.api.nvim_set_hl(0, "NotifyBackground", { bg = "#000000" })
+      require("ufo").setup({
+        provider_selector = function()
+          return { "lsp", "indent" }
+        end,
+      })
     end,
   },
 
@@ -25,6 +28,15 @@ return {
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
       "nvim-tree/nvim-web-devicons",
+    },
+  },
+
+  {
+    "folke/which-key.nvim",
+    opts = {
+      layout = {
+        height = { min = 10, max = 25 },
+      },
     },
   },
 
@@ -73,7 +85,6 @@ return {
       vim.api.nvim_set_hl(0, "GitConflictIncomingLabel", { bg = "#2A5F92" })
       vim.api.nvim_set_hl(0, "GitConflictAncestor", { bg = "#1E1E1E" })
       vim.api.nvim_set_hl(0, "GitConflictAncestorLabel", { bg = "#282A34" })
-
       require("git-conflict").setup({
         default_mappings = false,
         list_opener = "copen",
@@ -84,6 +95,16 @@ return {
           incoming = "GitConflictIncoming",
           ancestor = "GitConflictAncestor",
         },
+      })
+    end,
+  },
+
+  {
+    "rcarriga/nvim-notify",
+    config = function()
+      vim.notify = require("notify")
+      require("notify").setup({
+        background_colour = "#000000",
       })
     end,
   },

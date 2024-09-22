@@ -36,9 +36,14 @@ map("n", "<space>gR", ":lua require('gitsigns').reset_buffer()<CR>", opts)
 map("n", "<space>gb", ":lua require('gitsigns').toggle_current_line_blame()<CR>", opts)
 
 -- LSP
-map("n", "<space>d", ":lua vim.lsp.buf.definition()<CR>", opts)
+map("n", "<space>d", ":Telescope lsp_definitions<CR>", opts)
 map("n", "<space>h", ":lua vim.lsp.buf.hover()<CR>", opts)
-map("n", "<space>r", ":lua vim.lsp.buf.rename()<CR>", opts)
+map("n", "<space>r", ":Telescope lsp_references<CR>", opts)
+map("n", "<space>R", ":lua vim.lsp.buf.rename()<CR>", opts)
+
+-- Folds
+map("n", "zR", ":lua require('ufo').openAllFolds()<CR>", opts)
+map("n", "zM", ":lua require('ufo').closeAllFolds()<CR>", opts)
 
 -- Telescope
 map("n", "<leader>l", ":Lazy<CR>", opts)

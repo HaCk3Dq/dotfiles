@@ -25,4 +25,8 @@ o.signcolumn = "yes"
 o.title = true
 o.ch = 0
 
+o.foldlevel = 99
+o.foldlevelstart = 99
+o.foldenable = true
+
 vim.cmd("au TextYankPost * silent! lua vim.highlight.on_yank()")
