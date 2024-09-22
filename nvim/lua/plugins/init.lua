@@ -12,6 +12,50 @@ return {
   "xiyaowong/transparent.nvim",
 
   {
+    "stevearc/aerial.nvim",
+    opts = {},
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
+
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    opts = {
+      modes = {
+        char = {
+          enabled = false,
+        },
+      },
+    },
+    keys = {
+      {
+        "<space>s",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").jump()
+        end,
+      },
+      {
+        "S",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").treesitter()
+        end,
+      },
+      {
+        "r",
+        mode = "o",
+        function()
+          require("flash").remote()
+        end,
+      },
+    },
+  },
+
+  {
     "akinsho/git-conflict.nvim",
     version = "*",
     config = function()
@@ -54,6 +98,7 @@ return {
   {
     "ray-x/lsp_signature.nvim",
     event = "VeryLazy",
+    opts = {},
     config = function(_, opts)
       require("lsp_signature").setup(opts)
     end,

@@ -15,7 +15,7 @@ map("n", "J", ":BufferPrevious<CR>", opts)
 map("n", "K", ":BufferNext<CR>", opts)
 map("n", "<A-j>", ":BufferMovePrevious<CR>", opts)
 map("n", "<A-k>", ":BufferMoveNext<CR>", opts)
-map("n", "<C-W>", ":BufferClose<CR>", { nowait = true })
+map("n", "<C-w>", ":BufferClose<CR>", { nowait = true })
 map("n", "<S-x>", ":BufferRestore<CR>", opts)
 
 -- Splits
@@ -48,9 +48,10 @@ map("n", "<leader>f", ":Telescope find_files<CR>", opts)
 map("n", "<leader>e", ":Telescope diagnostics<CR>", opts)
 map("n", "<leader>v", ":VenvSelect<CR>", opts)
 map("n", "<leader>t", ":TodoTelescope<CR>", opts)
+map("n", "<leader>d", ":Telescope aerial<CR>", opts)
 
 -- DAP
-map("n", "<leader>d", ":lua require('dapui').toggle()<CR>", opts)
+map("n", "<leader>q", ":lua require('dapui').toggle()<CR>", opts)
 map("n", "<F5>", ":lua require('dap').continue()<CR>", opts)
 map("n", "<F6>", ":lua require('dap').step_over()<CR>", opts)
 map("n", "<F7>", ":lua require('dap').step_into()<CR>", opts)

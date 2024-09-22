@@ -14,8 +14,9 @@ return {
         markdown = { "prettier" },
         lua = { "stylua" },
         python = { "ruff_organize_imports", "ruff_format" },
-        sh = { "shfmt" },
+        sh = { "shellharden", "shellcheck", "shfmt" },
         zsh = { "beautysh" },
+        toml = { "taplo" },
       },
 
       format_on_save = {

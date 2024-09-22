@@ -46,6 +46,8 @@ return {
         "hadolint",
         "jsonlint",
         "yamllint",
+        "shellcheck",
+        "shellharden",
 
         "debugpy",
       },
