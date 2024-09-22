@@ -27,7 +27,6 @@ return {
         "jsonls",
         "ruff",
         "taplo",
-        "stylua",
         "yamlls",
       },
     })
@@ -39,6 +38,7 @@ return {
         "shfmt",
         "yamlfmt",
         "beautysh",
+        "stylua",
 
         "markdownlint",
         "luacheck",

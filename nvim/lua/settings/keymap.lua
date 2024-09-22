@@ -9,6 +9,7 @@ map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 map("n", "<C-\\>", ":Neotree toggle<CR>", opts)
 map("n", "<esc>", ":noh<CR>", opts)
+map("n", "m", "%", opts)
 
 -- Buffers
 map("n", "J", ":BufferPrevious<CR>", opts)
@@ -31,6 +32,7 @@ map("n", "<C-X>", ":close<CR>", opts)
 map("n", "<leader>g", ":LazyGit<CR>", opts)
 map("n", "<space>gv", ":lua require('gitsigns').preview_hunk()<CR>", opts)
 map("n", "<space>gr", ":lua require('gitsigns').reset_hunk()<CR>", opts)
+map("n", "<space>gR", ":lua require('gitsigns').reset_buffer()<CR>", opts)
 map("n", "<space>gb", ":lua require('gitsigns').toggle_current_line_blame()<CR>", opts)
 
 -- LSP
@@ -49,6 +51,7 @@ map("n", "<leader>e", ":Telescope diagnostics<CR>", opts)
 map("n", "<leader>v", ":VenvSelect<CR>", opts)
 map("n", "<leader>t", ":TodoTelescope<CR>", opts)
 map("n", "<leader>d", ":Telescope aerial<CR>", opts)
+map("n", "<leader>n", ":Telescope notify<CR>", opts)
 
 -- DAP
 map("n", "<leader>q", ":lua require('dapui').toggle()<CR>", opts)

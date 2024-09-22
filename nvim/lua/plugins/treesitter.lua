@@ -4,6 +4,7 @@ return {
   build = ":TSUpdate",
   dependencies = {
     "romgrk/nvim-treesitter-context",
+    "nvim-treesitter/nvim-treesitter-textobjects",
   },
   config = function()
     require("nvim-treesitter.configs").setup({
@@ -49,13 +50,51 @@ return {
         "toml",
         "xml",
       },
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = "<C-a>",
-          node_incremental = "<C-a>",
-          scope_incremental = false,
-          node_decremental = "<BS>",
+      textobjects = {
+        select = {
+          enable = true,
+          lookahead = true,
+          keymaps = {
+            ["aa"] = "@parameter.outer",
+            ["ia"] = "@parameter.inner",
+            ["af"] = "@function.outer",
+            ["if"] = "@function.inner",
+            ["ac"] = "@class.outer",
+            ["ic"] = "@class.inner",
+            ["ii"] = "@conditional.inner",
+            ["ai"] = "@conditional.outer",
+            ["il"] = "@loop.inner",
+            ["al"] = "@loop.outer",
+          },
+        },
+        move = {
+          enable = true,
+          set_jumps = true,
+          goto_next_start = {
+            ["]f"] = "@function.outer",
+            ["]c"] = "@class.outer",
+          },
+          goto_next_end = {
+            ["]F"] = "@function.outer",
+            ["]C"] = "@class.outer",
+          },
+          goto_previous_start = {
+            ["[f"] = "@function.outer",
+            ["[c"] = "@class.outer",
+          },
+          goto_previous_end = {
+            ["[F"] = "@function.outer",
+            ["[C"] = "@class.outer",
+          },
+        },
+        swap = {
+          enable = true,
+          swap_next = {
+            ["<space>a"] = "@parameter.inner",
+          },
+          swap_previous = {
+            ["<space>A"] = "@parameter.inner",
+          },
         },
       },
     })

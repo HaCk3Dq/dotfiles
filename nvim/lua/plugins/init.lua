@@ -12,6 +12,14 @@ return {
   "xiyaowong/transparent.nvim",
 
   {
+    "rcarriga/nvim-notify",
+    config = function()
+      vim.notify = require("notify")
+      vim.api.nvim_set_hl(0, "NotifyBackground", { bg = "#000000" })
+    end,
+  },
+
+  {
     "stevearc/aerial.nvim",
     opts = {},
     dependencies = {
@@ -126,10 +134,10 @@ return {
   },
 
   {
-    "b3nj5m1n/kommentary",
-    config = function()
-      require("kommentary.config").configure_language("default", { prefer_single_line_comments = true })
-    end,
+    "numToStr/Comment.nvim",
+    opts = {
+      ignore = "^$",
+    },
   },
 
   {
