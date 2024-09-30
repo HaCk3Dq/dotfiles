@@ -30,3 +30,7 @@ o.foldlevelstart = 99
 o.foldenable = true
 
 vim.cmd("au TextYankPost * silent! lua vim.highlight.on_yank()")
+
+vim.filetype.add({
+  pattern = { [".*/.github/workflows/.*"] = "yaml.ghactions" },
+})

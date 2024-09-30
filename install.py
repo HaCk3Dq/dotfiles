@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from os import system
 from sys import argv
 
@@ -9,6 +11,7 @@ config_destinations = {
     ".tmux.conf": "~/",
     ".p10k.zsh": "~/",
     "dunst": "~/.config/",
+    "yamllint": "~/.config/",
     "gpg-agent.conf": "~/.gnupg/",
     "gtk-3.0": "~/.config/",
     "gtk-4.0": "~/.config/",

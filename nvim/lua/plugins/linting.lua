@@ -9,7 +9,8 @@ return {
       sh = { "shellcheck" },
       lua = { "luacheck" },
       python = { "ruff" },
-      yaml = { "actionlint", "yamllint" },
+      yaml = { "yamllint" },
+      ["yaml.ghactions"] = { "actionlint", "yamllint" },
       dockerfile = { "hadolint" },
       json = { "jsonlint" },
     }

@@ -22,6 +22,7 @@ return {
         "query",
         "markdown",
         "markdown_inline",
+        "rasi",
         "json",
         "yaml",
         "javascript",
