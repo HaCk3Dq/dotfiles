@@ -34,6 +34,7 @@ server_part = [
     ".p10k.zsh",
     "nvim",
     "htop",
+    "yamllint",
 ]
 
 for config, path in config_destinations.items():
