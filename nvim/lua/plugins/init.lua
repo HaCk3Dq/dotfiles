@@ -11,6 +11,13 @@ return {
   "xiyaowong/transparent.nvim",
 
   {
+    "levouh/tint.nvim",
+    config = function()
+      require("tint").setup({})
+    end,
+  },
+
+  {
     "kevinhwang91/nvim-ufo",
     dependencies = { "kevinhwang91/promise-async" },
     config = function()

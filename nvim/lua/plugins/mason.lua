@@ -28,6 +28,7 @@ return {
         "ruff",
         "taplo",
         "yamlls",
+        "ansiblels",
       },
     })
 
@@ -36,11 +37,11 @@ return {
         "prettier",
         "stylua",
         "shfmt",
-        "yamlfmt",
         "beautysh",
         "stylua",
 
         "markdownlint",
+        "ansible-lint",
         "luacheck",
         "actionlint",
         "hadolint",

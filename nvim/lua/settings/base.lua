@@ -18,7 +18,7 @@ o.smartcase = true
 
 o.relativenumber = true
 o.number = true
-o.fillchars = { vert = " " }
+o.fillchars = { vert = " ", eob = " " }
 o.cursorline = true
 o.termguicolors = true
 o.signcolumn = "yes"
@@ -32,5 +32,8 @@ o.foldenable = true
 vim.cmd("au TextYankPost * silent! lua vim.highlight.on_yank()")
 
 vim.filetype.add({
-  pattern = { [".*/.github/workflows/.*"] = "yaml.ghactions" },
+  pattern = {
+    [".*/ansible/.*%.ya?ml"] = "yaml.ansible",
+    [".*/.github/workflows/.*"] = "yaml.ghactions",
+  },
 })

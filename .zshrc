@@ -12,6 +12,7 @@ DISABLE_LS_COLORS="true"
 
 plugins=(
     adb
+    ansible
     sudo
     colored-man-pages
     docker
