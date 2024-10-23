@@ -9,7 +9,7 @@ spotify &
 # discord --start-minimized &
 ./.screenlayout/main.sh &
 feh --no-fehbg --bg-scale Pictures/wallpaper.jpg &
-picom -C &
+picom &
 slack -u &
 upwork &
 exec i3

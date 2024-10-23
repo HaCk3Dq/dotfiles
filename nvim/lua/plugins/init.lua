@@ -8,14 +8,13 @@ return {
   "wsdjeg/vim-fetch", -- Allows nvim file:line
   "kdheepak/lazygit.nvim",
   "williamboman/mason.nvim",
-  "xiyaowong/transparent.nvim",
-
   {
     "levouh/tint.nvim",
     config = function()
       require("tint").setup({})
     end,
   },
+  "xiyaowong/transparent.nvim",
 
   {
     "kevinhwang91/nvim-ufo",
