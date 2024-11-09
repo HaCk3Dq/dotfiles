@@ -11,14 +11,12 @@ DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="true"
 
 plugins=(
-    adb
     ansible
     sudo
     colored-man-pages
     docker
     docker-compose
     pip
-    ripgrep
     systemd
     virtualenvwrapper
     kubectl
