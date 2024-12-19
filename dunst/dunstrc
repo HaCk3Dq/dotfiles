@@ -5,9 +5,9 @@
     follow = none
 
     width = 300
-    height = 300
+    height = (0, 300)
     origin = top-right
-    offset = 0x50
+    offset = (0, 50)
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
