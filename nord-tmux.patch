@@ -1,0 +1,13 @@
+diff --git a/src/nord-status-content.conf b/src/nord-status-content.conf
+index 11980e1..e9804e6 100644
+--- a/src/nord-status-content.conf
++++ b/src/nord-status-content.conf
+@@ -14,7 +14,7 @@ set -g @prefix_highlight_copy_mode_attr "fg=brightcyan,bg=black,bold"
+ #+--------+
+ #+--- Bars ---+
+ set -g status-left "#[fg=black,bg=blue,bold] #S #[fg=blue,bg=black,nobold,noitalics,nounderscore]"
+-set -g status-right "#{prefix_highlight}#[fg=brightblack,bg=black,nobold,noitalics,nounderscore]#[fg=white,bg=brightblack] ${NORD_TMUX_STATUS_DATE_FORMAT} #[fg=white,bg=brightblack,nobold,noitalics,nounderscore]#[fg=white,bg=brightblack] ${NORD_TMUX_STATUS_TIME_FORMAT} #[fg=cyan,bg=brightblack,nobold,noitalics,nounderscore]#[fg=black,bg=cyan,bold] #H "
++set -g status-right "#{prefix_highlight}#[fg=brightblack,bg=black,nobold,noitalics,nounderscore]#[fg=white,bg=brightblack] #[fg=white,bg=brightblack,nobold,noitalics,nounderscore]#[fg=white,bg=brightblack] #[fg=cyan,bg=brightblack,nobold,noitalics,nounderscore]#[fg=black,bg=cyan,bold] #H "
+ 
+ #+--- Windows ---+
+ set -g window-status-format "#[fg=black,bg=brightblack,nobold,noitalics,nounderscore] #[fg=white,bg=brightblack]#I #[fg=white,bg=brightblack,nobold,noitalics,nounderscore] #[fg=white,bg=brightblack]#W #F #[fg=brightblack,bg=black,nobold,noitalics,nounderscore]"
