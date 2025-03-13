@@ -19,6 +19,11 @@ alias ip='ip -color=auto'
 alias lg='lazygit'
 alias ldo='lazydocker'
 
+alias dswd='docker stack deploy -c docker-compose.yml'
+alias dswr='docker stack rm'
+alias dswl='docker service ls'
+alias db='docker build'
+
 alias gs='git status --short --branch'
 alias ga='git add'
 alias gc='git commit -m'
