@@ -58,14 +58,14 @@ return {
     },
     keys = {
       {
-        "<space>s",
+        "<space>f",
         mode = { "n", "x", "o" },
         function()
           require("flash").jump()
         end,
       },
       {
-        "S",
+        "F",
         mode = { "n", "x", "o" },
         function()
           require("flash").treesitter()
