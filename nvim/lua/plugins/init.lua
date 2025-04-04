@@ -8,6 +8,9 @@ return {
   "wsdjeg/vim-fetch", -- Allows nvim file:line
   "kdheepak/lazygit.nvim",
   "williamboman/mason.nvim",
+  "xzbdmw/colorful-menu.nvim",
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
   {
     "levouh/tint.nvim",
     config = function()

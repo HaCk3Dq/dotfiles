@@ -9,7 +9,7 @@ map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 map("n", "<C-\\>", ":Neotree toggle<CR>", opts)
 map("n", "<esc>", ":noh<CR>", opts)
-map("n", "m", "%", opts)
+map({ "n", "x", "o" }, "m", "%", opts)
 
 -- Buffers
 map("n", "J", ":BufferPrevious<CR>", opts)
