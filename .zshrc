@@ -11,6 +11,7 @@ DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="true"
 
 plugins=(
+    ssh-agent
     ansible
     sudo
     colored-man-pages
@@ -44,4 +45,3 @@ python ~/dotfiles/colored.py
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/terraform terraform

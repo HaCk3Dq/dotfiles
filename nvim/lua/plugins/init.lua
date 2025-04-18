@@ -160,7 +160,7 @@ return {
       dap_enabled = true,
     },
     config = function()
-      require("venv-selector").setup()
+      require("venv-selector").setup({})
     end,
   },
 

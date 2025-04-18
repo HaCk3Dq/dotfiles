@@ -41,6 +41,7 @@ map("n", "<space>h", ":lua vim.lsp.buf.hover()<CR>", opts)
 map("n", "<space>r", ":Telescope lsp_references<CR>", opts)
 map("n", "<space>R", ":lua vim.lsp.buf.rename()<CR>", opts)
 map("n", "<space>s", ":Telescope lsp_document_symbols<CR>", opts)
+map("n", "<space>e", ":lua vim.diagnostic.open_float()<CR>", opts)
 
 -- Folds
 map("n", "zR", ":lua require('ufo').openAllFolds()<CR>", opts)
@@ -71,7 +72,7 @@ map("n", "<F11>", ":lua require('telescope').extensions.dap.commands()<CR>", opt
 map("n", "<F12>", ":lua require('dap').clear_breakpoints()<CR>", opts)
 
 -- Merge
-map("n", "<leader>cc", ":GitConflictChooseOurs<CR>", opts)
-map("n", "<leader>ci", ":GitConflictChooseTheirs<CR>", opts)
-map("n", "<leader>cb", ":GitConflictChooseBoth<CR>", opts)
-map("n", "<leader>cn", ":GitConflictChooseNone<CR>", opts)
+map("n", "<space>gcc", ":GitConflictChooseOurs<CR>", opts)
+map("n", "<space>gci", ":GitConflictChooseTheirs<CR>", opts)
+map("n", "<space>gcb", ":GitConflictChooseBoth<CR>", opts)
+map("n", "<space>gcn", ":GitConflictChooseNone<CR>", opts)
