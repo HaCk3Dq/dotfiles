@@ -9,6 +9,7 @@ fi
 ZSH=/usr/share/oh-my-zsh/
 DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="true"
+zstyle :omz:plugins:ssh-agent quiet yes
 
 plugins=(
     ssh-agent

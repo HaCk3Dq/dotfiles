@@ -10,6 +10,7 @@ return {
   "williamboman/mason.nvim",
   "xzbdmw/colorful-menu.nvim",
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "xiyaowong/transparent.nvim", priority = 1000 },
 
   {
     "levouh/tint.nvim",
@@ -17,7 +18,6 @@ return {
       require("tint").setup({})
     end,
   },
-  "xiyaowong/transparent.nvim",
 
   {
     "kevinhwang91/nvim-ufo",
