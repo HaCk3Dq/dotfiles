@@ -42,6 +42,7 @@ map("n", "<space>r", ":Telescope lsp_references<CR>", opts)
 map("n", "<space>R", ":lua vim.lsp.buf.rename()<CR>", opts)
 map("n", "<space>s", ":Telescope lsp_document_symbols<CR>", opts)
 map("n", "<space>e", ":lua vim.diagnostic.open_float()<CR>", opts)
+map("n", "<space>a", ":AerialToggle<CR>", opts)
 
 -- Folds
 map("n", "zR", ":lua require('ufo').openAllFolds()<CR>", opts)
