@@ -39,7 +39,7 @@
 
   modules-left = i3
   modules-center = date
-  modules-right = spotify volume cpu memory xkeyboard battery
+  modules-right = spotify volume bluetooth cpu memory xkeyboard battery
 
   tray-position = right
   tray-padding = 5
@@ -81,7 +81,13 @@
   type = custom/script
   interval = 1
   format = <label>
-  exec = python /home/hacked/dotfiles/spotify.py
+  exec = python ~/dotfiles/spotify.py
+
+[module/bluetooth]
+  type = custom/script
+  interval = 1
+  format = <label>
+  exec = python ~/dotfiles/bt.py
 
 [module/battery]
   type = internal/battery
