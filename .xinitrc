@@ -3,7 +3,7 @@ dunst &
 firefox &
 alacritty -e tmux &
 nvim-ui &
-telegram-desktop &
+Telegram &
 nautilus &
 spotify &
 # discord --start-minimized &
