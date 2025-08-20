@@ -45,8 +45,9 @@ map("n", "<space>e", ":lua vim.diagnostic.open_float()<CR>", opts)
 map("n", "<space>a", ":AerialToggle<CR>", opts)
 
 -- Folds
-map("n", "zR", ":lua require('ufo').openAllFolds()<CR>", opts)
-map("n", "zM", ":lua require('ufo').closeAllFolds()<CR>", opts)
+map("n", "za", ":lua require('ufo').openAllFolds()<CR>", opts)
+map("n", "zc", ":lua require('ufo').closeAllFolds()<CR>", opts)
+map("n", "<space><space>", "za", opts)
 
 -- Telescope
 map("n", "<leader>l", ":Lazy<CR>", opts)
