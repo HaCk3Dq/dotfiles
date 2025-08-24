@@ -30,7 +30,7 @@ smart_borders on
 
 bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+r exec --no-startup-id rofi -show run
-bindsym $mod+l exec --no-startup-id $HOME/dotfiles/.lock.sh
+bindsym $mod+l exec --no-startup-id $HOME/dotfiles/lock.sh
 bindsym Mod1+e exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym Mod1+r exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym Mod1+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
