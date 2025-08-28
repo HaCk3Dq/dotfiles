@@ -4,7 +4,7 @@ o.tabstop = 2
 o.shiftwidth = 2
 o.expandtab = true
 o.autoindent = true
-o.wrap = true
+o.wrap = false
 o.clipboard = "unnamedplus"
 o.listchars = { tab = ">>>", trail = "·", precedes = "←", extends = "→", eol = "↲", nbsp = "␣" }
 o.swapfile = false
