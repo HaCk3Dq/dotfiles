@@ -46,3 +46,4 @@ python ~/dotfiles/colored.py
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 autoload -U +X bashcompinit && bashcompinit
+eval "$(uv generate-shell-completion zsh)"

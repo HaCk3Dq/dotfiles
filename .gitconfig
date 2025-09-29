@@ -37,8 +37,3 @@
 
 [alias]
   lg = "log --date=format:%c --pretty=format:'%C(blue)%h%C(reset) - %C(green)%ad%C(reset) %s %C(bold blue)<%an>%C(reset)' --abbrev-commit"
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f

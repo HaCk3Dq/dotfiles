@@ -36,8 +36,8 @@ local nord_func = "#81A1C1"
 
 local basic = require("catppuccin.groups.syntax").get()
 local cmp = require("catppuccin.groups.integrations.cmp").get()
-local lsp = require("catppuccin.groups.integrations.semantic_tokens").get()
-local tst = require("catppuccin.groups.integrations.treesitter").get()
+local lsp = require("catppuccin.groups.semantic_tokens").get()
+local tst = require("catppuccin.groups.treesitter").get()
 
 basic.String.fg = nord_string
 
