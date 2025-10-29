@@ -2,7 +2,7 @@ return {
   "mfussenegger/nvim-dap",
   ft = { "python" },
   dependencies = {
-    { "mfussenegger/nvim-dap-python" },
+    -- { "mfussenegger/nvim-dap-python" },
     { "rcarriga/nvim-dap-ui", dependencies = { "nvim-neotest/nvim-nio" } },
     { "nvim-telescope/telescope-dap.nvim" },
     { "theHamsta/nvim-dap-virtual-text" },
@@ -17,7 +17,7 @@ return {
 
     require("dapui").setup()
     -- TODO: check venv selector
-    require("dap-python").setup("~/.local/share/nvim/mason/packages/debugpy/venv/bin/python")
+    -- require("dap-python").setup("~/.local/share/nvim/mason/packages/debugpy/venv/bin/python")
     require("nvim-dap-virtual-text").setup({})
     require("telescope").load_extension("dap")
 

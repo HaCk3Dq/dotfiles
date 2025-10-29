@@ -25,6 +25,7 @@ config_destinations = {
     "feh": "~/.config/",
     "rofi": "~/.config/",
     "qt5ct": "~/.config/",
+    "mpv": "~/.config/",
     "layout.service": "~/.config/systemd/user/",
 }
 
