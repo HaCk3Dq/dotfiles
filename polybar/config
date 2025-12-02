@@ -11,6 +11,7 @@
   font-0 = DroidSansM Nerd Font:pixelsize=10;3
   font-1 = FontAwesome:pixelsize=13;3
   font-2 = DroidSansM Nerd Font:pixelsize=13;3
+  font-3 = DroidSansM Nerd Font:pixelsize=10;2
 
   width = 100%
   height = 25
@@ -163,6 +164,7 @@
   bar-volume-foreground-6 = #ff5555
   bar-volume-gradient = false
   bar-volume-indicator = |
+  bar-volume-indicator-font = 4
   bar-volume-fill = ─
   bar-volume-empty = ─
   bar-volume-empty-foreground = ${colors.foreground-alt}
