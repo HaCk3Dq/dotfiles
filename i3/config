@@ -14,8 +14,8 @@ for_window [class="Alacritty"] layout tabbed
 for_window [title="Nvim$"] move to workspace 3
 assign [class="TelegramDesktop|Spotify|discord"] 4
 for_window [class="Spotify"] move to workspace 4
-assign [class="Tor Browser|Pavucontrol|Arandr|Steam|betaflight-configurator|resolve|VirtualBox Machine|VirtualBox Manager|Qemu-system-x86_64"] 5
-assign [class="Nautilus|Transmission-gtk"] 6
+assign [class="Nautilus|Transmission-gtk"] 5
+assign [class="Tor Browser|Pavucontrol|Arandr|Steam|betaflight-configurator|resolve|VirtualBox Machine|VirtualBox Manager|Qemu-system-x86_64"] 6
 
 workspace 1 output HDMI-0
 workspace 2 output primary
