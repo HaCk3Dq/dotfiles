@@ -1,6 +1,6 @@
 import dbus
 
-BT_ICON = ""
+BT_ICON = "%{T3}%{T-}"
 LOW_BAT = 15
 RED_COLOR = "%{F#FF4444}"
 RESET_COLOR = "%{F-}"
@@ -19,7 +19,7 @@ def main() -> None:
         perc = int(interface["org.bluez.Battery1"].get("Percentage", -1))
 
         if perc >= 0:
-            perc_text = f"{perc}%"
+            perc_text = f"{perc:2d}%"
 
             if perc <= LOW_BAT:
                 perc_text = f"{RED_COLOR}{perc_text}{RESET_COLOR}"

@@ -5,14 +5,12 @@
   foreground-alt = #555
   primary = #E13399ff
   secondary = #3399ff
-  alert = #E1B86A74
+  alert = #FF4444
 
 [bar/default]
-  font-0 = Droid Sans Mono:pixelsize=10;3
-  font-1 = unifont:fontformat=truetype:size=8:antialias=false;1
-  font-2 = siji:pixelsize=10;0
-  font-3 = Font Awesome 5 Brands:pixelsize=13;3
-  font-4 = FontAwesome:pixelsize=13;3
+  font-0 = DroidSansM Nerd Font:pixelsize=10;3
+  font-1 = FontAwesome:pixelsize=13;3
+  font-2 = DroidSansM Nerd Font:pixelsize=13;3
 
   width = 100%
   height = 25
@@ -35,7 +33,6 @@
 
   module-margin-left = 1
   module-margin-right = 2
-
 
   modules-left = i3
   modules-center = date
@@ -75,7 +72,7 @@
 
   format-charging = <label-charging>
   format-discharging = <ramp-capacity> <label-discharging>
-  format-full = <ramp-capacity>
+  format-full = %{T3}<ramp-capacity>%{T-}
 
   ramp-capacity-0 = 
   ramp-capacity-1 = 
@@ -83,7 +80,7 @@
   ramp-capacity-3 = 
   ramp-capacity-4 = 
 
-  label-charging =  %percentage%%
+  label-charging = %{T3}%{T-} %percentage%%
   label-discharging = %percentage%%
 
 [module/i3]
@@ -101,40 +98,40 @@
   label-mode-padding = 2
   label-mode-background = ${colors.primary}
 
-  label-focused = %icon%
+  label-focused = %{T2}%icon%%{T-}
   label-focused-background = ${colors.background-alt}
   label-focused-underline = ${colors.primary}
   label-focused-padding = 2
 
-  label-unfocused = %icon%
+  label-unfocused = %{T2}%icon%%{T-}
   label-unfocused-padding = 2
 
-  label-visible = %icon%
+  label-visible = %{T2}%icon%%{T-}
   label-visible-padding = 2
 
-  label-urgent = %icon%
+  label-urgent = %{T2}%icon%%{T-}
   label-urgent-background = ${colors.alert}
   label-urgent-padding = 2
 
 [module/cpu]
   type = internal/cpu
   interval = 2
-  label =  %percentage%%
+  label = %{T3} %{T-}%percentage:2%%
 
 [module/memory]
   type = internal/memory
   interval = 2
-  label =  %percentage_used%%
+  label = %{T3} %{T-}%percentage_used:2%%
 
 [module/filesystem]
   type = internal/fs
   warn-percentage = 75
 
   format-mounted = <label-mounted> 
-  label-mounted =  %percentage_used%%
+  label-mounted = %{T2} %{T-}%percentage_used:2%%
 
   format-warn = <label-warn>
-  label-warn =  %percentage_used%%
+  label-warn = %{T2} %{T-}%percentage_used:2%%
   label-warn-foreground = ${colors.alert}
 
 [module/date]
@@ -150,7 +147,7 @@
 [module/volume]
   type = internal/pulseaudio
 
-  format-volume = <label-volume> <bar-volume>
+  format-volume = <label-volume>  <bar-volume>
   label-volume = 
 
   format-muted-foreground = ${colors.foreground-alt}
@@ -166,11 +163,8 @@
   bar-volume-foreground-6 = #ff5555
   bar-volume-gradient = false
   bar-volume-indicator = |
-  bar-volume-indicator-font = 3
   bar-volume-fill = ─
-  bar-volume-fill-font = 2
   bar-volume-empty = ─
-  bar-volume-empty-font = 2
   bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [settings]
