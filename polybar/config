@@ -146,8 +146,6 @@
 
 [module/filesystem]
   type = internal/fs
-  mount-0 = /
-  fixed-values = true
   warn-percentage = 75
 
   format-mounted = <label-mounted> 
