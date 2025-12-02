@@ -72,14 +72,14 @@
   full-at = 98
 
   format-charging = <label-charging>
-  format-discharging = <ramp-capacity>  <label-discharging>
+  format-discharging = <ramp-capacity> <label-discharging>
   format-full = <ramp-capacity>
 
-  ramp-capacity-0 = %{T3}%{T-}
-  ramp-capacity-1 = %{T3}%{T-}
-  ramp-capacity-2 = %{T3}%{T-}
-  ramp-capacity-3 = %{T3}%{T-}
-  ramp-capacity-4 = %{T3}%{T-}
+  ramp-capacity-0 = %{T2}%{T-}
+  ramp-capacity-1 = %{T2}%{T-}
+  ramp-capacity-2 = %{T2}%{T-}
+  ramp-capacity-3 = %{T2}%{T-}
+  ramp-capacity-4 = %{T2}%{T-}
 
   label-charging = %{T3}%{T-} %percentage%%
   label-discharging = %percentage%%
