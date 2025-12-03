@@ -34,7 +34,7 @@
     sort = yes
 
 
-    font = Droid Sans Mono 9
+    font = DroidSansM Nerd Font 9
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
