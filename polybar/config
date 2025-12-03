@@ -6,6 +6,7 @@
   primary = #E13399ff
   secondary = #3399ff
   alert = #FF4444
+  notify = #E1B86A74
 
 [bar/default]
   font-0 = DroidSansM Nerd Font:pixelsize=10;3
@@ -111,7 +112,7 @@
   label-visible-padding = 2
 
   label-urgent = %{T2}%icon%%{T-}
-  label-urgent-background = ${colors.alert}
+  label-urgent-background = ${colors.notify}
   label-urgent-padding = 2
 
 [module/cpu]
