@@ -59,7 +59,6 @@ map("n", "<leader>f", ":Telescope find_files<CR>", opts)
 map("n", "<leader>e", ":Telescope diagnostics<CR>", opts)
 map("n", "<leader>v", ":VenvSelect<CR>", opts)
 map("n", "<leader>t", ":TodoTelescope<CR>", opts)
-map("n", "<leader>d", ":Telescope aerial<CR>", opts)
 map("n", "<leader>n", ":Telescope notify<CR>", opts)
 
 -- DAP

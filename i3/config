@@ -41,6 +41,8 @@ bindsym $mod+bracketleft exec --no-startup-id python $HOME/dotfiles/player.py pr
 bindsym $mod+bracketright exec --no-startup-id python $HOME/dotfiles/player.py next
 bindsym $mod+backslash exec --no-startup-id python $HOME/dotfiles/player.py shuffle
 
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
 
 bindsym Mod1+q kill
 

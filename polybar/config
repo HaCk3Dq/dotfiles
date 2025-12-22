@@ -64,7 +64,7 @@
 
 [module/bluetooth]
   type = custom/script
-  interval = 1
+  interval = 10
   format = <label>
   exec = python ~/dotfiles/bt.py
 
