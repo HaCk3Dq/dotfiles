@@ -23,6 +23,7 @@ return {
     local cmp = require("cmp")
     local luasnip = require("luasnip")
     local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+    local lspkind = require("lspkind")
     require("luasnip.loaders.from_vscode").lazy_load()
     cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
@@ -73,28 +74,20 @@ return {
       }),
 
       formatting = {
-        expandable_indicator = true,
-        fields = { "kind", "abbr", "menu" },
+        fields = { "icon", "abbr" },
 
-        format = function(entry, vim_item)
-          local lspkind = require("lspkind").cmp_format({
-            mode = "symbol_text",
-          })(entry, vim.deepcopy(vim_item))
-          local highlights_info = require("colorful-menu").cmp_highlights(entry)
+        format = lspkind.cmp_format({
+          mode = "symbol",
 
-          -- highlight_info is nil means we are missing the ts parser, it's
-          -- better to fallback to use default `vim_item.abbr`. What this plugin
-          -- offers is two fields: `vim_item.abbr_hl_group` and `vim_item.abbr`.
-          if highlights_info ~= nil then
-            vim_item.abbr_hl_group = highlights_info.highlights
-            vim_item.abbr = highlights_info.text
-          end
-          local strings = vim.split(lspkind.kind, "%s", { trimempty = true })
-          vim_item.kind = "" .. (strings[1] or "") .. ""
-          vim_item.menu = ""
-
-          return vim_item
-        end,
+          before = function(entry, item)
+            local hi = require("colorful-menu").cmp_highlights(entry)
+            if hi then
+              item.abbr = hi.text
+              item.abbr_hl_group = hi.highlights
+            end
+            return item
+          end,
+        }),
       },
     })
   end,
