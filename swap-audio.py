@@ -1,17 +1,15 @@
 #!/usr/bin/python
+from subprocess import run
+
 import pulsectl
 
-headphones = "alsa_output.usb-Macronix_Razer_Barracuda_X_2.4_1234-00.analog-stereo"
-speakers = "alsa_output.pci-0000_00_1f.3.analog-stereo"
-
 with pulsectl.Pulse("sink-swapper") as pulse:
-    sink_list = pulse.sink_list()
-    if headphones in [e.name for e in sink_list]:
-        swapped = (
-            speakers
-            if pulse.server_info().default_sink_name == headphones
-            else headphones
-        )
-        found_sink = list(filter(lambda e: e.name == swapped, sink_list))
-        if found_sink:
-            pulse.default_set(found_sink[0])
+    sinks = [s for s in pulse.sink_list() if "hdmi" not in s.name]
+    current = pulse.server_info().default_sink_name  # type: ignore
+
+    sink_names = [s.name for s in sinks]
+    current_index = sink_names.index(current)
+    next_index = (current_index + 1) % len(sinks)
+
+    pulse.default_set(sinks[next_index])
+    run(["notify-send", sinks[next_index].description])

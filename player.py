@@ -1,5 +1,4 @@
 from itertools import cycle, islice
-from os import system
 from subprocess import PIPE, run
 from sys import argv
 
@@ -16,11 +15,11 @@ def get_status(cmd: str) -> str:
 
 
 def send_cmd(cmd: str, status: str = "") -> None:
-    system(f"playerctl -p spotify {cmd} {status}")
+    run(["playerctl", "-p", "spotify", cmd, status])
 
 
 def send_notify(text: str) -> None:
-    system(f'notify-send "{text}"')
+    run(["notify-send", text])
 
 
 match argv:
