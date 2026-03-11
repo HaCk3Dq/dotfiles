@@ -3,7 +3,7 @@ return {
   "stevearc/dressing.nvim",
   { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = { indent = { char = "▏" } } },
   { "windwp/nvim-autopairs", event = "InsertEnter", config = true },
-  { "kylechui/nvim-surround", event = { "BufReadPre", "BufNewFile" }, version = "*", config = true },
+  { "kylechui/nvim-surround", version = "^4.0.0", event = "VeryLazy" },
   "rrethy/vim-illuminate",
   "wsdjeg/vim-fetch", -- Allows nvim file:line
   "kdheepak/lazygit.nvim",
@@ -50,47 +50,12 @@ return {
   },
 
   {
-    "folke/flash.nvim",
-    event = "VeryLazy",
-    opts = {
-      modes = {
-        char = {
-          enabled = false,
-        },
-      },
-    },
-    keys = {
-      {
-        "<space>f",
-        mode = { "n", "x", "o" },
-        function()
-          require("flash").jump()
-        end,
-      },
-      {
-        "F",
-        mode = { "n", "x", "o" },
-        function()
-          require("flash").treesitter()
-        end,
-      },
-      {
-        "r",
-        mode = "o",
-        function()
-          require("flash").remote()
-        end,
-      },
-    },
-  },
-
-  {
     "akinsho/git-conflict.nvim",
     version = "*",
     config = function()
       vim.api.nvim_set_hl(0, "GitConflictCurrent", { bg = "#1D3B40" })
       vim.api.nvim_set_hl(0, "GitConflictCurrentLabel", { bg = "#2A7069" })
-      vim.api.nvim_set_hl(0, "GitConflictIncoming", { bg = "#1D3450" })
+      vim.api.nvim_set_hl(0, "GitConflictIncoming", { bg = "#2D3450" })
       vim.api.nvim_set_hl(0, "GitConflictIncomingLabel", { bg = "#2A5F92" })
       vim.api.nvim_set_hl(0, "GitConflictAncestor", { bg = "#1E1E1E" })
       vim.api.nvim_set_hl(0, "GitConflictAncestorLabel", { bg = "#282A34" })
@@ -146,20 +111,15 @@ return {
   {
     "linux-cultist/venv-selector.nvim",
     dependencies = {
-      "neovim/nvim-lspconfig",
-      "mfussenegger/nvim-dap",
-      -- "mfussenegger/nvim-dap-python",
-      { "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
+      { "nvim-telescope/telescope.nvim", version = "*", dependencies = { "nvim-lua/plenary.nvim" } },
     },
-    lazy = false,
     opts = {
       auto_refresh = true,
       path = "~/.virtualenvs/",
       parents = 0,
-      dap_enabled = true,
     },
     config = function()
-      require("venv-selector").setup({})
+      require("venv-selector").setup()
     end,
   },
 

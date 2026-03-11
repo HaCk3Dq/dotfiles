@@ -20,13 +20,15 @@ map("n", "<C-w>", ":BufferClose<CR>", { nowait = true })
 map("n", "<S-x>", ":BufferRestore<CR>", opts)
 
 -- Splits
--- TODO: vertical split + resize
 map("n", "<F26>", ":vsp<CR>", opts)
+map("n", "<F14>", ":sp<CR>", opts)
 map("n", "<A-a>", ":wincmd h<CR>", opts)
 map("n", "<A-d>", ":wincmd l<CR>", opts)
 map("n", "<A-s>", ":wincmd j<CR>", opts)
 map("n", "<A-w>", ":wincmd k<CR>", opts)
 map("n", "<C-X>", ":close<CR>", opts)
+map("n", "<A-A>", ":vertical resize -1<CR>", opts)
+map("n", "<A-D>", ":vertical resize +1<CR>", opts)
 
 -- Git
 map("n", "<leader>g", ":LazyGit<CR>", opts)
@@ -60,17 +62,6 @@ map("n", "<leader>e", ":Telescope diagnostics<CR>", opts)
 map("n", "<leader>v", ":VenvSelect<CR>", opts)
 map("n", "<leader>t", ":TodoTelescope<CR>", opts)
 map("n", "<leader>n", ":Telescope notify<CR>", opts)
-
--- DAP
-map("n", "<leader>q", ":lua require('dapui').toggle()<CR>", opts)
-map("n", "<F5>", ":lua require('dap').continue()<CR>", opts)
-map("n", "<F6>", ":lua require('dap').step_over()<CR>", opts)
-map("n", "<F7>", ":lua require('dap').step_into()<CR>", opts)
-map("n", "<F8>", ":lua require('dap').step_out()<CR>", opts)
-map("n", "<F9>", ":lua require('dap').toggle_breakpoint()<CR>", opts)
-map("n", "<F10>", ":lua require('telescope').extensions.dap.list_breakpoints()<CR>", opts)
-map("n", "<F11>", ":lua require('telescope').extensions.dap.commands()<CR>", opts)
-map("n", "<F12>", ":lua require('dap').clear_breakpoints()<CR>", opts)
 
 -- Merge
 map("n", "<space>gcc", ":GitConflictChooseOurs<CR>", opts)
