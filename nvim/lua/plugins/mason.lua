@@ -28,7 +28,6 @@ return {
         "ruff",
         "taplo",
         "yamlls",
-        "ansiblels",
       },
     })
 

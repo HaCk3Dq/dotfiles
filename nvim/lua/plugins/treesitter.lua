@@ -3,7 +3,6 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   build = ":TSUpdate",
   dependencies = {
-    "romgrk/nvim-treesitter-context",
     "nvim-treesitter/nvim-treesitter-textobjects",
   },
   config = function()

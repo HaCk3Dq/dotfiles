@@ -9,6 +9,7 @@ o.clipboard = "unnamedplus"
 o.listchars = { tab = ">>>", trail = "·", precedes = "←", extends = "→", eol = "↲", nbsp = "␣" }
 o.swapfile = false
 o.showmatch = true
+o.undofile = true
 
 o.splitright = true
 o.splitbelow = true

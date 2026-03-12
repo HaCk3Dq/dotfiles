@@ -19,6 +19,7 @@ return {
       },
 
       completion = {
+        documentation = { auto_show = true },
         menu = {
           max_height = 20,
           draw = {
