@@ -36,6 +36,9 @@ return {
         filtered_items = {
           hide_dotfiles = false,
           hide_gitignored = false,
+          never_show = {
+            "__pycache__",
+          },
         },
         follow_current_file = {
           enabled = true,
