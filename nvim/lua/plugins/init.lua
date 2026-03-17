@@ -1,7 +1,14 @@
 return {
   "nvim-lua/plenary.nvim",
   "stevearc/dressing.nvim",
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = { indent = { char = "▏" } } },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {
+      indent = { char = "▏" },
+      scope = { enabled = false },
+    },
+  },
   { "windwp/nvim-autopairs", event = "InsertEnter", config = true },
   { "kylechui/nvim-surround", version = "^4.0.0", event = "VeryLazy" },
   "rrethy/vim-illuminate",
