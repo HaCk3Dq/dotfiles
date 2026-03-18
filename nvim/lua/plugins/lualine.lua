@@ -2,13 +2,6 @@ return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
-    local function venv()
-      local fullPath = require("venv-selector").venv()
-      if not fullPath then
-        return ""
-      end
-      return string.match(fullPath, "[^/\\]+$")
-    end
     local lazy_status = require("lazy.status")
 
     require("lualine").setup({
@@ -30,11 +23,8 @@ return {
           "filetype",
         },
         lualine_y = {
-          {
-            venv,
-            icon = "",
-            color = { fg = "#FFD43B" },
-          },
+          "lsp_status",
+          "venv-selector",
         },
         lualine_z = {},
       },

@@ -12,10 +12,10 @@ return {
     },
   },
   { "windwp/nvim-autopairs", event = "InsertEnter", config = true },
-  { "kylechui/nvim-surround", version = "^4.0.0", event = "VeryLazy" },
+  { "kylechui/nvim-surround", event = "VeryLazy" },
   "rrethy/vim-illuminate",
   "wsdjeg/vim-fetch", -- Allows nvim file:line
-  "kdheepak/lazygit.nvim",
+  { "kdheepak/lazygit.nvim", lazy = true, cmd = { "LazyGit" } },
   "williamboman/mason.nvim",
   "xzbdmw/colorful-menu.nvim",
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
@@ -70,7 +70,6 @@ return {
 
   {
     "akinsho/git-conflict.nvim",
-    version = "*",
     config = function()
       vim.api.nvim_set_hl(0, "GitConflictCurrent", { bg = "#1D3B40" })
       vim.api.nvim_set_hl(0, "GitConflictCurrentLabel", { bg = "#2A7069" })
@@ -130,16 +129,12 @@ return {
   {
     "linux-cultist/venv-selector.nvim",
     dependencies = {
-      { "nvim-telescope/telescope.nvim", version = "*", dependencies = { "nvim-lua/plenary.nvim" } },
+      { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
     },
     opts = {
-      auto_refresh = true,
-      path = "~/.virtualenvs/",
-      parents = 0,
+      options = {},
+      search = {},
     },
-    config = function()
-      require("venv-selector").setup()
-    end,
   },
 
   {
