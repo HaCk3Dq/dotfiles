@@ -35,6 +35,7 @@ return {
 
   {
     "akinsho/git-conflict.nvim",
+    version = "*",
     config = function()
       vim.api.nvim_set_hl(0, "GitConflictCurrent", { bg = "#1D3B40" })
       vim.api.nvim_set_hl(0, "GitConflictCurrentLabel", { bg = "#2A7069" })

@@ -48,8 +48,6 @@ return {
         "yamllint",
         "shellcheck",
         "shellharden",
-
-        "debugpy",
       },
     })
   end,
