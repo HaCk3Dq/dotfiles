@@ -11,6 +11,12 @@ map("n", "<C-\\>", ":Neotree toggle<CR>", opts)
 map("n", "<esc>", ":noh<CR>", opts)
 map({ "n", "x", "o" }, "m", "%", opts)
 
+-- Spider
+map({ "n", "o", "x" }, "w", "<cmd>lua require('spider').motion('w')<CR>", opts)
+map({ "n", "o", "x" }, "e", "<cmd>lua require('spider').motion('e')<CR>", opts)
+map({ "n", "o", "x" }, "b", "<cmd>lua require('spider').motion('b')<CR>", opts)
+map({ "n", "o", "x" }, "ge", "<cmd>lua require('spider').motion('ge')<CR>", opts)
+
 -- Buffers
 map("n", "J", ":BufferPrevious<CR>", opts)
 map("n", "K", ":BufferNext<CR>", opts)

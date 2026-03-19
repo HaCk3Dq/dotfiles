@@ -21,17 +21,7 @@ return {
   config = function()
     local mason_lspconfig = require("mason-lspconfig")
 
-    vim.diagnostic.config({
-      virtual_text = true,
-      signs = {
-        text = {
-          ERROR = " ",
-          WARN = " ",
-          HINT = "󰌶",
-          INFO = " ",
-        },
-      },
-    })
+    vim.diagnostic.config({ virtual_text = true, signs = true })
     for type, icon in pairs({ Error = " ", Warn = " ", Hint = "󰌶", Info = " " }) do
       vim.fn.sign_define("DiagnosticSign" .. type, { text = icon, texthl = "DiagnosticSign" .. type })
     end

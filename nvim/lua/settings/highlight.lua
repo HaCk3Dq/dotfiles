@@ -54,3 +54,5 @@ for _, group in ipairs({ basic, tst, lsp, cmp }) do
     set(0, name, normalize_style(hl))
   end
 end
+
+set(0, "NotifyBackground", { bg = "#000000" })

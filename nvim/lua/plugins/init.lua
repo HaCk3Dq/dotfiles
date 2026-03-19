@@ -1,70 +1,35 @@
 return {
-  "nvim-lua/plenary.nvim",
-  "stevearc/dressing.nvim",
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    ---@module "ibl"
-    ---@type ibl.config
-    opts = {
-      indent = { char = "▏" },
-      scope = { enabled = false },
-    },
-  },
-  { "windwp/nvim-autopairs", event = "InsertEnter", config = true },
-  { "kylechui/nvim-surround", event = "VeryLazy" },
   "rrethy/vim-illuminate",
   "wsdjeg/vim-fetch", -- Allows nvim file:line
-  { "kdheepak/lazygit.nvim", lazy = true, cmd = { "LazyGit" } },
-  "williamboman/mason.nvim",
   "xzbdmw/colorful-menu.nvim",
+  "chrisgrieser/nvim-spider",
+  { "kdheepak/lazygit.nvim", lazy = true, cmd = { "LazyGit" } },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "xiyaowong/transparent.nvim", priority = 1000 },
+  { "windwp/nvim-autopairs", event = "InsertEnter", config = true },
+  { "kylechui/nvim-surround", event = "VeryLazy" },
+  { "stevearc/aerial.nvim", opts = {} },
+  { "folke/todo-comments.nvim", opts = {} },
+  { "numToStr/Comment.nvim", opts = { ignore = "^$" } },
+  { "linux-cultist/venv-selector.nvim", opts = {} },
+  { "ray-x/lsp_signature.nvim", event = "InsertEnter" },
+  { "levouh/tint.nvim", config = true },
+  { "folke/which-key.nvim", opts = {} },
+  { "lewis6991/gitsigns.nvim", config = true },
+  { "kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" }, config = true },
 
   {
-    "chrisgrieser/nvim-spider",
-    keys = {
-      { "w", "<cmd>lua require('spider').motion('w')<CR>", mode = { "n", "o", "x" } },
-      { "e", "<cmd>lua require('spider').motion('e')<CR>", mode = { "n", "o", "x" } },
-      { "b", "<cmd>lua require('spider').motion('b')<CR>", mode = { "n", "o", "x" } },
-      { "ge", "<cmd>lua require('spider').motion('ge')<CR>", mode = { "n", "o", "x" } },
-    },
-  },
-
-  {
-    "levouh/tint.nvim",
-    config = function()
-      require("tint").setup({})
-    end,
-  },
-
-  {
-    "kevinhwang91/nvim-ufo",
-    dependencies = { "kevinhwang91/promise-async" },
-    config = function()
-      require("ufo").setup({
-        provider_selector = function()
-          return { "lsp", "indent" }
-        end,
-      })
-    end,
-  },
-
-  {
-    "stevearc/aerial.nvim",
-    opts = {},
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons",
-    },
-  },
-
-  {
-    "folke/which-key.nvim",
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
     opts = {
-      layout = {
-        height = { min = 10, max = 25 },
+      input = { enabled = true },
+      notifier = { enabled = true },
+      indent = {
+        enabled = true,
+        scope = { hl = "Function" },
       },
+      scroll = { enabled = true },
     },
   },
 
@@ -88,74 +53,6 @@ return {
           ancestor = "GitConflictAncestor",
         },
       })
-    end,
-  },
-
-  {
-    "rcarriga/nvim-notify",
-    config = function()
-      vim.notify = require("notify")
-      require("notify").setup({
-        background_colour = "#000000",
-        merge_duplicates = true,
-      })
-    end,
-  },
-
-  {
-    "williamboman/mason-lspconfig.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = {
-      "williamboman/mason.nvim",
-    },
-  },
-
-  {
-    "lewis6991/gitsigns.nvim",
-    config = function()
-      require("gitsigns").setup()
-    end,
-  },
-
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "VeryLazy",
-    opts = {},
-    config = function(_, opts)
-      require("lsp_signature").setup(opts)
-    end,
-  },
-
-  {
-    "linux-cultist/venv-selector.nvim",
-    dependencies = {
-      { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
-    },
-    opts = {
-      options = {},
-      search = {},
-    },
-  },
-
-  {
-    "numToStr/Comment.nvim",
-    opts = {
-      ignore = "^$",
-    },
-  },
-
-  {
-    "folke/todo-comments.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("todo-comments").setup()
-    end,
-  },
-
-  {
-    "karb94/neoscroll.nvim",
-    config = function()
-      require("neoscroll").setup({})
     end,
   },
 
