@@ -1,6 +1,5 @@
 # Dotfiles
 
-<img src='scrots/main.png'>
+![main](scrots/main.png)
 
-<img src='scrots/code.png'>
-
+![code](scrots/code.png)
