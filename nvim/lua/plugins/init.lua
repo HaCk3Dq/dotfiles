@@ -24,6 +24,7 @@ return {
     lazy = false,
     opts = {
       input = { enabled = true },
+      picker = { enabled = true },
       notifier = { enabled = true },
       indent = {
         enabled = true,
