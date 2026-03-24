@@ -7,8 +7,6 @@ return {
     lint.linters_by_ft = {
       markdown = { "markdownlint" },
       sh = { "shellcheck" },
-      lua = { "luacheck" },
-      python = { "ruff" },
       yaml = { "yamllint" },
       ["yaml.ghactions"] = { "actionlint", "yamllint" },
       dockerfile = { "hadolint" },

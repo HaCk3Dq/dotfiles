@@ -21,10 +21,19 @@ return {
   config = function()
     local mason_lspconfig = require("mason-lspconfig")
 
-    vim.diagnostic.config({ virtual_text = true, signs = true })
-    for type, icon in pairs({ Error = " ", Warn = " ", Hint = "󰌶", Info = " " }) do
-      vim.fn.sign_define("DiagnosticSign" .. type, { text = icon, texthl = "DiagnosticSign" .. type })
-    end
+    vim.diagnostic.config({
+      virtual_text = {
+        prefix = "",
+      },
+      signs = {
+        text = {
+          [vim.diagnostic.severity.ERROR] = " ",
+          [vim.diagnostic.severity.WARN] = " ",
+          [vim.diagnostic.severity.HINT] = "󰌶",
+          [vim.diagnostic.severity.INFO] = " ",
+        },
+      },
+    })
 
     local default_on_attach = function(_, bufnr)
       require("lsp_signature").on_attach({ hint_prefix = "💡" }, bufnr)

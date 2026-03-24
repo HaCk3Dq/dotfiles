@@ -41,7 +41,6 @@ return {
 
         "markdownlint",
         "ansible-lint",
-        "luacheck",
         "actionlint",
         "hadolint",
         "jsonlint",

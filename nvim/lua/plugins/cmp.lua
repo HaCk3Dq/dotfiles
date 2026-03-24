@@ -25,6 +25,11 @@ return {
           draw = {
             columns = { { "kind_icon" }, { "label", gap = 1 } },
             components = {
+              kind_icon = {
+                highlight = function(ctx)
+                  return ctx.kind_hl
+                end,
+              },
               label = {
                 text = function(ctx)
                   return require("colorful-menu").blink_components_text(ctx)

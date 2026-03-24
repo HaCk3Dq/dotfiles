@@ -1,6 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
-  branch = "0.1.x",
+  version = "*",
   dependencies = {
     "kyazdani42/nvim-web-devicons",
     "nvim-lua/plenary.nvim",
