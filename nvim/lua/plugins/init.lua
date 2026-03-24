@@ -3,6 +3,7 @@ return {
   "wsdjeg/vim-fetch", -- Allows nvim file:line
   "xzbdmw/colorful-menu.nvim",
   "chrisgrieser/nvim-spider",
+  "nordtheme/vim",
   { "kdheepak/lazygit.nvim", lazy = true, cmd = { "LazyGit" } },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "xiyaowong/transparent.nvim", priority = 1000 },

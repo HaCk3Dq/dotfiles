@@ -29,6 +29,7 @@ local lsp = require("catppuccin.groups.semantic_tokens").get()
 local cmp = require("catppuccin.groups.integrations.cmp").get()
 local snacks = require("catppuccin.groups.integrations.snacks").get()
 
+editor.Folded.bg = "#22252C"
 basic.String.fg = nord_string
 
 tst["@variable"].fg = nord_text
