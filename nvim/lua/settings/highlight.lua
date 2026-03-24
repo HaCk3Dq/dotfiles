@@ -37,19 +37,18 @@ tst["@function.builtin"].fg = nord_builtin
 tst["@constructor.lua"].fg = nord_text
 tst["@keyword.function.lua"] = { fg = nord_func }
 tst["@property.yaml"] = { fg = nord_text }
-lsp["@lsp.type.parameter.dockerfile"] = { fg = nord_text }
 
+lsp["@lsp.type.parameter.dockerfile"] = { fg = nord_text }
 lsp["@lsp.mod.global"] = { fg = C.red }
 
-for _, group in ipairs({
-  editor,
-  basic,
-  tst,
-  lsp_groups,
-  lsp,
-  cmp,
-  snacks,
-}) do
+lsp_groups["DiagnosticVirtualTextError"].bg = "None"
+lsp_groups["DiagnosticVirtualTextWarn"].bg = "None"
+lsp_groups["DiagnosticVirtualTextInfo"].bg = "None"
+lsp_groups["DiagnosticVirtualTextHint"].bg = "None"
+lsp_groups["DiagnosticVirtualTextOk"].bg = "None"
+
+local groups = { editor, basic, tst, lsp_groups, lsp, cmp, snacks }
+for _, group in ipairs(groups) do
   apply(group)
 end
 

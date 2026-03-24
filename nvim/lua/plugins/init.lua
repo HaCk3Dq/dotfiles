@@ -10,7 +10,7 @@ return {
   { "windwp/nvim-autopairs", event = "InsertEnter", config = true },
   { "kylechui/nvim-surround", event = "VeryLazy" },
   { "stevearc/aerial.nvim", opts = {} },
-  { "folke/todo-comments.nvim", opts = {} },
+  { "folke/todo-comments.nvim", event = { "BufReadPost", "BufNewFile" }, opts = {} },
   { "numToStr/Comment.nvim", opts = { ignore = "^$" } },
   { "linux-cultist/venv-selector.nvim", opts = {} },
   { "ray-x/lsp_signature.nvim", event = "InsertEnter" },
