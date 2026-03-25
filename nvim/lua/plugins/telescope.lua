@@ -2,13 +2,12 @@ return {
   "nvim-telescope/telescope.nvim",
   version = "*",
   dependencies = {
+    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     "kyazdani42/nvim-web-devicons",
     "nvim-lua/plenary.nvim",
-    "nvim-telescope/telescope-fzy-native.nvim",
     "folke/todo-comments.nvim",
   },
   config = function()
-    require("telescope").load_extension("fzy_native")
     require("telescope").load_extension("session-lens")
     local actions = require("telescope.actions")
 
@@ -31,11 +30,14 @@ return {
         },
       },
       extensions = {
-        fzy_native = {
-          override_generic_sorter = false,
+        fzf = {
+          fuzzy = true,
+          override_generic_sorter = true,
           override_file_sorter = true,
         },
       },
     })
+
+    require("telescope").load_extension("fzf")
   end,
 }

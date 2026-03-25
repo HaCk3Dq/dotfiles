@@ -7,15 +7,7 @@ return {
     "mason-org/mason-lspconfig.nvim",
     "saghen/blink.cmp",
     { "antosha417/nvim-lsp-file-operations", config = true },
-    {
-      "folke/lazydev.nvim",
-      ft = "lua",
-      opts = {
-        library = {
-          { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-        },
-      },
-    },
+    { "folke/lazydev.nvim", ft = "lua", opts = {} },
   },
 
   config = function()
