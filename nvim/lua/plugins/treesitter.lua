@@ -55,14 +55,10 @@ return {
           enable = true,
           lookahead = true,
           keymaps = {
-            ["aa"] = "@parameter.outer",
-            ["ia"] = "@parameter.inner",
             ["af"] = "@function.outer",
             ["if"] = "@function.inner",
             ["ac"] = "@class.outer",
             ["ic"] = "@class.inner",
-            ["ii"] = "@conditional.inner",
-            ["ai"] = "@conditional.outer",
             ["il"] = "@loop.inner",
             ["al"] = "@loop.outer",
           },
@@ -85,15 +81,6 @@ return {
           goto_previous_end = {
             ["[F"] = "@function.outer",
             ["[C"] = "@class.outer",
-          },
-        },
-        swap = {
-          enable = true,
-          swap_next = {
-            ["<space>j"] = "@parameter.inner",
-          },
-          swap_previous = {
-            ["<space>k"] = "@parameter.inner",
           },
         },
       },
