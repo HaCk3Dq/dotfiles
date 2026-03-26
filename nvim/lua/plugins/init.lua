@@ -33,6 +33,7 @@ return {
       input = { enabled = true },
       picker = { enabled = true },
       notifier = { enabled = true },
+      scope = { enabled = true },
       indent = {
         enabled = true,
         scope = { hl = "Function" },

@@ -4,9 +4,11 @@ return {
   ---@module "auto-session"
   ---@type AutoSession.Config
   opts = {
-    suppressed_dirs = { "~/" },
     session_lens = {
-      path_display = { "shorten" },
+      picker_opts = {
+        path_display = { "shorten", absolute = true },
+      },
     },
+    suppressed_dirs = { "~/" },
   },
 }

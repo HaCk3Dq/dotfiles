@@ -1,3 +1,4 @@
+vim.g.python3_host_prog = "/usr/bin/python"
 local o = vim.opt
 
 o.tabstop = 2
@@ -29,12 +30,12 @@ o.ch = 0
 o.foldlevel = 99
 o.foldlevelstart = 99
 o.foldenable = true
+o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 vim.cmd("au TextYankPost * silent! lua vim.highlight.on_yank()")
 
 vim.filetype.add({
   pattern = {
-    [".*/ansible/.*%.ya?ml"] = "yaml.ansible",
     [".*/.github/workflows/.*"] = "yaml.ghactions",
   },
 })

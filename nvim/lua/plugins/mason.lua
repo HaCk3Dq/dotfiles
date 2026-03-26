@@ -1,7 +1,7 @@
 return {
-  "williamboman/mason.nvim",
+  "mason-org/mason.nvim",
   dependencies = {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
   config = function()
@@ -37,10 +37,8 @@ return {
         "stylua",
         "shfmt",
         "beautysh",
-        "stylua",
 
         "markdownlint",
-        "ansible-lint",
         "actionlint",
         "hadolint",
         "jsonlint",
