@@ -6,7 +6,7 @@ return {
     require("blink.cmp").setup({
 
       appearance = { nerd_font_variant = "mono" },
-      signature = { enabled = false },
+      signature = { enabled = true },
       sources = {
         default = { "lazydev", "lsp", "path", "snippets", "buffer" },
         providers = {

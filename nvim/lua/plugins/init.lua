@@ -12,11 +12,18 @@ return {
   { "folke/todo-comments.nvim", opts = {} },
   { "numToStr/Comment.nvim", opts = { ignore = "^$" } },
   { "linux-cultist/venv-selector.nvim", opts = {} },
-  { "ray-x/lsp_signature.nvim", event = "InsertEnter" },
   { "levouh/tint.nvim", config = true },
   { "folke/which-key.nvim", opts = {} },
   { "lewis6991/gitsigns.nvim", config = true },
   { "kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" }, config = true },
+
+  {
+    "antosha417/nvim-lsp-file-operations",
+    dependencies = { "nvim-neo-tree/neo-tree.nvim" },
+    config = function()
+      require("lsp-file-operations").setup()
+    end,
+  },
 
   {
     "folke/snacks.nvim",
