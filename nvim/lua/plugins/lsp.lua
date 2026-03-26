@@ -10,10 +10,6 @@ return {
   },
 
   config = function()
-    local capabilities =
-      require("blink.cmp").get_lsp_capabilities(require("lsp-file-operations").default_capabilities(), true)
-    local mason_lspconfig = require("mason-lspconfig")
-
     vim.diagnostic.config({
       virtual_text = { prefix = "" },
       signs = {
@@ -27,7 +23,10 @@ return {
     })
 
     vim.lsp.config("*", {
-      capabilities = capabilities,
+      capabilities = require("blink.cmp").get_lsp_capabilities(
+        require("lsp-file-operations").default_capabilities(),
+        true
+      ),
     })
 
     vim.lsp.config("lua_ls", {
@@ -50,6 +49,6 @@ return {
       },
     })
 
-    mason_lspconfig.setup({})
+    require("mason-lspconfig").setup()
   end,
 }
