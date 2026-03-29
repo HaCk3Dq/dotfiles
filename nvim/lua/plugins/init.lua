@@ -1,9 +1,10 @@
 return {
   "rrethy/vim-illuminate",
-  "wsdjeg/vim-fetch", -- Allows nvim file:line
+  "wsdjeg/vim-fetch",
   "xzbdmw/colorful-menu.nvim",
   "chrisgrieser/nvim-spider",
   "nordtheme/vim",
+  { "gbprod/substitute.nvim", opts = {} },
   { "kdheepak/lazygit.nvim", lazy = true, cmd = { "LazyGit" } },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "xiyaowong/transparent.nvim", priority = 1000 },
@@ -34,10 +35,7 @@ return {
       picker = { enabled = true },
       notifier = { enabled = true },
       scope = { enabled = true },
-      indent = {
-        enabled = true,
-        scope = { hl = "Function" },
-      },
+      indent = { enabled = true, scope = { hl = "Function" } },
       scroll = { enabled = true },
     },
   },
@@ -71,12 +69,7 @@ return {
     config = function()
       require("colorizer").setup({
         filetypes = { "*" },
-        user_default_options = {
-          RGB = true,
-          RRGGBB = true,
-          css = true,
-          names = false,
-        },
+        user_default_options = { RGB = true, RRGGBB = true, css = true, names = false },
       })
     end,
   },

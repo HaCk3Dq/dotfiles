@@ -15,6 +15,12 @@ map("v", "`", "g~", opts)
 map("n", "<C-j>", "J", opts)
 map("v", "<C-j>", "J", opts)
 
+-- Substitute
+map("n", "s", require("substitute").operator, opts)
+map("n", "ss", require("substitute").line, opts)
+map("n", "S", require("substitute").eol, opts)
+map("x", "s", require("substitute").visual, opts)
+
 -- Spider
 map({ "n", "o", "x" }, "w", "<cmd>lua require('spider').motion('w')<CR>", opts)
 map({ "n", "o", "x" }, "e", "<cmd>lua require('spider').motion('e')<CR>", opts)

@@ -1,7 +1,6 @@
 require("settings.base")
-require("settings.keymap")
-
 require("lazynvim")
+require("settings.keymap")
 
 vim.cmd("colorscheme nord")
 require("settings.highlight")
