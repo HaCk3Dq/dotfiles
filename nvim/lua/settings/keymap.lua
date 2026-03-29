@@ -10,6 +10,10 @@ map("v", ">", ">gv", opts)
 map("n", "<C-\\>", ":Neotree toggle<CR>", opts)
 map("n", "<esc>", ":noh<CR>", opts)
 map({ "n", "x", "o" }, "m", "%", opts)
+map("n", "`", "g~iw", opts)
+map("v", "`", "g~", opts)
+map("n", "<C-j>", "J", opts)
+map("v", "<C-j>", "J", opts)
 
 -- Spider
 map({ "n", "o", "x" }, "w", "<cmd>lua require('spider').motion('w')<CR>", opts)
