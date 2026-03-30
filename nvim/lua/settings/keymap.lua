@@ -61,18 +61,18 @@ map("n", "<space>R", ":lua vim.lsp.buf.rename()<CR>", opts)
 map("n", "<space>e", ":lua vim.diagnostic.open_float()<CR>", opts)
 map("n", "<space>s", ":Telescope lsp_document_symbols<CR>", opts)
 map("n", "<space>a", ":Telescope lsp_dynamic_workspace_symbols<CR>", opts)
-map("n", "<space>q", ":lua vim.lsp.buf.code_action()<CR>", opts)
+map("n", "<space>q", ":lua require('actions-preview').code_actions()<CR>", opts)
 
 -- Folds
 map("n", "za", ":lua require('ufo').openAllFolds()<CR>", opts)
 map("n", "zc", ":lua require('ufo').closeAllFolds()<CR>", opts)
-map("n", "<space><space>", "za", opts)
+map("n", "<space><space>", ":lua require('fold-cycle').toggle_all()<CR>", opts)
 
 -- Telescope
 map("n", "<leader>l", ":Lazy<CR>", opts)
 map("n", "<leader>m", ":Mason<CR>", opts)
 map("n", "<leader>r", ":Telescope live_grep<CR>", opts)
-map("n", "<leader>b", ":Telescope buffers<CR>", opts)
+map("n", "<leader>b", ":Telescope git_branches<CR>", opts)
 map("n", "<leader><leader>", ":AutoSession search<CR>", opts)
 map("n", "<leader>f", ":Telescope find_files<CR>", opts)
 map("n", "<leader>e", ":Telescope diagnostics<CR>", opts)

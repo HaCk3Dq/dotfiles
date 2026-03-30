@@ -4,6 +4,9 @@ return {
   "xzbdmw/colorful-menu.nvim",
   "chrisgrieser/nvim-spider",
   "nordtheme/vim",
+  "aznhe21/actions-preview.nvim",
+  { "jghauser/fold-cycle.nvim", opts = {} },
+  { "j-hui/fidget.nvim", opts = { notification = { window = { winblend = 0 } } } },
   { "gbprod/substitute.nvim", opts = {} },
   { "kdheepak/lazygit.nvim", lazy = true, cmd = { "LazyGit" } },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
@@ -33,6 +36,7 @@ return {
     opts = {
       input = { enabled = true },
       picker = { enabled = true },
+      quickfile = { enabled = true },
       notifier = { enabled = true },
       scope = { enabled = true },
       indent = { enabled = true, scope = { hl = "Function" } },

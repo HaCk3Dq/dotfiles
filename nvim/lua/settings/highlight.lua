@@ -51,5 +51,3 @@ local groups = { editor, basic, tst, lsp_groups, lsp, cmp, snacks }
 for _, group in ipairs(groups) do
   apply(group)
 end
-
-set(0, "NotifyBackground", { bg = "#000000" })
