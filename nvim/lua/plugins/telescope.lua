@@ -13,21 +13,14 @@ return {
 
     require("telescope").setup({
       pickers = {
-        find_files = {
-          hidden = true,
-        },
+        live_grep = { additional_args = { "--hidden" } },
+        find_files = { hidden = true },
       },
       defaults = {
-        file_ignore_patterns = {
-          ".git/",
-        },
+        file_ignore_patterns = { ".git/" },
         prompt_prefix = "λ -> ",
         selection_caret = "> ",
-        mappings = {
-          i = {
-            ["<esc>"] = actions.close,
-          },
-        },
+        mappings = { i = { ["<esc>"] = actions.close } },
       },
       extensions = {
         fzf = {

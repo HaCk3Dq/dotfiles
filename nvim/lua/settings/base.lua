@@ -37,5 +37,7 @@ vim.cmd("au TextYankPost * silent! lua vim.highlight.on_yank()")
 vim.filetype.add({
   pattern = {
     [".*/.github/workflows/.*"] = "yaml.ghactions",
+    [".*/.ssh/hosts/*"] = "sshconfig",
+    [".*/ssh/config"] = "sshconfig",
   },
 })

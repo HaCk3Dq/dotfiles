@@ -29,7 +29,7 @@ foreground = "#c5c8c6"
 TERM = "xterm-256color"
 
 [font]
-size = 9.5
+size = 10
 
 [font.normal]
 family = "DroidSansM Nerd Font"

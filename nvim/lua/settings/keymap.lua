@@ -1,5 +1,25 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
+local ts_select = require("nvim-treesitter-textobjects.select")
+local ts_move = require("nvim-treesitter-textobjects.move")
+
+local function select_textobject(query)
+  return function()
+    ts_select.select_textobject(query, "textobjects")
+  end
+end
+
+local function goto_next_start(query)
+  return function()
+    ts_move.goto_next_start(query, "textobjects")
+  end
+end
+
+local function goto_previous_start(query)
+  return function()
+    ts_move.goto_previous_start(query, "textobjects")
+  end
+end
 
 map("n", "<F3>", ":set relativenumber!<CR>", opts)
 map("n", "<F4>", ":set list!<CR>", opts)
@@ -62,6 +82,16 @@ map("n", "<space>e", ":lua vim.diagnostic.open_float()<CR>", opts)
 map("n", "<space>s", ":Telescope lsp_document_symbols<CR>", opts)
 map("n", "<space>a", ":Telescope lsp_dynamic_workspace_symbols<CR>", opts)
 map("n", "<space>q", ":lua require('actions-preview').code_actions()<CR>", opts)
+
+-- Textobjects
+map({ "x", "o" }, "af", select_textobject("@function.outer"), opts)
+map({ "x", "o" }, "if", select_textobject("@function.inner"), opts)
+map({ "x", "o" }, "ac", select_textobject("@class.outer"), opts)
+map({ "x", "o" }, "ic", select_textobject("@class.inner"), opts)
+map({ "n", "x", "o" }, "]f", goto_next_start("@function.outer"), opts)
+map({ "n", "x", "o" }, "[f", goto_previous_start("@function.outer"), opts)
+map({ "n", "x", "o" }, "]c", goto_next_start("@class.outer"), opts)
+map({ "n", "x", "o" }, "[c", goto_previous_start("@class.outer"), opts)
 
 -- Folds
 map("n", "za", ":lua require('ufo').openAllFolds()<CR>", opts)

@@ -1,89 +1,23 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  event = { "BufReadPre", "BufNewFile" },
+  lazy = false,
+  branch = "main",
   build = ":TSUpdate",
-  dependencies = {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-  },
+  dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
   config = function()
-    require("nvim-treesitter.configs").setup({
-      sync_install = false,
-      auto_install = true,
-      indent = { enable = true },
-      highlight = { enable = true },
-      ignore_install = {},
-      modules = {},
-      ensure_installed = {
-        "c",
-        "lua",
-        "vim",
-        "vimdoc",
-        "query",
-        "markdown",
-        "markdown_inline",
-        "rasi",
-        "json",
-        "yaml",
-        "javascript",
-        "html",
-        "css",
-        "typescript",
-        "graphql",
-        "bash",
-        "comment",
-        "cmake",
-        "csv",
-        "diff",
-        "dockerfile",
-        "editorconfig",
-        "git_config",
-        "gitignore",
-        "ini",
-        "nix",
-        "passwd",
-        "python",
-        "regex",
-        "sql",
-        "ssh_config",
-        "terraform",
-        "tmux",
-        "toml",
-        "xml",
+    require("nvim-treesitter").setup({ install_dir = vim.fn.stdpath("data") .. "/site" })
+    require("nvim-treesitter-textobjects").setup({
+      select = {
+        lookahead = true,
       },
-      textobjects = {
-        select = {
-          enable = true,
-          lookahead = true,
-          keymaps = {
-            ["af"] = "@function.outer",
-            ["if"] = "@function.inner",
-            ["ac"] = "@class.outer",
-            ["ic"] = "@class.inner",
-            ["il"] = "@loop.inner",
-            ["al"] = "@loop.outer",
-          },
-        },
-        move = {
-          enable = true,
-          set_jumps = true,
-          goto_next_start = {
-            ["]f"] = "@function.outer",
-            ["]c"] = "@class.outer",
-          },
-          goto_next_end = {
-            ["]F"] = "@function.outer",
-            ["]C"] = "@class.outer",
-          },
-          goto_previous_start = {
-            ["[f"] = "@function.outer",
-            ["[c"] = "@class.outer",
-          },
-          goto_previous_end = {
-            ["[F"] = "@function.outer",
-            ["[C"] = "@class.outer",
-          },
-        },
-      },
+    })
+
+    require("nvim-treesitter").install({ "python" })
+
+    vim.api.nvim_create_autocmd("FileType", {
+      callback = function(args)
+        pcall(vim.treesitter.start, args.buf)
+      end,
     })
   end,
 }
