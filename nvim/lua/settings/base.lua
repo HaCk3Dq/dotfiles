@@ -35,6 +35,7 @@ o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,term
 vim.cmd("au TextYankPost * silent! lua vim.highlight.on_yank()")
 
 vim.filetype.add({
+  extension = { service = "dosini", tcss = "css" },
   pattern = {
     [".*/.github/workflows/.*"] = "yaml.ghactions",
     [".*/.ssh/hosts/*"] = "sshconfig",
