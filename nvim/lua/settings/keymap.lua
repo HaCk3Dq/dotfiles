@@ -1,22 +1,23 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
-local ts_select = require("nvim-treesitter-textobjects.select")
-local ts_move = require("nvim-treesitter-textobjects.move")
 
 local function select_textobject(query)
   return function()
+    local ts_select = require("nvim-treesitter-textobjects.select")
     ts_select.select_textobject(query, "textobjects")
   end
 end
 
 local function goto_next_start(query)
   return function()
+    local ts_move = require("nvim-treesitter-textobjects.move")
     ts_move.goto_next_start(query, "textobjects")
   end
 end
 
 local function goto_previous_start(query)
   return function()
+    local ts_move = require("nvim-treesitter-textobjects.move")
     ts_move.goto_previous_start(query, "textobjects")
   end
 end
