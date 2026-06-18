@@ -12,7 +12,7 @@ return {
   config = function()
     require("nvim-treesitter").setup({ install_dir = vim.fn.stdpath("data") .. "/site" })
     require("nvim-treesitter-textobjects").setup({ select = { lookahead = true } })
-    require("nvim-treesitter").install({ "python", "bash", "lua" })
+    require("nvim-treesitter").install({ "python", "bash", "lua", "yaml" })
 
     vim.api.nvim_create_autocmd("FileType", {
       callback = function(args)
