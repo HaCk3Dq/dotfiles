@@ -18,7 +18,7 @@ vr() {
 alias ip='ip -color=auto'
 alias lg='lazygit'
 alias ldo='lazydocker'
-alias nmap='nmap -A -T4'
+alias nmap='sudo nmap -sT -sU -T4 -n -Pn'
 
 alias dswd='docker stack deploy -c docker-compose.yml'
 alias dswr='docker stack rm'

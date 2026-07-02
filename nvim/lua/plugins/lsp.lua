@@ -49,6 +49,8 @@ return {
       },
     })
 
+    vim.lsp.enable("gdscript")
+
     require("mason-lspconfig").setup()
   end,
 }

@@ -36,6 +36,7 @@ vim.cmd("au TextYankPost * silent! lua vim.highlight.on_yank()")
 
 vim.filetype.add({
   extension = { service = "dosini", tcss = "css" },
+  filename = { ["project.godot"] = "dosini" },
   pattern = {
     [".*/.github/workflows/.*"] = "yaml.ghactions",
     [".*/.ssh/hosts/*"] = "sshconfig",
