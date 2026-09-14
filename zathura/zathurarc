@@ -1,16 +1,13 @@
-# Basic Settings
 set highlight-transparency .1
 set zoom-center "true"
 set selection-clipboard clipboard
 set render-loading "false"
 map <Space> toggle_index
-map p print
 map b recolor
+map j navigate next
+map k navigate previous
 
 
-# theme
-
-# Light/Default mode settings:
 set notification-error-bg       "#f44747"
 set notification-error-fg       "#A0A8CD"
 set notification-warning-bg     "#dcdcaa"

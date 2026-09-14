@@ -1,6 +1,7 @@
 _G.C = require("catppuccin.palettes").get_palette("frappe")
 _G.U = require("catppuccin.utils.colors")
 _G.O = vim.deepcopy(require("catppuccin").default_options)
+O.integrations.snacks = O.integrations.snacks or {}
 
 local set = vim.api.nvim_set_hl
 

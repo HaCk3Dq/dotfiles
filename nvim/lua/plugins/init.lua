@@ -20,6 +20,41 @@ return {
   { "folke/which-key.nvim", opts = {} },
   { "lewis6991/gitsigns.nvim", config = true },
   { "kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" }, config = true },
+  {
+    "3rd/time-tracker.nvim",
+    dependencies = { "3rd/sqlite.nvim" },
+    event = "VeryLazy",
+    opts = {
+      data_file = vim.fn.stdpath("data") .. "/time-tracker.db",
+    },
+    config = function(_, opts)
+      local ui = require("time-tracker.ui")
+      for index = 1, math.huge do
+        local name, original = debug.getupvalue(ui.render, index)
+        if not name then
+          break
+        end
+        if name == "get_all_projects_durations" then
+          debug.setupvalue(ui.render, index, function(tracker, data)
+            if tracker.current_session then
+              return original(tracker, data)
+            end
+
+            tracker.current_session = { buffers = {} }
+            local ok, result = pcall(original, tracker, data)
+            tracker.current_session = nil
+            if not ok then
+              error(result)
+            end
+            return result
+          end)
+          break
+        end
+      end
+
+      require("time-tracker").setup(opts)
+    end,
+  },
 
   {
     "antosha417/nvim-lsp-file-operations",
