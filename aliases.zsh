@@ -50,6 +50,7 @@ fzf-git-branch() {
         --preview 'git log -n 50 --color=always --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed "s/.* //" <<< {})' |
     sed "s/.* //"
 }
+
 fzf-git-checkout() {
     git rev-parse HEAD > /dev/null 2>&1 || return
     local branch
@@ -65,6 +66,19 @@ fzf-git-checkout() {
     else
         git checkout $branch;
     fi
+}
+
+rectw() {
+    mkdir -p "$1"
+    npx twitch-dlp "https://www.twitch.tv/$1" \
+        --live-from-start \
+        -o "$1/%(release_date)s.%(ext)s"
+}
+
+rectwl() {
+    mkdir -p "$1"
+    npx twitch-dlp "https://www.twitch.tv/$1" \
+        -o "$1/%(release_date)s.%(ext)s"
 }
 
 alias S='sudo pacman -S'
