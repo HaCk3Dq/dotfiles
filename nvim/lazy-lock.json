@@ -11,7 +11,7 @@
   "fold-cycle.nvim": { "branch": "main", "commit": "6144567b3307bbcfed0e5b2dd23acb9576575d9e" },
   "friendly-snippets": { "branch": "main", "commit": "b4d01b0fdf3c9a549961c2f9ffe8dc09be166219" },
   "git-conflict.nvim": { "branch": "main", "commit": "93814bb37d1c2d4fd427e62074580cd36ffe17a3" },
-  "gitsigns.nvim": { "branch": "main", "commit": "fd36f038e52ad8409fbf9926ae4a0a514cca04d8" },
+  "gitsigns.nvim": { "branch": "main", "commit": "5eb287fdbd523c3a1b3d01f304f43570e73e259b" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
   "lazydev.nvim": { "branch": "main", "commit": "ff2cbcba459b637ec3fd165a2be59b7bbaeedf0d" },
   "lazygit.nvim": { "branch": "main", "commit": "a04ad0dbc725134edbee3a5eea29290976695357" },
