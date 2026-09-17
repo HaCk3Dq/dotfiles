@@ -1,0 +1,30 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "ollama/qwen38-code:iq3m-48k-text",
+  "permission": {
+    "webfetch": "allow",
+    "websearch": "allow"
+  },
+  "providers": {
+    "ollama": {
+      "name": "local",
+      "settings": {
+        "baseURL": "http://127.0.0.1:11434/v1"
+      },
+      "models": {
+        "qwen38-code:iq3m-48k-text": {
+          "name": "qwen 3.8",
+          "capabilities": {
+            "tools": true,
+            "input": ["text"],
+            "output": ["text"]
+          },
+          "limit": {
+            "context": 49152,
+            "output": 16384
+          }
+        }
+      }
+    }
+  }
+}

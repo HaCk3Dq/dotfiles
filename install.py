@@ -26,6 +26,8 @@ home_configs = {
     "rofi": "~/.config/rofi",
     "qt5ct": "~/.config/qt5ct",
     "mpv": "~/.config/mpv",
+    "opencode/opencode.json": "~/.config/opencode/opencode.json",
+    "opencode/cli.json": "~/.config/opencode/cli.json",
     "layout.service": "~/.config/systemd/user/layout.service",
     "ssh/config": "~/.ssh/config",
 }
@@ -46,9 +48,10 @@ configs = (
     else home_configs
 )
 
+root = Path(__file__).resolve().parent
 
 for config, dest in configs.items():
-    source = Path.cwd() / config
+    source = root / config
     target = Path(dest).expanduser()
 
     if not source.exists():

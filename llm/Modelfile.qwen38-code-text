@@ -1,0 +1,10 @@
+# strip vision projector
+FROM /var/lib/ollama/blobs/sha256-42c88ef3450c15dd7b91d4a19e5efcf3f9cb36b4ae4403b977ef8357346d2c2b
+TEMPLATE {{ .Prompt }}
+RENDERER qwen3.5
+PARSER qwen3.5
+PARAMETER top_k 20
+PARAMETER top_p 0.95
+PARAMETER temperature 1
+PARAMETER num_ctx 49152
+LICENSE Apache-2.0

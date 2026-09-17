@@ -1,8 +1,9 @@
+from pathlib import Path
 from subprocess import PIPE, run
 
 import i3ipc
 
-xkb_path = "/home/hacked/dotfiles/xkblayout-state"
+xkb_path = str(Path(__file__).resolve().parent / "xkblayout-state")
 bind = {
     "us": ["Alacritty", "firefox", "Org.gnome.Nautilus", "Spotify", "Tor Browser"],
     "ru": ["TelegramDesktop", "discord"],
