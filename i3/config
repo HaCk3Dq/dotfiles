@@ -46,7 +46,7 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 
 bindsym Mod1+q kill
 
-bindsym $mod+Tab exec i3-cycle right
+bindsym $mod+Tab exec --no-startup-id i3-cycle right
 
 bindsym $mod+Shift+a move left
 bindsym $mod+Shift+s move down
@@ -61,9 +61,9 @@ bindsym $mod+e layout toggle split
 bindsym $mod+t floating toggle
 bindsym $mod+w layout tabbed
 
-bindsym Control+space exec dunstctl close
-bindsym Control+Shift+space exec dunstctl close-all
-bindsym Control+Escape exec dunstctl history-pop
+bindsym Control+space exec --no-startup-id dunstctl close
+bindsym Control+Shift+space exec --no-startup-id dunstctl close-all
+bindsym Control+Escape exec --no-startup-id dunstctl history-pop
 
 set $ws1 "1"
 set $ws2 "2"
@@ -93,4 +93,3 @@ bindsym $mod+x move workspace to output right
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-
