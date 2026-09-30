@@ -20,39 +20,31 @@ return {
   { "folke/which-key.nvim", opts = {} },
   { "lewis6991/gitsigns.nvim", config = true },
   { "kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" }, config = true },
-  {
-    "3rd/time-tracker.nvim",
-    dependencies = { "3rd/sqlite.nvim" },
-    event = "VeryLazy",
-    opts = {
-      data_file = vim.fn.stdpath("data") .. "/time-tracker.db",
-    },
-    config = function(_, opts)
-      local ui = require("time-tracker.ui")
-      for index = 1, math.huge do
-        local name, original = debug.getupvalue(ui.render, index)
-        if not name then
-          break
-        end
-        if name == "get_all_projects_durations" then
-          debug.setupvalue(ui.render, index, function(tracker, data)
-            if tracker.current_session then
-              return original(tracker, data)
-            end
 
-            tracker.current_session = { buffers = {} }
-            local ok, result = pcall(original, tracker, data)
-            tracker.current_session = nil
-            if not ok then
-              error(result)
-            end
-            return result
-          end)
-          break
+  {
+    "ptdewey/pendulum-nvim",
+    config = function()
+      package.preload["pendulum.handlers"] = function()
+        local path = vim.api.nvim_get_runtime_file("lua/pendulum/handlers.lua", false)[1]
+        local source = table.concat(vim.fn.readfile(path), "\n")
+
+        local function replace(original, replacement)
+          local start = source:find(original, 1, true)
+          source = source:sub(1, start - 1) .. replacement .. source:sub(start + #original)
         end
+        -- store only active sessions
+        replace("project = git_project(),", "project = vim.fs.basename(vim.loop.cwd()),")
+        replace("log_activity(true, opts, last_active_time)", "return")
+        replace("    log_activity(is_active, opts)", "    if is_active then\n        log_activity(true, opts)\n    end")
+
+        return loadstring(source, "@" .. path)()
       end
 
-      require("time-tracker").setup(opts)
+      require("pendulum").setup({
+        log_file = vim.fn.stdpath("data") .. "/pendulum-log.csv",
+        gen_reports = false,
+        time_format = "24h",
+      })
     end,
   },
 

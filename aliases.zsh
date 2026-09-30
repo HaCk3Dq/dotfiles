@@ -11,6 +11,8 @@ alias rm='rm -rf'
 alias feh='feh -q --scale-down --auto-zoom'
 alias ping='mtr'
 alias less='less -r'
+alias wiki='wikiman'
+alias open='xdg-open'
 alias v='nvim'
 vr() {
     nvim --server ${XDG_RUNTIME_DIR:-${TMPDIR}nvim.${USER}}/nvim.*.0 --remote-silent "$(realpath "$1")"
