@@ -37,7 +37,7 @@ def project_totals() -> dict[str, float]:
             totals.setdefault(project, 0.0)
             if project == previous_project and previous_timestamp is not None:
                 elapsed = (timestamp - previous_timestamp).total_seconds()
-                if elapsed >= 0:
+                if elapsed >= 0 and timestamp.date() == previous_timestamp.date():
                     totals[project] += elapsed
 
             previous_project = project

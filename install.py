@@ -40,6 +40,7 @@ server_part = [
     "nvim",
     "htop",
     "yamllint",
+    "w3m/keymap",
 ]
 
 server_option = len(argv) > 1 and argv[1] == "--server"
