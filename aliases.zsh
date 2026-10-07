@@ -13,6 +13,7 @@ alias ping='mtr'
 alias less='less -r'
 alias wiki='wikiman'
 alias open='xdg-open'
+alias ps='procs'
 alias v='nvim'
 vr() {
     nvim --server ${XDG_RUNTIME_DIR:-${TMPDIR}nvim.${USER}}/nvim.*.0 --remote-silent "$(realpath "$1")"

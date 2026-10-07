@@ -30,6 +30,7 @@ home_configs = {
     "opencode/cli.json": "~/.config/opencode/cli.json",
     "layout.service": "~/.config/systemd/user/layout.service",
     "ssh/config": "~/.ssh/config",
+    "w3m/keymap": "~/.w3m/keymap",
 }
 
 server_part = [

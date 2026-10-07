@@ -19,12 +19,10 @@ plugins=(
     colored-man-pages
     docker
     docker-compose
-    pip
     systemd
     virtualenvwrapper
-    kubectl
-    kubectx
-    helm
+    celery
+    extract
 )
 
 export EDITOR="nvim"
@@ -41,10 +39,10 @@ source ~/dotfiles/aliases.zsh
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
-[[ -f ~/.SERVER_ENV ]] && source ~/.SERVER_ENV
-python ~/dotfiles/colored.py
-
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 autoload -U +X bashcompinit && bashcompinit
 eval "$(uv generate-shell-completion zsh)"
+
+[[ -f ~/.SERVER_ENV ]] && source ~/.SERVER_ENV
+(sleep 1; python ~/dotfiles/colored.py) &!
