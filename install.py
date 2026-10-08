@@ -31,6 +31,7 @@ home_configs = {
     "layout.service": "~/.config/systemd/user/layout.service",
     "ssh/config": "~/.ssh/config",
     "w3m/keymap": "~/.w3m/keymap",
+    "procs": "~/.config/procs/",
 }
 
 server_part = [
@@ -41,6 +42,7 @@ server_part = [
     "htop",
     "yamllint",
     "w3m/keymap",
+    "procs",
 ]
 
 server_option = len(argv) > 1 and argv[1] == "--server"

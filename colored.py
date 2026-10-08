@@ -1,15 +1,16 @@
-from os import environ, system
+from os import environ
+from subprocess import run
 
-env = environ.get("SERVER_ENV")
-
-env_colors = {
+ENV_COLORS = {
     "home": "#223E55",
     "dev": "#192436",
     "test": "#282c34",
     "prod": "#331C1F",
-    None: "default",
 }
 
-pane = environ.get("TMUX_PANE")
-if environ.get("TMUX") and pane:
-    system(f'tmux select-pane -t "{pane}" -P "bg={env_colors[env]}"')
+env, pane, tmux = map(environ.get, ("SERVER_ENV", "TMUX_PANE", "TMUX"))
+if env and pane and tmux:
+    run(
+        ["tmux", "select-pane", "-t", pane, "-P", f"bg={ENV_COLORS[env]}"],
+        check=False,
+    )
