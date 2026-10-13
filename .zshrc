@@ -45,4 +45,4 @@ autoload -U +X bashcompinit && bashcompinit
 eval "$(uv generate-shell-completion zsh)"
 
 [[ -f ~/.SERVER_ENV ]] && source ~/.SERVER_ENV
-(sleep 1; python ~/dotfiles/colored.py) &!
+python ~/dotfiles/colored.py
